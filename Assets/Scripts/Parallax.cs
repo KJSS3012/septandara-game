@@ -21,9 +21,9 @@ public class Parallax : MonoBehaviour
         float Distance = cam.transform.position.x * ParallaxEffect;
         transform.position = new Vector3(startPosition + Distance, transform.position.y, transform.position.z);
 
-        if(rePosition > startPosition-lengthBackground/2){
+        if(rePosition > startPosition+lengthBackground/2){
             startPosition += lengthBackground;
-        }else if(rePosition < startPosition+lengthBackground/2){
+        }else if(rePosition < startPosition-lengthBackground/2){
             startPosition -= lengthBackground;
         }
     }
