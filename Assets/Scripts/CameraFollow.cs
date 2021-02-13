@@ -5,8 +5,8 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
 
-    public Transform target;
-    public float smoothSpeed = 0.08f;
+    private Transform target;
+    private float smoothSpeed = 0.08f;
 
     void Start()
     {

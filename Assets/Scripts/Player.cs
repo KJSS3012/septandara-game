@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
                 rig2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
                 animPlayer.SetBool("jump", true);
             }else{
-                //Double Jump
+                //Double Jump or Fly
             }
         }
     }

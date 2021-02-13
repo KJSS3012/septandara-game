@@ -8,7 +8,7 @@ public class Parallax : MonoBehaviour
     private float lengthBackground;
     private float startPosition;
     private Transform cam;
-    public float ParallaxEffect;
+    public float speedParallaxEffect;
 
     void Start(){
         startPosition = transform.position.x;
@@ -17,9 +17,9 @@ public class Parallax : MonoBehaviour
     }
 
     void Update(){
-        float rePosition = cam.transform.position.x * (1 - ParallaxEffect);
-        float Distance = cam.transform.position.x * ParallaxEffect;
-        transform.position = new Vector3(startPosition + Distance, transform.position.y, transform.position.z);
+        float rePosition = cam.transform.position.x * (1 - speedParallaxEffect);
+        float distance = cam.transform.position.x * speedParallaxEffect;
+        transform.position = new Vector3(startPosition + distance, transform.position.y, transform.position.z);
 
         if(rePosition > startPosition+lengthBackground){
             startPosition += lengthBackground;
