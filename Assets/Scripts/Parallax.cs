@@ -16,14 +16,14 @@ public class Parallax : MonoBehaviour
         cam = Camera.main.transform;
     }
 
-    void FixedUpdate(){
+    void Update(){
         float rePosition = cam.transform.position.x * (1 - ParallaxEffect);
         float Distance = cam.transform.position.x * ParallaxEffect;
         transform.position = new Vector3(startPosition + Distance, transform.position.y, transform.position.z);
 
-        if(rePosition > startPosition-lengthBackground/2){
+        if(rePosition > startPosition+lengthBackground){
             startPosition += lengthBackground;
-        }else if(rePosition < startPosition+lengthBackground/2){
+        }else if(rePosition < startPosition-lengthBackground){
             startPosition -= lengthBackground;
         }
     }
