@@ -25,10 +25,12 @@ public class ActiveDialogue : MonoBehaviour
         Collider2D hit = Physics2D.OverlapCircle(transform.position, radious, playerLayer);
         if(hit != null){
             dc.Speech(speechText, actorName);
-        }else{
-
         }
 
+    }
+
+    private void OnDrawGizmosSelected(){
+        Gizmos.DrawWireSphere(transform.position, radious);
     }
 
 }
