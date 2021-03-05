@@ -5,13 +5,14 @@ using UnityEngine;
 public class ActiveDialogue : MonoBehaviour
 {
     
-    public string speechText;
+    public string[] speechText;
     public string actorName;
 
     public LayerMask playerLayer;
     public float radious;
 
     private DialogueControl dc;
+    bool onRadius;
 
     private void Start() {
         dc = FindObjectOfType<DialogueControl>();
@@ -21,10 +22,18 @@ public class ActiveDialogue : MonoBehaviour
         ShowDialogue();
     }
 
+    private void Update(){
+        if(Input.GetKeyDown(KeyCode.S) && onRadius){
+            dc.Speech(speechText, actorName);
+        }
+    }
+
     public void ShowDialogue(){
         Collider2D hit = Physics2D.OverlapCircle(transform.position, radious, playerLayer);
         if(hit != null){
-            dc.Speech(speechText, actorName);
+            onRadius = true;
+        }else{
+            onRadius = false;
         }
 
     }
