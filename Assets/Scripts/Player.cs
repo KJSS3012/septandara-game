@@ -36,6 +36,10 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void ControlArrowRight(){
+
+    }
+
     void Jump(){
         if(Input.GetButtonDown("Jump")){
             if(!isJumping){
