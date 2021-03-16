@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+
+    private bool moveRight, moveLeft;
     
     public Vector3 GetMovimentInput()
     {
@@ -16,6 +18,6 @@ public class PlayerInput : MonoBehaviour
         return Input.GetKeyDown(KeyCode.Space);
     }
 
-
+    
 
 }
