@@ -10,13 +10,15 @@ public class Parallax : MonoBehaviour
     private Transform cam;
     public float speedParallaxEffect;
 
-    void Start(){
+    void Start()
+    {
         startPosition = transform.position.x;
         lengthBackground = GetComponent<SpriteRenderer>().bounds.size.x;
         cam = Camera.main.transform;
     }
 
-    void Update(){
+    void Update()
+    {
         float rePosition = cam.transform.position.x * (1 - speedParallaxEffect);
         float distance = cam.transform.position.x * speedParallaxEffect;
         transform.position = new Vector3(startPosition + distance, transform.position.y, transform.position.z);

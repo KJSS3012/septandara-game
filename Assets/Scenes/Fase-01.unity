@@ -10888,7 +10888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ab576d7afca3b4fb083847a549dc22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothSpeed: 0.08
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -13060,6 +13059,7 @@ GameObject:
   - component: {fileID: 1814103118}
   - component: {fileID: 1814103117}
   - component: {fileID: 1814103120}
+  - component: {fileID: 1814103121}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -13141,12 +13141,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1814103114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8475d7e408cd34a44bbf39a96dd7cb7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 16285b489b4671547b37dc5980eccb5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
-  jumpForce: 5
-  isJumping: 0
 --- !u!95 &1814103118
 Animator:
   serializedVersion: 3
@@ -13203,6 +13200,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.004096985, y: -0.006114006}
   m_Size: {x: 0.2718048, y: 0.76667047}
   m_Direction: 0
+--- !u!114 &1814103121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814103114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867051f1c89602948b1fc783910c47ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1919713931
 GameObject:
   m_ObjectHideFlags: 0
