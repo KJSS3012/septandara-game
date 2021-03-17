@@ -13,6 +13,7 @@ public class ActiveDialogue : MonoBehaviour
 
     private DialogueControl dc;
     bool onRadius;
+    //criar uma variável para autorizar diálogos sem necessidade de clicar no 'S'
 
     private void Start() {
         dc = FindObjectOfType<DialogueControl>();
@@ -35,7 +36,6 @@ public class ActiveDialogue : MonoBehaviour
         }else{
             onRadius = false;
         }
-
     }
 
     private void OnDrawGizmosSelected(){

@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private Animator animPlayer;
     private SpriteRenderer spritePlayer;
     private PlayerInput playerInput;
+    public float test;
 
     void Start()
     {
@@ -32,8 +33,9 @@ public class Player : MonoBehaviour
         //Movimentação Horizontal
 
         Vector3 movement = playerInput.GetMovimentInput();
-        transform.position += movement * Time.deltaTime * speed;
 
+        transform.position += movement * Time.deltaTime * speed;
+        
         if (movement.x > 0f)
         {
             animPlayer.SetBool("walk", true);
@@ -53,6 +55,8 @@ public class Player : MonoBehaviour
 
         if (playerInput.IsJump())
         {
+            test = 1f;
+
             if (!isJumping)
             {
                 rig2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
@@ -62,6 +66,10 @@ public class Player : MonoBehaviour
             {
                 //Double Jump or Fly
             }
+        }
+        else
+        {
+            test = 0f;
         }
 
     }
