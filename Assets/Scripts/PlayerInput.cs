@@ -29,17 +29,22 @@ public class PlayerInput : MonoBehaviour
     
     public bool IsJump()
     {
-        return Input.GetKeyDown(KeyCode.Space) || jump;
+        bool inputJump = Input.GetKeyDown(KeyCode.Space);
+
+        if (!inputJump && jump) 
+        {
+            jump = false;
+            return !jump;
+        }
+        else
+        {
+            return inputJump;
+        }
     }
 
-    public void JumpButtonTrue()
+    public void IsJumpTrue()
     {
         jump = true;
-    }
-
-    public void JumpButtonFalse()
-    {
-        jump = false;
     }
 
     public void MoveRightTrue()
