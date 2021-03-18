@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 3656395}
   - component: {fileID: 3656394}
   - component: {fileID: 3656393}
+  - component: {fileID: 3656396}
   m_Layer: 5
   m_Name: ButtonArrowRight
   m_TagString: Untagged
@@ -243,6 +244,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3656391}
   m_CullTransparentMesh: 1
+--- !u!114 &3656396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3656391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1814103121}
+          m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+          m_MethodName: MoveRightTrue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1814103121}
+          m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+          m_MethodName: MoveRightFalse
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &10058475
 GameObject:
   m_ObjectHideFlags: 0
@@ -9811,7 +9857,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 78796754}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1814103121}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+        m_MethodName: IsJumpTrue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &78796754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10888,7 +10946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ab576d7afca3b4fb083847a549dc22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothSpeed: 0.08
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -11203,6 +11260,7 @@ GameObject:
   - component: {fileID: 937206299}
   - component: {fileID: 937206298}
   - component: {fileID: 937206297}
+  - component: {fileID: 937206300}
   m_Layer: 5
   m_Name: ButtonArrowLeft
   m_TagString: Untagged
@@ -11311,6 +11369,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937206295}
   m_CullTransparentMesh: 1
+--- !u!114 &937206300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937206295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1814103121}
+          m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+          m_MethodName: MoveLeftTrue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1814103121}
+          m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+          m_MethodName: MoveLeftFalse
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &973400992
 GameObject:
   m_ObjectHideFlags: 0
@@ -13060,6 +13163,7 @@ GameObject:
   - component: {fileID: 1814103118}
   - component: {fileID: 1814103117}
   - component: {fileID: 1814103120}
+  - component: {fileID: 1814103121}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -13141,12 +13245,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1814103114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8475d7e408cd34a44bbf39a96dd7cb7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 16285b489b4671547b37dc5980eccb5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
-  jumpForce: 5
-  isJumping: 0
 --- !u!95 &1814103118
 Animator:
   serializedVersion: 3
@@ -13203,6 +13304,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.004096985, y: -0.006114006}
   m_Size: {x: 0.2718048, y: 0.76667047}
   m_Direction: 0
+--- !u!114 &1814103121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814103114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867051f1c89602948b1fc783910c47ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1919713931
 GameObject:
   m_ObjectHideFlags: 0
