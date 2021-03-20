@@ -24,7 +24,8 @@ public class ActiveDialogue : MonoBehaviour
     }
 
     private void Update(){
-        if(Input.GetKeyDown(KeyCode.S) && onRadius){
+        //Atualizar forma de ativar o diálogo
+        if(onRadius){
             dc.Speech(speechText, actorName);
         }
     }

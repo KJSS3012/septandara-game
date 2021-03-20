@@ -5,12 +5,12 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
 
-    private Transform target;
+    public Transform target;
     private float smoothSpeed = 0.08f;
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        target = GetComponent<Transform>().transform;
     }
 
     void Update()
