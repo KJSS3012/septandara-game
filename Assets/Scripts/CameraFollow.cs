@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
-        target = GetComponent<Transform>().transform;
+        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
