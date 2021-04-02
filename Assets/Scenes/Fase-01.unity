@@ -12346,6 +12346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1142185824}
   - component: {fileID: 1142185823}
+  - component: {fileID: 1142185825}
   m_Layer: 0
   m_Name: QuestionSheet
   m_TagString: Untagged
@@ -12418,6 +12419,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1142185825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142185822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4aa369a5b01c1d4f92cda360c888a4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enunciated: "Um n\xFAmero \xE9 composto de 8 unidades de milhar, 6 centenas, 4
+    dezenas e 9 unidades. Esse n\xFAmero \xE9:"
+  altA: a) 8.600
+  altB: b) 8.649
+  altC: c) 8.049
+  altD: d) 8.009
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  radious: 0.2
 --- !u!1 &1163155813
 GameObject:
   m_ObjectHideFlags: 0
