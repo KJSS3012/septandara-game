@@ -14,6 +14,9 @@ public class QuestionControl : MonoBehaviour
     public Text alternativeC;
     public Text alternativeD;
     //public Image imageQuestion;
+    //Tratamento de imagens: Criar uma pasta para armazenar as imagens. 
+    //No arquivo JSON, colocar o nome da imagem e quando for feito a leitura, 
+    //lembrar de verificar se a imagem existe na pasta.
 
     public void ShowQuestion(string enunciated, string altA, string altB, string altC, string altD)
     {
