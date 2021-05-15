@@ -49,6 +49,12 @@ public class ActiveQuestion : MonoBehaviour
         }
     }
 
+    //Criar método para ler o arquivo JSON com as questões de determinada fase
+    //Criar um objeto FASE com os atributos: Nome do mundo e número da fase (ou nome)
+    //Criar duas variáveis públicas para recolher os dados do mundo e da fase ao qual determinada questão será inserida
+
+
+
 
     private void OnDrawGizmosSelected()
     {
