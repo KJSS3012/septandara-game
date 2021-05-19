@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class ActiveQuestion : MonoBehaviour
 {
@@ -16,12 +17,13 @@ public class ActiveQuestion : MonoBehaviour
 
     private QuestionControl questionObj;
     private bool OnRadius;
-    private Animator question_animations;
 
     private void Start()
     {
         questionObj = FindObjectOfType<QuestionControl>();
-        question_animations = GetComponent<Animator>();
+
+        
+
     }
 
     private void FixedUpdate()
@@ -34,6 +36,7 @@ public class ActiveQuestion : MonoBehaviour
         if (OnRadius)
         {
             questionObj.ShowQuestion(enunciated, altA, altB, altC, altD);
+            GetQuestions();
         }
     }
 
@@ -50,6 +53,22 @@ public class ActiveQuestion : MonoBehaviour
             OnRadius = false;
         }
     }
+
+    public void GetQuestions()
+    {
+        Debug.Log(Application.dataPath);
+
+        
+
+        if (File.Exists(Application.dataPath + "/JSONFiles/JSONQuestions/teste.json"))
+        {
+            string json = File.ReadAllText(Application.dataPath + "/JSONFiles/JSONQuestions/teste.json");
+            Debug.Log(json);
+        }
+
+        //return null;
+    }
+
 
     //Criar método para ler o arquivo JSON com as questões de determinada fase
     //Criar um objeto FASE com os atributos: Nome do mundo e número da fase (ou nome)

@@ -7,7 +7,8 @@ public class QuestionControl : MonoBehaviour
 {
 
     [Header("Components")]
-    public GameObject questionObj;
+    public GameObject questionCanvas;
+    public GameObject questionIcon;
     public Text enunciatedText;
     public Text alternativeA;
     public Text alternativeB;
@@ -21,12 +22,16 @@ public class QuestionControl : MonoBehaviour
 
     public void ShowQuestion(string enunciated, string altA, string altB, string altC, string altD)
     {
-        questionObj.SetActive(true);
+        questionCanvas.SetActive(true);
         enunciatedText.text = enunciated;
         alternativeA.text = altA;
         alternativeB.text = altB;
         alternativeC.text = altC;
         alternativeD.text = altD;
+
+        Destroy(questionIcon);
     }
+
+
 
 }
