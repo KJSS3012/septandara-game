@@ -16,10 +16,12 @@ public class ActiveQuestion : MonoBehaviour
 
     private QuestionControl questionObj;
     private bool OnRadius;
+    private Animator question_animations;
 
     private void Start()
     {
         questionObj = FindObjectOfType<QuestionControl>();
+        question_animations = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
