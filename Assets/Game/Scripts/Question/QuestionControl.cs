@@ -8,7 +8,7 @@ public class QuestionControl : MonoBehaviour
 
     [Header("Components")]
     public GameObject questionCanvas;
-    public GameObject questionIcon;
+    //public GameObject questionIcon;
     public Text enunciatedText;
     public Text alternativeA;
     public Text alternativeB;
@@ -29,7 +29,7 @@ public class QuestionControl : MonoBehaviour
         alternativeC.text = altC;
         alternativeD.text = altD;
 
-        Destroy(questionIcon);
+        //Destroy(questionIcon);
     }
 
 

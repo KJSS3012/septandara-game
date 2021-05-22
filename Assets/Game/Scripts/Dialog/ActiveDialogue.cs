@@ -16,7 +16,9 @@ public class ActiveDialogue : MonoBehaviour
     //criar uma variável para autorizar diálogos sem necessidade de clicar no 'S'
 
     private void Start() {
+
         dc = FindObjectOfType<DialogueControl>();
+
     }
 
     private void FixedUpdate(){
@@ -31,12 +33,14 @@ public class ActiveDialogue : MonoBehaviour
     }
 
     public void ShowDialogue(){
+
         Collider2D hit = Physics2D.OverlapCircle(transform.position, radious, playerLayer);
         if(hit != null){
             onRadius = true;
         }else{
             onRadius = false;
         }
+
     }
 
     private void OnDrawGizmosSelected(){

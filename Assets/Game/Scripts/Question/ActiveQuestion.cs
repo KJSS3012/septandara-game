@@ -36,7 +36,7 @@ public class ActiveQuestion : MonoBehaviour
         if (OnRadius)
         {
             questionObj.ShowQuestion(enunciated, altA, altB, altC, altD);
-            GetQuestions();
+            //GetQuestions();
         }
     }
 

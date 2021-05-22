@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class WorldMath
 {
-    [SerializeField]
+    
 
     public string worldName;
     public string faseName;

@@ -11,8 +11,8 @@ public class Player : MonoBehaviour
 {
 
     private float speed = 2.5f;
-    private float jumpForce = 5f;
-    private bool isJumping;
+    private float jumpForce = 280;
+    private bool isJumping = false;
     private Rigidbody2D rig2D;
     private Animator animPlayer;
     private SpriteRenderer spritePlayer;
@@ -26,14 +26,14 @@ public class Player : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
 
         //Movimentação Horizontal
 
         Vector3 movement = playerInput.GetMovimentInput();
 
-        transform.position += movement * Time.deltaTime * speed;
+        transform.position += movement * Time.fixedDeltaTime * speed;
         
         if (movement.x > 0f)
         {
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
         {
             if(!isJumping)
             {
-                rig2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+                rig2D.AddForce(new Vector2(0f, jumpForce * Time.fixedDeltaTime), ForceMode2D.Impulse);
                 animPlayer.SetBool("jump", true);
             }
             else
