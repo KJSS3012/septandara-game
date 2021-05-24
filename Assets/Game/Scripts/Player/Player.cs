@@ -11,8 +11,8 @@ public class Player : MonoBehaviour
 {
 
     private float speed = 2.5f;
-    private float jumpForce = 280;
-    private bool isJumping = false;
+    public float jumpForce = 280;
+    private bool isJumping;
     private Rigidbody2D rig2D;
     private Animator animPlayer;
     private SpriteRenderer spritePlayer;
