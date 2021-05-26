@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: 9f39845f31944d343936d21b543df322
+guid: f92a252a3a2cd2146a9ddd876fa65a25
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5208674160283971530
-    second: coin_00_spin_0
+      213: -5403945923973092690
+    second: coin_00_spi_01_0
   - first:
-      213: -8077981237966430198
-    second: coin_00_spin_1
+      213: -5306361818998362800
+    second: coin_00_spi_01_1
   - first:
-      213: 1653370964373381211
-    second: coin_00_spin_2
+      213: 5663111368921037421
+    second: coin_00_spi_01_2
   - first:
-      213: 8288313663257693724
-    second: coin_00_spin_3
+      213: 4466536141365036437
+    second: coin_00_spi_01_3
   - first:
-      213: -3769589566873870149
-    second: coin_00_spin_4
+      213: 7559575601563907417
+    second: coin_00_spi_01_4
   - first:
-      213: -5022341147237527565
-    second: coin_00_spin_5
+      213: 2135255707521760805
+    second: coin_00_spi_01_5
   - first:
-      213: 3821283118779149601
-    second: coin_00_spin_6
+      213: 3190212152940570899
+    second: coin_00_spi_01_6
   - first:
-      213: -8065525283539649207
-    second: coin_00_spin_7
+      213: -5304699450493218030
+    second: coin_00_spi_01_7
   - first:
-      213: -6130724115915580160
-    second: coin_00_spin_8
+      213: 1399917142151332746
+    second: coin_00_spi_01_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -142,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: coin_00_spin_0
+      name: coin_00_spi_01_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 180
+        y: 64
         width: 64
-        height: 90
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acf6b725d8de84840800000000000000
-      internalID: 5208674160283971530
+      spriteID: eaae92040d35105b0800000000000000
+      internalID: -5403945923973092690
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin_00_spin_1
+      name: coin_00_spi_01_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 180
+        y: 64
         width: 64
-        height: 90
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a00adb0fcde35ef80800000000000000
-      internalID: -8077981237966430198
+      spriteID: 05d28e83a040c56b0800000000000000
+      internalID: -5306361818998362800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin_00_spin_2
+      name: coin_00_spi_01_2
       rect:
         serializedVersion: 2
         x: 128
-        y: 180
+        y: 64
         width: 64
-        height: 90
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b50ab65d124f1f610800000000000000
-      internalID: 1653370964373381211
+      spriteID: d6ab30c19c9679e40800000000000000
+      internalID: 5663111368921037421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin_00_spin_3
+      name: coin_00_spi_01_3
       rect:
         serializedVersion: 2
         x: 192
-        y: 180
+        y: 64
         width: 64
-        height: 90
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,20 +219,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1ecd750d51060370800000000000000
-      internalID: 8288313663257693724
+      spriteID: 595c182b4f25cfd30800000000000000
+      internalID: 4466536141365036437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin_00_spin_4
+      name: coin_00_spi_01_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 90
+        x: 256
+        y: 64
         width: 64
-        height: 90
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,83 +240,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb0e675d24abfabc0800000000000000
-      internalID: -3769589566873870149
+      spriteID: 9553def05f109e860800000000000000
+      internalID: 7559575601563907417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: coin_00_spin_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 90
-        width: 64
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ff441a065f0d4ab0800000000000000
-      internalID: -5022341147237527565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: coin_00_spin_6
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 90
-        width: 64
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12d270120cce70530800000000000000
-      internalID: 3821283118779149601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: coin_00_spin_7
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 90
-        width: 64
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94dffa3dc7f711090800000000000000
-      internalID: -8065525283539649207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: coin_00_spin_8
+      name: coin_00_spi_01_5
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
-        height: 90
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,8 +261,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00d5ee606ea4beaa0800000000000000
-      internalID: -6130724115915580160
+      spriteID: 52eb57fb0c3f1ad10800000000000000
+      internalID: 2135255707521760805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_00_spi_01_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3192826fc09e54c20800000000000000
+      internalID: 3190212152940570899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_00_spi_01_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213542d84fbe166b0800000000000000
+      internalID: -5304699450493218030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_00_spi_01_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8309e449318d6310800000000000000
+      internalID: 1399917142151332746
       vertices: []
       indices: 
       edges: []
