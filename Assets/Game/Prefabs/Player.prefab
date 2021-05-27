@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &842141681919865459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3451232948291993445}
+  m_Layer: 7
+  m_Name: WallCheckCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3451232948291993445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842141681919865459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00425148, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9196055453543619396}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4226280730623567676
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4226280730623567676}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.003, y: -0.3856, z: -3.5096028}
+  m_LocalPosition: {x: -0.003, y: -0.395, z: -3.5096028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9196055453543619396}
@@ -64,6 +94,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 377248115726696504}
+  - {fileID: 3451232948291993445}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -152,7 +183,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1.3
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -182,14 +213,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16285b489b4671547b37dc5980eccb5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
+  speedMove: 2.5
   jumpForce: 280
-  isGround: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  radious: 0.08
+  isJumping: 0
+  isWalk: 0
+  isGround: 0
+  radious: 0.07
   groundCheckCollider: {fileID: 377248115726696504}
+  wallCheckCollider: {fileID: 3451232948291993445}
+  wallDistance: 0.557
+  isTouchingWall: 0
 --- !u!70 &9196055453543619397
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

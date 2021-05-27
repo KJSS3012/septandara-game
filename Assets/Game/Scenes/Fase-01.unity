@@ -9566,9 +9566,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 377248115726696504, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.009
+      objectReference: {fileID: 0}
+    - target: {fileID: 377248115726696504, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.396
+      objectReference: {fileID: 0}
+    - target: {fileID: 3451232948291993445, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.007
+      objectReference: {fileID: 0}
     - target: {fileID: 9196055453543619393, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196055453543619395, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9196055453543619396, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
       propertyPath: m_RootOrder
@@ -9614,9 +9630,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9196055453543619512, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
-      propertyPath: m_GravityScale
-      value: 1.5
+    - target: {fileID: 9196055453543619397, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2623577
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196055453543619397, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196055453543619397, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196055453543619397, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0075941086
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196055453543619398, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
+      propertyPath: jumpForce
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196055453543619398, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
+      propertyPath: wallDistance
+      value: 0.525
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}

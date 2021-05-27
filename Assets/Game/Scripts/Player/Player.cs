@@ -10,17 +10,23 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
-    [SerializeField] private float speed = 2.5f;
+    [Header("Basic Components")]
+    [SerializeField] private float speedMove = 2.5f;
     [SerializeField] private float jumpForce = 280;
-
-    [SerializeField] private bool isGround;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private bool isJumping;
+    [SerializeField] private bool isWalk;
+
+    [Header("Collider CheckGround")]
+    [SerializeField] private bool isGround;
     [SerializeField] private float radious;
     [SerializeField] private Transform groundCheckCollider;
-    
 
-    private bool isJumping;
+    [Header("Collider CheckWall")]
+    [SerializeField] private Transform wallCheckCollider;
+    [SerializeField] private float wallDistance;
+    [SerializeField] private bool isTouchingWall;
+
     private Rigidbody2D rig2D;
     private Animator animPlayer;
     private SpriteRenderer spritePlayer;
@@ -37,70 +43,79 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
 
-        //Movimentação Horizontal
+        MovePlayer();
+        JumpPlayer();
+        CheckWall();
 
+    }
+
+    private void MovePlayer()
+    {
         Vector3 movement = playerInput.GetMovimentInput();
 
-        transform.position += movement * Time.fixedDeltaTime * speed;
-        
+        transform.position += movement * Time.fixedDeltaTime * speedMove;
+
         if (movement.x > 0f)
         {
             animPlayer.SetBool("walk", true);
             spritePlayer.flipX = false;
+            isWalk = true;
         }
         else if (movement.x == 0f)
         {
             animPlayer.SetBool("walk", false);
+            isWalk = false;
         }
         else if (movement.x < 0f)
         {
             animPlayer.SetBool("walk", true);
             spritePlayer.flipX = true;
+            isWalk = true;
         }
+    }
 
-        //Pulo
-
+    private void JumpPlayer()
+    {
         CheckGround();
+
+        if (isTouchingWall && isWalk)
+        {
+            speedMove = 0;
+        }
+        else
+        {
+            speedMove = 2.5f;
+        }
 
         if (playerInput.IsJump())
         {
-            if(!isJumping && isGround)
+            if (isGround)
             {
-                rig2D.AddForce(new Vector2(0f, jumpForce * Time.fixedDeltaTime), ForceMode2D.Impulse);
+                rig2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
                 animPlayer.SetBool("jump", true);
             }
-            else
-            {
-                //Double Jump or Fly
-            }
         }
-
-        
-
     }
 
     private void CheckGround()
     {
-        Collider2D collider = Physics2D.OverlapCircle(groundCheckCollider.position, radious, groundLayer);
-        Debug.Log(collider);
-        if (collider != null)
+        isGround = Physics2D.OverlapCircle(groundCheckCollider.position, radious, groundLayer);
+        if (isGround)
         {
-            isGround = true;
-            isJumping = false;
             animPlayer.SetBool("jump", false);
         }
-        else
-        {
-            isGround = false;
-            isJumping = true;
-        }
+    }
 
+    private void CheckWall()
+    {
+        isTouchingWall = Physics2D.OverlapBox(wallCheckCollider.position, new Vector3(wallDistance / 2, wallDistance, 0), wallDistance, groundLayer);
     }
 
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(groundCheckCollider.position, radious);
+        Gizmos.DrawWireCube(wallCheckCollider.position, new Vector3(wallDistance / 2, wallDistance, 0));
     }
 
 }
