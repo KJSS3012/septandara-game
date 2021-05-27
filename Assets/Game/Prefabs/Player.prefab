@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842141681919865459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00425148, y: 0, z: 0}
+  m_LocalPosition: {x: -0.007, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9196055453543619396}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4226280730623567676}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.003, y: -0.395, z: -3.5096028}
+  m_LocalPosition: {x: -0.009, y: -0.396, z: -3.5096028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9196055453543619396}
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMove: 2.5
-  jumpForce: 280
+  jumpForce: 5.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -224,7 +224,7 @@ MonoBehaviour:
   radious: 0.07
   groundCheckCollider: {fileID: 377248115726696504}
   wallCheckCollider: {fileID: 3451232948291993445}
-  wallDistance: 0.557
+  wallDistance: 0.525
   isTouchingWall: 0
 --- !u!70 &9196055453543619397
 CapsuleCollider2D:
@@ -239,6 +239,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00425148, y: -0.03945577}
-  m_Size: {x: 0.2779541, y: 0.85094476}
+  m_Offset: {x: -0.0075941086, y: -0.03945577}
+  m_Size: {x: 0.2623577, y: 0.85094476}
   m_Direction: 0
