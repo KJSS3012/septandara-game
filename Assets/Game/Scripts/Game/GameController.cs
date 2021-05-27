@@ -6,8 +6,14 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
 
+    [Header("Coin Controller")]
     public int totalScoreCoins;
     public Text textScoreCoins;
+
+    [Header("Dialogue Controller")]
+
+
+
 
     public static GameController instance;
 
@@ -19,6 +25,10 @@ public class GameController : MonoBehaviour
 
     public void UpdateScoreCoins()
     {
+        if (totalScoreCoins < 100)
+        {
+            //ajustar exibição das moedas
+        }
         textScoreCoins.text = totalScoreCoins.ToString();
     }
 
