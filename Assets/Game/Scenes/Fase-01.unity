@@ -7884,6 +7884,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalScoreCoins: 0
   textScoreCoins: {fileID: 634098275}
+  dialogueUI: {fileID: 40287969}
+  speechText: {fileID: 315491676}
+  actorNameText: {fileID: 839663627}
+  writeSpeedSpeech: 0.2
 --- !u!4 &1624922145
 Transform:
   m_ObjectHideFlags: 0
@@ -8090,6 +8094,7 @@ GameObject:
   - component: {fileID: 1809799167}
   - component: {fileID: 1809799166}
   - component: {fileID: 1809799168}
+  - component: {fileID: 1809799165}
   m_Layer: 0
   m_Name: Grandmother
   m_TagString: Untagged
@@ -8097,6 +8102,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1809799165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809799164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea88b675ff631e648b706fbc326cd58d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechsActors: {fileID: 11400000, guid: d04581668f67df2478a6d80b34682c16, type: 2}
+  layerCollider:
+    serializedVersion: 2
+    m_Bits: 128
+  radiousCollider: 1
+  isColliderDialogue: 0
+  isActiveDialogue: 0
+  lengthSpeechVector: 0
 --- !u!212 &1809799166
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9301,14 +9326,6 @@ PrefabInstance:
     - target: {fileID: 8993570888169979218, guid: da918c58e794cd44586c8455a7238347, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8993570888427423471, guid: da918c58e794cd44586c8455a7238347, type: 3}
-      propertyPath: m_Text
-      value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id ipsum
-        et ante maximus laoreet. Etiam feugiat ac ante vitae lobortis. Phasellus
-        vel ullamcorper turpis. Proin turpis nibh, dapibus quis volutpat quis, gravida
-        eu urna. Nunc id iaculis eros. Vestibulum at augue eget mauris posuere suscipit.
-        Aliquam dictum consectetur purus.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da918c58e794cd44586c8455a7238347, type: 3}
