@@ -6,8 +6,6 @@ using UnityEngine;
 public class SpeechsDialogue : ScriptableObject
 {
 
-    //[Header("Basic Informations")]
-
     public Speech[] speechsDialogueObjects;
 
 }

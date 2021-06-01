@@ -7,58 +7,67 @@ public class Dialogue : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] public SpeechsDialogue speechsActors;
-    [SerializeField] private LayerMask layerCollider;
-    [SerializeField] private float radiousCollider;
-    [SerializeField] private bool isColliderDialogue;
+    [SerializeField] private bool isCollisionPlayer;
+    [SerializeField] private bool isActiveDirect;
     [SerializeField] private bool isActiveDialogue;
-    public int lengthSpeechVector;
-    public int indexSpeechActive;
+
 
     private void Start()
     {
         isActiveDialogue = false;
-        lengthSpeechVector = 0;
-        for (int s = 0; s < speechsActors.speechsDialogueObjects.Length; s++)
-        {
-            lengthSpeechVector++;
-        }
-        indexSpeechActive = 0;
-    }
-
-    private void FixedUpdate()
-    {
-        CheckColliderDialogue();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S) && isColliderDialogue)
+        if (isActiveDirect)
+        {
+            DirectTriggerActivate();
+        }
+        else
+        {
+            IndirectTriggerActivate();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            isCollisionPlayer = true;
+        }
+        else
+        {
+            isCollisionPlayer = false;
+        }
+    }
+
+    public void DirectTriggerActivate() //Ativar direto
+    {
+        if (isCollisionPlayer && !isActiveDialogue)
         {
             ShowDialogue();
         }
     }
 
-    public void CheckColliderDialogue()
+    public void IndirectTriggerActivate() //Ativar tando dentro do trigger e acionando uma tecla/botão na tela
     {
-        isColliderDialogue = Physics2D.OverlapCircle(transform.position, radiousCollider, layerCollider);
-        if (isColliderDialogue)
+
+        if (isCollisionPlayer && Input.GetKeyDown(KeyCode.S) && !isActiveDialogue)
         {
-            isActiveDialogue = true;
+            ShowDialogue();
         }
+
     }
+
 
     public void ShowDialogue()
     {
         Speech[] speechsDialogue = speechsActors.speechsDialogueObjects;
-        GameController.instance.ActiveDialogue(speechsDialogue[indexSpeechActive].actorName, speechsDialogue[indexSpeechActive].speech);
-
+        DialogueControl.instance.GetDataDialogues(speechsDialogue);
+        isActiveDialogue = true;
+        Debug.Log("Entrou");
     }
 
     
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.DrawWireSphere(transform.position, radiousCollider);
-    }
 
 }

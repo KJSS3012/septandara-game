@@ -5,44 +5,78 @@ using UnityEngine.UI;
 
 public class DialogueControl : MonoBehaviour
 {
-    
-    [Header("Components")]
-    public GameObject dialogueObj;
-    public Text speechText;
-    public Text actorNameText;
 
-    [Header("Settings")]
-    public float typingSpeed;
-    private string[] sentences;
+    [Header("Dialogue Controller")]
+    [SerializeField] private GameObject dialogueUI;
+    [SerializeField] private Text speechText;
+    [SerializeField] private Text actorNameText;
+
+    public static DialogueControl instance;
+
+    private int length;
     private int index;
+    private Speech[] speechs;
+    private bool isPass;
+    private float writeSpeedSpeech = 0.06f;
 
-
-    public void Speech(string[] txt, string actorName){
-        dialogueObj.SetActive(true);
-        sentences = txt;
-        actorNameText.text = actorName;
-        StartCoroutine(TypeSentence());
+    private void Start()
+    {
+        instance = this;
+        index = 0;
     }
 
-    IEnumerator TypeSentence(){
-        foreach(char letter in sentences[index].ToCharArray()){
-            speechText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
-        }
-    }
 
-    public void NextSentence(){
-        if(speechText.text == sentences[index]){
-            if(index < sentences.Length - 1){ //Ainda tendo diálogos
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
+        {
+            if (index < length-1 && isPass)
+            {
+                isPass = false;
                 index++;
-                speechText.text = "";
-                StartCoroutine(TypeSentence());
-            }else{ //Quando acabar os diálogos
-                speechText.text = "";
-                index = 0;
-                dialogueObj.SetActive(false);
+                ActiveDialogue(speechs[index].actorName, speechs[index].speech);
             }
         }
     }
+
+
+    public void ActiveDialogue(string actorName, string speech)
+    {
+        dialogueUI.SetActive(true);
+        actorNameText.text = actorName;
+        speechText.text = "";
+        StartCoroutine(WriteSpeech(speech));
+    }
+
+    IEnumerator WriteSpeech(string speech)
+    {
+        foreach (char letter in speech.ToCharArray())
+        {
+            speechText.text += letter;
+            if (speechText.text == speechs[index].speech)
+            {
+                StartCoroutine(DelayNextSpeech());
+            }
+
+            yield return new WaitForSeconds(writeSpeedSpeech);
+        }
+    }
+
+    IEnumerator DelayNextSpeech()
+    {
+        yield return new WaitForSeconds(0.5f);
+        isPass = true;
+        
+    }
+
+    public void GetDataDialogues(Speech[] speechs)
+    {
+        length = speechs.Length;
+        this.speechs = speechs;
+        ActiveDialogue(speechs[index].actorName, speechs[index].speech);
+    }
+
+    
+
 
 }

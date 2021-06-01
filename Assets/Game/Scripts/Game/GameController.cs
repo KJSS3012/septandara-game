@@ -10,12 +10,6 @@ public class GameController : MonoBehaviour
     public int totalScoreCoins;
     [SerializeField] private Text textScoreCoins;
 
-    [Header("Dialogue Controller")]
-    [SerializeField] private GameObject dialogueUI;
-    [SerializeField] private Text speechText;
-    [SerializeField] private Text actorNameText;
-    [SerializeField] private float writeSpeedSpeech;
-
     public static GameController instance;
 
     private void Start()
@@ -33,29 +27,6 @@ public class GameController : MonoBehaviour
         }
         textScoreCoins.text = totalScoreCoins.ToString();
     }
-
-
-
-    // MECHANICAL DIALOGUE
-    public void ActiveDialogue(string actorName, string speech)
-    {
-        dialogueUI.SetActive(true);
-        actorNameText.text = actorName;
-        speechText.text = speech;
-        StartCoroutine(WriteSpeech(speech));
-    }
-
-    IEnumerator WriteSpeech(string speech)
-    {
-        foreach (char letter in speech.ToCharArray())
-        {
-            speechText.text += letter;
-            yield return new WaitForSeconds(writeSpeedSpeech);
-        }
-    }
-
-   
-
 
 
 }
