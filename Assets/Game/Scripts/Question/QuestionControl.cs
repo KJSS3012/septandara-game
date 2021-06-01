@@ -7,29 +7,84 @@ public class QuestionControl : MonoBehaviour
 {
 
     [Header("Components")]
-    public GameObject questionCanvas;
-    //public GameObject questionIcon;
+    public GameObject questionUI;
     public Text enunciatedText;
-    public Text alternativeA;
-    public Text alternativeB;
-    public Text alternativeC;
-    public Text alternativeD;
-    //public Image imageQuestion;
+    public Text alternative_A;
+    public Text alternative_B;
+    public Text alternative_C;
+    public Text alternative_D;
+    public Image imageQuestion;
+    public Animator animQuestion;
+    public Player player;
+    public GameObject controlsUI;
 
-    //Tratamento de imagens: Criar uma pasta para armazenar as imagens. 
-    //No arquivo JSON, colocar o nome da imagem e quando for feito a leitura, 
-    //lembrar de verificar se a imagem existe na pasta.
+    private int alternativeCorrect;
+    public int contActivated;
 
-    public void ShowQuestion(string enunciated, string altA, string altB, string altC, string altD)
+
+    public static QuestionControl instance;
+    [SerializeField] private QuestionsLevel questionsLevel;
+
+    private void Start()
     {
-        questionCanvas.SetActive(true);
-        enunciatedText.text = enunciated;
-        alternativeA.text = altA;
-        alternativeB.text = altB;
-        alternativeC.text = altC;
-        alternativeD.text = altD;
+        instance = this;
+        contActivated = 0;
 
-        //Destroy(questionIcon);
+
+        //zerar o isActivated de todas as questões quando iniciar o objeto
+        ClearActivatedData();
+    }
+
+
+    public void ActiveQuestion(QuestionSheet question)
+    {
+        questionUI.SetActive(true);
+
+        player.RestartControls(false);
+        player.playerInput.enabled = false;
+        controlsUI.SetActive(false);
+
+        enunciatedText.text = question.enunciated;
+        alternative_A.text = question.alternative_A;
+        alternative_B.text = question.alternative_B;
+        alternative_C.text = question.alternative_C;
+        alternative_D.text = question.alternative_D;
+        alternativeCorrect = question.alternativeCorrect;
+    }
+
+    public void ClearActivatedData()
+    {
+        for (int index = 0; index < questionsLevel.questions.Length; index++)
+        {
+            questionsLevel.questions[index].isActivated = false;
+        }
+        contActivated = 0;
+    }
+
+    public void AddContActivated()
+    {
+        contActivated++;
+    }
+
+    public int GetContActivated()
+    {
+        return contActivated;
+    }
+
+
+    public void ClickAlternative()
+    {
+        animQuestion.SetBool("exit", true);
+        controlsUI.SetActive(true);
+        player.RestartControls(true);
+        player.playerInput.enabled = true;
+        StartCoroutine(DelayDesactiveQuestion());
+    }
+
+    IEnumerator DelayDesactiveQuestion()
+    {
+        yield return new WaitForSeconds(2);
+        questionUI.SetActive(false);
     }
 
 

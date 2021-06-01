@@ -8,12 +8,7 @@ public class GameController : MonoBehaviour
 
     [Header("Coin Controller")]
     public int totalScoreCoins;
-    public Text textScoreCoins;
-
-    [Header("Dialogue Controller")]
-
-
-
+    [SerializeField] private Text textScoreCoins;
 
     public static GameController instance;
 
@@ -22,7 +17,8 @@ public class GameController : MonoBehaviour
         instance = this;
     }
 
-
+    
+    // MECHANICAL COINS
     public void UpdateScoreCoins()
     {
         if (totalScoreCoins < 100)
@@ -31,5 +27,6 @@ public class GameController : MonoBehaviour
         }
         textScoreCoins.text = totalScoreCoins.ToString();
     }
+
 
 }

@@ -43,9 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e53b468034dceb74b8e6f78be265cf7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionCanvas: {fileID: 0}
+  questionUI: {fileID: 0}
   enunciatedText: {fileID: 0}
-  alternativeA: {fileID: 0}
-  alternativeB: {fileID: 0}
-  alternativeC: {fileID: 0}
-  alternativeD: {fileID: 0}
+  alternative_A: {fileID: 0}
+  alternative_B: {fileID: 0}
+  alternative_C: {fileID: 0}
+  alternative_D: {fileID: 0}
+  imageQuestion: {fileID: 0}
+  animQuestion: {fileID: 0}
+  player: {fileID: 0}
+  controlsUI: {fileID: 0}
+  contActivated: 0
+  questionsLevel: {fileID: 11400000, guid: 72c4e62efd7046f45bdb4c2af9f11561, type: 2}

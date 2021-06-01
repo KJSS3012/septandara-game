@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58873661c23a3ef4494e32f6447e6e60, type: 3}
+  m_Name: Dialogue_00
+  m_EditorClassIdentifier: 
+  speechsDialogueObjects:
+  - actorName: Teresa
+    speech: Oi!
+  - actorName: Dandara
+    speech: Hello World!
+  - actorName: Teresa
+    speech: Como vai?
+  - actorName: Dandara
+    speech: Tudo bem, e tu?
+  - actorName: Teresa
+    speech: Vou indo

@@ -30,7 +30,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D rig2D;
     private Animator animPlayer;
     private SpriteRenderer spritePlayer;
-    private PlayerInput playerInput;
+    public PlayerInput playerInput;
+    [SerializeField] private bool isActiveMoviment;
 
     void Start()
     {
@@ -38,15 +39,17 @@ public class Player : MonoBehaviour
         animPlayer = GetComponent<Animator>();
         spritePlayer = GetComponent<SpriteRenderer>();
         playerInput = GetComponent<PlayerInput>();
+        isActiveMoviment = true;
     }
 
     void FixedUpdate()
     {
-
-        MovePlayer();
-        JumpPlayer();
-        CheckWall();
-
+        if (isActiveMoviment)
+        {
+            MovePlayer();
+            JumpPlayer();
+            CheckWall();
+        }
     }
 
     private void MovePlayer()
@@ -109,6 +112,19 @@ public class Player : MonoBehaviour
     private void CheckWall()
     {
         isTouchingWall = Physics2D.OverlapBox(wallCheckCollider.position, new Vector3(wallDistance / 2, wallDistance, 0), wallDistance, groundLayer);
+    }
+
+    public void RestartControls(bool value)
+    {
+        isActiveMoviment = value;
+        if (!isActiveMoviment)
+        {
+            playerInput.MoveLeftFalse();
+            playerInput.MoveRightFalse();
+
+            animPlayer.SetBool("walk", false);
+            animPlayer.SetBool("jump", false);
+        }
     }
 
 
