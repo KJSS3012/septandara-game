@@ -13,6 +13,7 @@ public class QuestionControl : MonoBehaviour
     public Text alternative_B;
     public Text alternative_C;
     public Text alternative_D;
+    public Text resultsClick;
     public Image imageQuestion;
     public Animator animQuestion;
     public Player player;
@@ -72,12 +73,26 @@ public class QuestionControl : MonoBehaviour
     }
 
 
-    public void ClickAlternative()
+    public void ClickAlternative(int valueAlternative)
     {
+        if (alternativeCorrect == valueAlternative)
+        {
+            resultsClick.text = "Correto";
+        }
+        else
+        {
+            resultsClick.text = "Errado";
+        }
+
+        resultsClick.gameObject.SetActive(true);
+
+        StartCoroutine(DelayDesactiveQuestion());
+
         animQuestion.SetBool("exit", true);
         controlsUI.SetActive(true);
         player.RestartControls(true);
         player.playerInput.enabled = true;
+
         StartCoroutine(DelayDesactiveQuestion());
     }
 
@@ -85,6 +100,7 @@ public class QuestionControl : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         questionUI.SetActive(false);
+        resultsClick.gameObject.SetActive(false);
     }
 
 
