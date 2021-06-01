@@ -76,7 +76,4 @@ public class DialogueControl : MonoBehaviour
         ActiveDialogue(speechs[index].actorName, speechs[index].speech);
     }
 
-    
-
-
 }

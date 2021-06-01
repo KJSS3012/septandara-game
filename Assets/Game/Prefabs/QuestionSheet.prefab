@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5226789363211972583}
   - component: {fileID: 5226789363211972569}
   - component: {fileID: 5226789363211972570}
+  - component: {fileID: 4239819769745456051}
   m_Layer: 0
   m_Name: QuestionSheet
   m_TagString: Untagged
@@ -96,21 +97,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5226789363211972582}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4aa369a5b01c1d4f92cda360c888a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enunciated: "Um n\xFAmero \xE9 composto de 8 unidades de milhar, 6 centenas, 4
-    dezenas e 9 unidades. Esse n\xFAmero \xE9:"
-  altA: 8.600
-  altB: 8.649
-  altC: 8.049
-  altD: 8.009
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  radious: 0.2
+  questionsLevel: {fileID: 11400000, guid: 72c4e62efd7046f45bdb4c2af9f11561, type: 2}
+  isColliderQuestion: 0
+  isActive: 0
+  questionObject: {fileID: 5226789363211972582}
 --- !u!95 &5226789363211972570
 Animator:
   serializedVersion: 3
@@ -130,3 +125,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &4239819769745456051
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5226789363211972582}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000166893, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

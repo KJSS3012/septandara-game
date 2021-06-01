@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class WorldMath : MonoBehaviour
 {
+    //MathKingdom
+    //NumbersKingdom
+    //AlgebraKingdom
+    //GeometryKingdom
+    //TrigonometryKingdom
 
-    public string[] mathKingdoms;
-    
+    public string mathKingdom;
+    public int quantLevels;
 
-    
 }
 
 
