@@ -10,19 +10,22 @@ public class DialogueControl : MonoBehaviour
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private Text speechText;
     [SerializeField] private Text actorNameText;
+    public Player player;
+    public GameObject controlsUI;
 
     public static DialogueControl instance;
 
     private int length;
     private int index;
     private Speech[] speechs;
-    private bool isPass;
+    [SerializeField] private bool isPass;
     private float writeSpeedSpeech = 0.06f;
 
     private void Start()
     {
         instance = this;
         index = 0;
+        length = -1;
     }
 
 
@@ -30,19 +33,40 @@ public class DialogueControl : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
         {
-            if (index < length-1 && isPass)
+            if (index < length - 1 && isPass)
             {
                 isPass = false;
                 index++;
                 ActiveDialogue(speechs[index].actorName, speechs[index].speech);
             }
         }
+
+        if (index == length && !isPass)
+        {
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
+            {
+                dialogueUI.SetActive(false);
+                controlsUI.SetActive(true);
+                player.RestartControls(true);
+                player.playerInput.enabled = true;
+                this.gameObject.SetActive(false);
+
+            }
+        }
+
+        
+
     }
 
 
     public void ActiveDialogue(string actorName, string speech)
     {
         dialogueUI.SetActive(true);
+
+        player.RestartControls(false);
+        player.playerInput.enabled = false;
+        controlsUI.SetActive(false);
+
         actorNameText.text = actorName;
         speechText.text = "";
         StartCoroutine(WriteSpeech(speech));
@@ -60,13 +84,21 @@ public class DialogueControl : MonoBehaviour
 
             yield return new WaitForSeconds(writeSpeedSpeech);
         }
+
+        if (index == length - 1)
+        {
+            isPass = false;
+            index = length;
+        }
+        else
+        {
+            isPass = true;
+        }
     }
 
     IEnumerator DelayNextSpeech()
     {
-        yield return new WaitForSeconds(0.5f);
-        isPass = true;
-        
+        yield return new WaitForSeconds(0.3f);
     }
 
     public void GetDataDialogues(Speech[] speechs)

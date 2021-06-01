@@ -43,7 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1052c09f8479586408828cdcaebe27fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObj: {fileID: 0}
+  dialogueUI: {fileID: 0}
   speechText: {fileID: 0}
   actorNameText: {fileID: 0}
-  typingSpeed: 0.1
+  player: {fileID: 0}
+  controlsUI: {fileID: 0}
+  isPass: 0

@@ -14,6 +14,9 @@ public class QuestionControl : MonoBehaviour
     public Text alternative_C;
     public Text alternative_D;
     public Image imageQuestion;
+    public Animator animQuestion;
+    public Player player;
+    public GameObject controlsUI;
 
     private int alternativeCorrect;
     public int contActivated;
@@ -27,6 +30,7 @@ public class QuestionControl : MonoBehaviour
         instance = this;
         contActivated = 0;
 
+
         //zerar o isActivated de todas as questões quando iniciar o objeto
         ClearActivatedData();
     }
@@ -35,6 +39,11 @@ public class QuestionControl : MonoBehaviour
     public void ActiveQuestion(QuestionSheet question)
     {
         questionUI.SetActive(true);
+
+        player.RestartControls(false);
+        player.playerInput.enabled = false;
+        controlsUI.SetActive(false);
+
         enunciatedText.text = question.enunciated;
         alternative_A.text = question.alternative_A;
         alternative_B.text = question.alternative_B;
@@ -63,8 +72,18 @@ public class QuestionControl : MonoBehaviour
     }
 
 
-    public void Desactive()
+    public void ClickAlternative()
     {
+        animQuestion.SetBool("exit", true);
+        controlsUI.SetActive(true);
+        player.RestartControls(true);
+        player.playerInput.enabled = true;
+        StartCoroutine(DelayDesactiveQuestion());
+    }
+
+    IEnumerator DelayDesactiveQuestion()
+    {
+        yield return new WaitForSeconds(2);
         questionUI.SetActive(false);
     }
 
