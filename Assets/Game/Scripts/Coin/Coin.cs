@@ -31,7 +31,7 @@ public class Coin : MonoBehaviour
         GameController.instance.totalScoreCoins += valueCoin;
         GameController.instance.UpdateScoreCoins();
 
-        Destroy(this.gameObject, 0.3f);
+        Destroy(this.gameObject, 0.5f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
