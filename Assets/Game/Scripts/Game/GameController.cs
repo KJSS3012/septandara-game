@@ -10,11 +10,16 @@ public class GameController : MonoBehaviour
     public int totalScoreCoins;
     [SerializeField] private Text textScoreCoins;
 
+    [Header("Heart Life Controller")]
+    public int percentageLife;
+    [SerializeField] private Text textPercentageHeart;
+
     public static GameController instance;
 
     private void Start()
     {
         instance = this;
+        textPercentageHeart.text = percentageLife.ToString() + "%";
     }
 
     
@@ -28,5 +33,11 @@ public class GameController : MonoBehaviour
         textScoreCoins.text = totalScoreCoins.ToString();
     }
 
+
+    //MECHANICAL HEARTS LIFE
+    public void UpdatePercentageLife()
+    {
+        textPercentageHeart.text = percentageLife.ToString() + "%";
+    }
 
 }
