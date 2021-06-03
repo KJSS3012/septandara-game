@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-
-    public int valueCoin;
+    [Header("Coin")]
+    [SerializeField] private int valueCoin;
     private Animator animCoin;
     public bool animSpin;
-    public LayerMask playerLayer;
 
     private void Start()
     {
         animCoin = GetComponent<Animator>();
         ChangeSpinCoin(animSpin);
-    }
-
-    public int GetValueCoin()
-    {
-        return valueCoin;
     }
 
     public void ChangeSpinCoin(bool other)
@@ -30,14 +24,14 @@ public class Coin : MonoBehaviour
     }
 
 
-    public void ColectCoin()
+    private void ColectCoin()
     {
         animCoin.SetBool("colect", true);
 
         GameController.instance.totalScoreCoins += valueCoin;
         GameController.instance.UpdateScoreCoins();
 
-        Destroy(this.gameObject, 0.3f);
+        Destroy(this.gameObject, 0.5f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
