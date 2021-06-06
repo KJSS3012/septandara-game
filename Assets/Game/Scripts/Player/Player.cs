@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     [SerializeField] private float speedMove = 2.5f;
     [SerializeField] private float jumpForce = 280;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private bool isJumping;
     [SerializeField] private bool isWalk;
 
     [Header("Collider CheckGround")]
