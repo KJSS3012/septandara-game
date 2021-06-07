@@ -14,7 +14,6 @@ public class Chance : MonoBehaviour
     {
         animChance = GetComponent<Animator>();
         isActive = statusGame.chances[indetifyChance - 1];
-        Debug.Log("Iniciando..................");
         if (!isActive)
         {
             SwitchAnimation("idle-desactive", true);
