@@ -95,7 +95,6 @@ public class GameController : MonoBehaviour
                 StartCoroutine(DelayDesactiveText(false));
                 break;
             }
-            Debug.Log("0-4 : [" + indexActive + "] 4-0: [" + indexDesactive + "]");
             indexDesactive--;
             indexActive++;
         } while (indexDesactive>=0 && indexActive>0);
