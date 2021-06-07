@@ -13,7 +13,6 @@ public class Life : MonoBehaviour
     private void Start()
     {
         animHeartLife = GetComponent<Animator>();
-
     }
 
     private void ColectHeart()

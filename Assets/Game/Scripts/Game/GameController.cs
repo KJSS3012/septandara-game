@@ -14,23 +14,32 @@ public class GameController : MonoBehaviour
     public int percentageLife;
     [SerializeField] private Text textPercentageHeart;
 
+    [Header("Chances Controller")]
+    public Chance[] chances = new Chance[5];
+    public int concecutiveCorrectQuestion;
+
     public static GameController instance;
+
+    public StatusGame statusGame;
 
     private void Start()
     {
         instance = this;
         textPercentageHeart.text = percentageLife.ToString() + "%";
+        concecutiveCorrectQuestion = 0;
+        
+        totalScoreCoins = statusGame.scoreCoins;
+        UpdateScoreCoins();
+        percentageLife = statusGame.quantLife;
+        UpdatePercentageLife();
     }
 
     
     // MECHANICAL COINS
     public void UpdateScoreCoins()
     {
-        if (totalScoreCoins < 100)
-        {
-            //ajustar exibição das moedas
-        }
         textScoreCoins.text = totalScoreCoins.ToString();
+        statusGame.scoreCoins = totalScoreCoins;
     }
 
 
@@ -38,6 +47,76 @@ public class GameController : MonoBehaviour
     public void UpdatePercentageLife()
     {
         textPercentageHeart.text = percentageLife.ToString() + "%";
+        statusGame.quantLife = percentageLife;
     }
+
+
+    //MECHANICAL CHANCES QUESTION
+    public void VerifyQuantChances(bool isMissChance)
+    {
+        //Verifica chances perdidas
+        for (int i = chances.Length - 1; i >= 0; i--)
+        {
+            if (chances[i].IsActiveChance() && isMissChance)
+            {
+                if (i == chances[i].indetifyChance - 1)
+                {
+                }
+            }
+        }
+
+        //Verifica chances ganhadas
+        for (int i = 0; i < chances.Length; i++)
+        {
+            if (!chances[i].IsActiveChance() && !isMissChance && concecutiveCorrectQuestion == 2)
+            {
+            }
+        }
+
+    }
+
+    public void ActiveAnimChanceNow(int index, bool isDesactive)
+    {
+        if (isDesactive)
+        {
+            chances[index].SwitchAnimation("idle-active", true);
+            chances[index].SwitchAnimation("desactive", true);
+        }
+        else if(!isDesactive)
+        {
+            chances[index].SwitchAnimation("idle-desactive", true);
+            chances[index].SwitchAnimation("active", true);
+        }
+    }
+
+    public void VerifyChances(bool isMissChange)
+    {
+        int indexDesactive = chances.Length-1;
+        int indexActive = 0;
+        do
+        {
+            if (chances[indexDesactive].IsActiveChance() && isMissChange)
+            {
+                ActiveAnimChanceNow(indexDesactive, true);
+                chances[indexDesactive].SetActiveChance(false);
+                statusGame.chances[indexDesactive] = false;
+                break;
+            }
+            else if(!chances[indexActive].IsActiveChance() && !isMissChange && concecutiveCorrectQuestion == 2)
+            {
+                ActiveAnimChanceNow(indexActive, false);
+                chances[indexActive].SetActiveChance(true);
+                statusGame.chances[indexActive] = true;
+                concecutiveCorrectQuestion = 0;
+                break;
+            }
+            Debug.Log("0-4 : [" + indexActive + "] 4-0: [" + indexDesactive + "]");
+            indexDesactive--;
+            indexActive++;
+        } while (indexDesactive>=0 && indexActive>0);
+    }
+
+
+
 
 }

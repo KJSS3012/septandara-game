@@ -18,7 +18,6 @@ public class QuestionControl : MonoBehaviour
     public Animator animQuestion;
     public Player player;
     public GameObject controlsUI;
-    public Chance[] chances = new Chance[5];
 
     private int alternativeCorrect;
     public int contActivated;
@@ -34,7 +33,6 @@ public class QuestionControl : MonoBehaviour
         contActivated = 0;
         isMissChance = false;
 
-
         //zerar o isActivated de todas as questões quando iniciar o objeto
         ClearActivatedData();
     }
@@ -46,7 +44,7 @@ public class QuestionControl : MonoBehaviour
 
         player.RestartControls(false);
         player.playerInput.enabled = false;
-        //controlsUI.SetActive(false);
+        controlsUI.SetActive(false);
 
         enunciatedText.text = question.enunciated;
         alternative_A.text = question.alternative_A;
@@ -81,11 +79,14 @@ public class QuestionControl : MonoBehaviour
         if (alternativeCorrect == valueAlternative)
         {
             resultsClick.text = "Correto";
+            isMissChance = false;
+            GameController.instance.concecutiveCorrectQuestion++;
         }
         else
         {
             resultsClick.text = "Errado";
             isMissChance = true;
+            GameController.instance.concecutiveCorrectQuestion = 0;
         }
 
         resultsClick.gameObject.SetActive(true);
@@ -93,12 +94,11 @@ public class QuestionControl : MonoBehaviour
         StartCoroutine(DelayDesactiveQuestion());
 
         animQuestion.SetBool("exit", true);
-        //controlsUI.SetActive(true);
+        controlsUI.SetActive(true);
         player.RestartControls(true);
         player.playerInput.enabled = true;
-        VerifyQuantChances();
 
-        StartCoroutine(DelayDesactiveQuestion());
+        GameController.instance.VerifyChances(isMissChance);
     }
 
     IEnumerator DelayDesactiveQuestion()
@@ -108,24 +108,6 @@ public class QuestionControl : MonoBehaviour
         resultsClick.gameObject.SetActive(false);
     }
 
-    public void VerifyQuantChances()
-    {
-        for (int i = chances.Length - 1; i >= 0; i--)
-        {
-            if (chances[i].IsActiveChance() && isMissChance)
-            {
-                Debug.Log(i);
-
-                if (i == chances[i].indetifyChance - 1)
-                {
-                    chances[i].SwitchAnimationEmptyTrue();
-                    chances[i].isActive = false;
-                }
-                isMissChance = false;
-                break;
-
-            }
-        }
-    }
+    
 
 }

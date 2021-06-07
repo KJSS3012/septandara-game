@@ -109,8 +109,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  indetifyChance: 1
+  indetifyChance: 3
   animChance: {fileID: 0}
+  statusGame: {fileID: 11400000, guid: a484585002ceeb74d8e28cb97fa6a82a, type: 2}
 --- !u!1 &615158314624179940
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,8 +221,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  indetifyChance: 1
+  indetifyChance: 4
   animChance: {fileID: 0}
+  statusGame: {fileID: 11400000, guid: a484585002ceeb74d8e28cb97fa6a82a, type: 2}
 --- !u!1 &3265916355674129217
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,8 +333,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  indetifyChance: 1
+  indetifyChance: 2
   animChance: {fileID: 0}
+  statusGame: {fileID: 11400000, guid: a484585002ceeb74d8e28cb97fa6a82a, type: 2}
 --- !u!1 &6167740291703604087
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +746,7 @@ MonoBehaviour:
   isActive: 0
   indetifyChance: 1
   animChance: {fileID: 0}
+  statusGame: {fileID: 11400000, guid: a484585002ceeb74d8e28cb97fa6a82a, type: 2}
 --- !u!1 &6167740291956045870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,5 +1735,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  indetifyChance: 1
+  indetifyChance: 5
   animChance: {fileID: 0}
+  statusGame: {fileID: 11400000, guid: a484585002ceeb74d8e28cb97fa6a82a, type: 2}

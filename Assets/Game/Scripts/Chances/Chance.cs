@@ -8,11 +8,21 @@ public class Chance : MonoBehaviour
     public bool isActive;
     public int indetifyChance;
     public Animator animChance;
+    public StatusGame statusGame;
 
     private void Start()
     {
         animChance = GetComponent<Animator>();
-        isActive = true;
+        isActive = statusGame.chances[indetifyChance - 1];
+        Debug.Log("Iniciando..................");
+        if (!isActive)
+        {
+            SwitchAnimation("idle-desactive", true);
+        }
+        else
+        {
+            SwitchAnimation("idle-active", true);
+        }
     }
 
     public void SetActiveChance(bool value)
@@ -25,15 +35,9 @@ public class Chance : MonoBehaviour
         return isActive;
     }
 
-    public void SwitchAnimationEmptyTrue()
+    public void SwitchAnimation(string anim, bool active)
     {
-        StartCoroutine(DelayDesactiveChance());
-        animChance.SetBool("desactive", true);
-    }
-
-    IEnumerator DelayDesactiveChance()
-    {
-        yield return new WaitForSeconds(2);
+        animChance.SetBool(anim, active);
     }
 
 

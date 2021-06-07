@@ -10490,17 +10490,49 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
+      propertyPath: statusGame
+      value: 
+      objectReference: {fileID: 11400000, guid: a484585002ceeb74d8e28cb97fa6a82a, type: 2}
+    - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
       propertyPath: percentageLife
-      value: 80
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
       propertyPath: textScoreCoins
       value: 
       objectReference: {fileID: 985754001}
     - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
+      propertyPath: objectOutsideText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
+      propertyPath: resultsChanceText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
       propertyPath: textPercentageHeart
       value: 
       objectReference: {fileID: 1359570981}
+    - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
+      propertyPath: chances.Array.data[0]
+      value: 
+      objectReference: {fileID: 6167740292712887361}
+    - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
+      propertyPath: chances.Array.data[1]
+      value: 
+      objectReference: {fileID: 6167740292712887360}
+    - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
+      propertyPath: chances.Array.data[2]
+      value: 
+      objectReference: {fileID: 6167740292712887359}
+    - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
+      propertyPath: chances.Array.data[3]
+      value: 
+      objectReference: {fileID: 6167740292712887358}
+    - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
+      propertyPath: chances.Array.data[4]
+      value: 
+      objectReference: {fileID: 6167740292712887357}
     - target: {fileID: 180138478567164487, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -10662,6 +10694,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Question
       objectReference: {fileID: 0}
+    - target: {fileID: 1002921364260886173, guid: 7834b4001d7af874f97098cc7fa47d23, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1002921364615302426, guid: 7834b4001d7af874f97098cc7fa47d23, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10752,21 +10788,53 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1190937138}
     m_Modifications:
-    - target: {fileID: 1939963120742004527, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
-      propertyPath: indetifyChance
-      value: 3
+    - target: {fileID: 1633915205344540722, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3202328373537180671, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
-      propertyPath: indetifyChance
-      value: 4
+    - target: {fileID: 1633915205344540722, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4066689874523247154, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
-      propertyPath: indetifyChance
-      value: 5
+    - target: {fileID: 1633915205344540722, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5978480073039472095, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
-      propertyPath: indetifyChance
-      value: 2
+    - target: {fileID: 1633915205344540722, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633915205344540722, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_Maskable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633915205344540722, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633915205344540722, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633915205344540722, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633915205344540722, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633915205344540722, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3657852730606542795, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608935081072672750, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6167740291729724185, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -10875,6 +10943,22 @@ PrefabInstance:
     - target: {fileID: 6167740292502322849, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266307566459447322, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7741316682847678942, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7741316682847678942, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7741316682847678942, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
