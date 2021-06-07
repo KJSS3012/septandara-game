@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour
     [SerializeField] private Text textPercentageHeart;
 
     [Header("Chances Controller")]
+    public Text resultsChanceActive;
+    public Text resultsChanceDesactive;
     public Chance[] chances = new Chance[5];
     public int concecutiveCorrectQuestion;
 
@@ -52,29 +54,6 @@ public class GameController : MonoBehaviour
 
 
     //MECHANICAL CHANCES QUESTION
-    public void VerifyQuantChances(bool isMissChance)
-    {
-        //Verifica chances perdidas
-        for (int i = chances.Length - 1; i >= 0; i--)
-        {
-            if (chances[i].IsActiveChance() && isMissChance)
-            {
-                if (i == chances[i].indetifyChance - 1)
-                {
-                }
-            }
-        }
-
-        //Verifica chances ganhadas
-        for (int i = 0; i < chances.Length; i++)
-        {
-            if (!chances[i].IsActiveChance() && !isMissChance && concecutiveCorrectQuestion == 2)
-            {
-            }
-        }
-
-    }
-
     public void ActiveAnimChanceNow(int index, bool isDesactive)
     {
         if (isDesactive)
@@ -100,6 +79,9 @@ public class GameController : MonoBehaviour
                 ActiveAnimChanceNow(indexDesactive, true);
                 chances[indexDesactive].SetActiveChance(false);
                 statusGame.chances[indexDesactive] = false;
+                resultsChanceDesactive.gameObject.SetActive(true);
+                resultsChanceDesactive.text = "-1 Chance";
+                StartCoroutine(DelayDesactiveText(true));
                 break;
             }
             else if(!chances[indexActive].IsActiveChance() && !isMissChange && concecutiveCorrectQuestion == 2)
@@ -108,6 +90,9 @@ public class GameController : MonoBehaviour
                 chances[indexActive].SetActiveChance(true);
                 statusGame.chances[indexActive] = true;
                 concecutiveCorrectQuestion = 0;
+                resultsChanceActive.gameObject.SetActive(true);
+                resultsChanceActive.text = "+1 Chance";
+                StartCoroutine(DelayDesactiveText(false));
                 break;
             }
             Debug.Log("0-4 : [" + indexActive + "] 4-0: [" + indexDesactive + "]");
@@ -116,6 +101,18 @@ public class GameController : MonoBehaviour
         } while (indexDesactive>=0 && indexActive>0);
     }
 
+    IEnumerator DelayDesactiveText(bool alternative)
+    {
+        yield return new WaitForSeconds(2.5f);
+        if (alternative)
+        {
+            resultsChanceDesactive.gameObject.SetActive(false);
+        }
+        else
+        {
+            resultsChanceActive.gameObject.SetActive(false);
+        }
+    }
 
 
 
