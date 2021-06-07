@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class SpeechsDialogue : ScriptableObject
+public class SpeechsDT : ScriptableObject
 {
 
     public Speech[] speechsDialogueObjects;

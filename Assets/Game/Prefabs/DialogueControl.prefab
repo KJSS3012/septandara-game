@@ -44,8 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 0}
-  speechText: {fileID: 0}
-  actorNameText: {fileID: 0}
+  d_speechText: {fileID: 0}
+  d_actorNameText: {fileID: 0}
+  tutorialUI: {fileID: 0}
+  t_speechText: {fileID: 0}
   player: {fileID: 0}
   controlsUI: {fileID: 0}
   isPass: 0
+  isTutorial: 0
