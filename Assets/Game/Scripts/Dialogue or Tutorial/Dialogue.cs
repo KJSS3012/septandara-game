@@ -6,10 +6,11 @@ public class Dialogue : MonoBehaviour
 {
 
     [Header("Components")]
-    [SerializeField] public SpeechsDialogue speechsActors;
+    [SerializeField] public SpeechsDT speechsActors;
     [SerializeField] private bool isActiveDirect;
     private bool isCollisionPlayer;
     private bool isActiveDialogue;
+    public bool isTutorial;
 
 
     private void Start()
@@ -63,7 +64,7 @@ public class Dialogue : MonoBehaviour
     private void ShowDialogue()
     {
         Speech[] speechsDialogue = speechsActors.speechsDialogueObjects;
-        DialogueControl.instance.GetDataDialogues(speechsDialogue);
+        DialogueControl.instance.GetDataDialogues(speechsDialogue, isTutorial);
         isActiveDialogue = true;
     }
 
