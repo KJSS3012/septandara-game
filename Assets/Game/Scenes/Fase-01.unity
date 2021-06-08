@@ -9954,7 +9954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1809799165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11811,6 +11811,40 @@ PrefabInstance:
     - target: {fileID: 8993570888169979218, guid: da918c58e794cd44586c8455a7238347, type: 3}
       propertyPath: m_Name
       value: Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993570888169979218, guid: da918c58e794cd44586c8455a7238347, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993570888427423464, guid: da918c58e794cd44586c8455a7238347, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 65.7414
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993570888427423464, guid: da918c58e794cd44586c8455a7238347, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0000072718
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993570888427423464, guid: da918c58e794cd44586c8455a7238347, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -130.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993570888427423471, guid: da918c58e794cd44586c8455a7238347, type: 3}
+      propertyPath: m_Text
+      value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id ipsum
+        et ante maximus laoreet. Etiam feugiat ac ante vitae lobortis. Phasellus
+        vel ullamcorper turpis. Proin turpis nibh, dapibus quis volutpat quis, gravida.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993570888427423471, guid: da918c58e794cd44586c8455a7238347, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993570888427423471, guid: da918c58e794cd44586c8455a7238347, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993570888427423471, guid: da918c58e794cd44586c8455a7238347, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da918c58e794cd44586c8455a7238347, type: 3}
