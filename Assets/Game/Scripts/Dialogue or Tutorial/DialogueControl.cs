@@ -28,6 +28,7 @@ public class DialogueControl : MonoBehaviour
     private float writeSpeedSpeech = 0.06f;
     public bool isTutorial;
     public bool isDown;
+    public bool isDialogueEnabled;
 
     private void Start()
     {
@@ -49,7 +50,7 @@ public class DialogueControl : MonoBehaviour
             }
         }
 
-        if (index == length && !isPass)
+        if (index == length && !isPass && isDialogueEnabled)
         {
             if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
             {
@@ -64,6 +65,7 @@ public class DialogueControl : MonoBehaviour
                 controlsUI.SetActive(true);
                 player.RestartControls(true);
                 player.playerInput.enabled = true;
+                isDialogueEnabled = false;
             }
         }
     }
@@ -71,7 +73,6 @@ public class DialogueControl : MonoBehaviour
 
     public void ActiveDialogue(string actorName, string speech)
     {
-        Debug.Log(isTutorial);
         if (!isTutorial)
         {
             dialogueUI.SetActive(true);
@@ -87,6 +88,7 @@ public class DialogueControl : MonoBehaviour
         player.RestartControls(false);
         player.playerInput.enabled = false;
         controlsUI.SetActive(false);
+        isDialogueEnabled = true;
 
         StartCoroutine(WriteSpeech(speech));
     }
