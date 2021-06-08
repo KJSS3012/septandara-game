@@ -256,8 +256,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1.6213, y: -133}
-  m_SizeDelta: {x: 699.6875, y: 76.9291}
+  m_AnchoredPosition: {x: -0.0000072718, y: -130.6}
+  m_SizeDelta: {x: 699.6875, y: 65.7414}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8993570888427423470
 CanvasRenderer:
@@ -289,11 +289,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4260f02cada1c4b4785e0b0914561232, type: 3}
-    m_FontSize: 17
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 18
+    m_MinSize: 0
+    m_MaxSize: 24
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -302,9 +302,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id ipsum
     et ante maximus laoreet. Etiam feugiat ac ante vitae lobortis. Phasellus vel
-    ullamcorper turpis. Proin turpis nibh, dapibus quis volutpat quis, gravida eu
-    urna. Nunc id iaculis eros. Vestibulum at augue eget mauris posuere suscipit.
-    Aliquam dictum consectetur purus.
+    ullamcorper turpis. Proin turpis nibh, dapibus quis volutpat quis, gravida.
 --- !u!1 &8993570888883259025
 GameObject:
   m_ObjectHideFlags: 0

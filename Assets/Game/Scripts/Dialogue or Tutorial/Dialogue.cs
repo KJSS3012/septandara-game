@@ -53,7 +53,7 @@ public class Dialogue : MonoBehaviour
     private void IndirectTriggerActivate() //Ativar tando dentro do trigger e acionando uma tecla/botão na tela
     {
 
-        if (isCollisionPlayer && Input.GetKeyDown(KeyCode.S) && !isActiveDialogue)
+        if (isCollisionPlayer && (Input.GetKeyDown(KeyCode.S) || Input.GetMouseButtonDown(0)) && !isActiveDialogue)
         {
             ShowDialogue();
         }
