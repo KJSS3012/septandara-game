@@ -29,6 +29,7 @@ public class DialogueControl : MonoBehaviour
     public bool isTutorial;
     public bool isDown;
     public bool isDialogueEnabled;
+    public int contClick = 0;
 
     private void Start()
     {
@@ -42,15 +43,30 @@ public class DialogueControl : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
         {
+            contClick++;
             if (index < length - 1 && isPass)
             {
                 isPass = false;
                 index++;
+                d_speechText.text = "";
                 ActiveDialogue(speechs[index].actorName, speechs[index].speech);
+            }
+
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S) && isPass)
+            {
+                if (contClick == 1 && length != 1)
+                {
+                    d_actorNameText.text = speechs[index].actorName;
+                    d_speechText.text = speechs[index].speech;
+                    StartCoroutine(DelayNextSpeech());
+                    AlterVariables();
+                }
             }
         }
 
-        if (index == length && !isPass && isDialogueEnabled)
+        
+
+        if (index == length - 1 && !isPass && isDialogueEnabled)
         {
             if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
             {
@@ -84,44 +100,55 @@ public class DialogueControl : MonoBehaviour
             tutorialUI.SetActive(true);
             t_speechText.text = "";
         }
-        
+        Debug.Log("Active");
         player.RestartControls(false);
         player.playerInput.enabled = false;
         controlsUI.SetActive(false);
         isDialogueEnabled = true;
 
         StartCoroutine(WriteSpeech(speech));
+        
     }
 
     IEnumerator WriteSpeech(string speech)
     {
+        contClick = 0;
         foreach (char letter in speech.ToCharArray())
-        {
-            if (!isTutorial)
+        { 
+            if (d_speechText.text != speechs[index].speech)
             {
-                d_speechText.text += letter;
-                if (d_speechText.text == speechs[index].speech && length != 1)
+                if (!isTutorial)
                 {
-                    StartCoroutine(DelayNextSpeech());
+                    d_speechText.text += letter;
+                    if (d_speechText.text == speechs[index].speech && length != 1)
+                    {
+                        StartCoroutine(DelayNextSpeech());
+                    }
                 }
+                else
+                {
+                    t_speechText.text += letter;
+                    if (t_speechText.text == speechs[index].speech && length != 1)
+                    {
+                        StartCoroutine(DelayNextSpeech());
+                    }
+                }
+                yield return new WaitForSeconds(writeSpeedSpeech);
             }
             else
             {
-                t_speechText.text += letter;
-                if (t_speechText.text == speechs[index].speech && length != 1)
-                {
-                    StartCoroutine(DelayNextSpeech());
-                }
+                break;
             }
-            
-
-            yield return new WaitForSeconds(writeSpeedSpeech);
         }
+        AlterVariables();
 
+    }
+
+    public void AlterVariables()
+    {
         if (index == length - 1)
         {
             isPass = false;
-            index = length;
         }
         else
         {
@@ -140,7 +167,7 @@ public class DialogueControl : MonoBehaviour
         this.speechs = speechs;
         this.isTutorial = isTutorial;
         index = 0;
-        
+
         ActiveDialogue(speechs[index].actorName, speechs[index].speech);
     }
 
