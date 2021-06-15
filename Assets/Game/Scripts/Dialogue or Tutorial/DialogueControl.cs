@@ -11,10 +11,6 @@ public class DialogueControl : MonoBehaviour
     [SerializeField] private Text d_speechText;
     [SerializeField] private Text d_actorNameText;
 
-    [Header("Tutorial Controller")]
-    [SerializeField] private GameObject tutorialUI;
-    [SerializeField] private Text t_speechText;
-
     [Header("Data Extra")]
     public Player player;
     public GameObject controlsUI;
@@ -24,10 +20,8 @@ public class DialogueControl : MonoBehaviour
     private int length;
     private int index;
     private Speech[] speechs;
-    [SerializeField] private bool isPass;
-    private float writeSpeedSpeech = 0.06f;
-    public bool isTutorial;
-    public bool isDown;
+    private bool isPass;
+    [SerializeField] private float writeSpeedSpeech = 0.04f;
     public bool isDialogueEnabled;
     public int contClick = 0;
 
@@ -64,20 +58,11 @@ public class DialogueControl : MonoBehaviour
             }
         }
 
-        
-
         if (index == length - 1 && !isPass && isDialogueEnabled)
         {
             if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
             {
-                if (!isTutorial)
-                {
-                    dialogueUI.SetActive(false);
-                }
-                else
-                {
-                    tutorialUI.SetActive(false);
-                }
+                dialogueUI.SetActive(false);
                 controlsUI.SetActive(true);
                 player.RestartControls(true);
                 player.playerInput.enabled = true;
@@ -89,18 +74,9 @@ public class DialogueControl : MonoBehaviour
 
     public void ActiveDialogue(string actorName, string speech)
     {
-        if (!isTutorial)
-        {
-            dialogueUI.SetActive(true);
-            d_actorNameText.text = actorName;
-            d_speechText.text = "";
-        }
-        else
-        {
-            tutorialUI.SetActive(true);
-            t_speechText.text = "";
-        }
-        Debug.Log("Active");
+        dialogueUI.SetActive(true);
+        d_actorNameText.text = actorName;
+        d_speechText.text = "";
         player.RestartControls(false);
         player.playerInput.enabled = false;
         controlsUI.SetActive(false);
@@ -117,21 +93,10 @@ public class DialogueControl : MonoBehaviour
         { 
             if (d_speechText.text != speechs[index].speech)
             {
-                if (!isTutorial)
+                d_speechText.text += letter;
+                if (d_speechText.text == speechs[index].speech && length != 1)
                 {
-                    d_speechText.text += letter;
-                    if (d_speechText.text == speechs[index].speech && length != 1)
-                    {
-                        StartCoroutine(DelayNextSpeech());
-                    }
-                }
-                else
-                {
-                    t_speechText.text += letter;
-                    if (t_speechText.text == speechs[index].speech && length != 1)
-                    {
-                        StartCoroutine(DelayNextSpeech());
-                    }
+                    StartCoroutine(DelayNextSpeech());
                 }
                 yield return new WaitForSeconds(writeSpeedSpeech);
             }
@@ -161,11 +126,10 @@ public class DialogueControl : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
     }
 
-    public void GetDataDialogues(Speech[] speechs, bool isTutorial)
+    public void GetDataDialogues(Speech[] speechs)
     {
         length = speechs.Length;
         this.speechs = speechs;
-        this.isTutorial = isTutorial;
         index = 0;
 
         ActiveDialogue(speechs[index].actorName, speechs[index].speech);
