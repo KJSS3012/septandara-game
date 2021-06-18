@@ -7,7 +7,7 @@ public class Tutorial : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] public SpeechsDT speechsActors;
-    private bool isTutorialDialogue;
+    [SerializeField] private bool isTutorialDialogue;
     public LayerMask layer;
 
     private void Start()
@@ -20,14 +20,18 @@ public class Tutorial : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isTutorialDialogue = true;
+            Debug.Log("ENTROUUUUUUUUUUUUUUUU!");
         }
-        else
-        {
-            isTutorialDialogue = false;
-        }
-        Debug.Log(isTutorialDialogue);
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Debug.Log("SAIUUUUUUUUUUUUUUU!");
+            TutorialControl.instance.DesactiveUITutorial();
+        }
+    }
 
     public void Update()
     {
@@ -41,6 +45,7 @@ public class Tutorial : MonoBehaviour
     {
         Speech[] speechsDialogue = speechsActors.speechsDialogueObjects;
         TutorialControl.instance.ActiveTutorial(speechsDialogue);
+        isTutorialDialogue = false;
     }
 
 }

@@ -5646,7 +5646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!58 &461524420
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5676,6 +5676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speechsActors: {fileID: 11400000, guid: cc4eb0a853b495f4ba5130e6987c77d1, type: 2}
+  isTutorialDialogue: 0
   layer:
     serializedVersion: 2
     m_Bits: 128
@@ -6392,7 +6393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &741319790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6407,8 +6408,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialUI: {fileID: 2021452461}
   t_speechText: {fileID: 491598944}
-  player: {fileID: 1369645412}
-  controlsUI: {fileID: 259328668}
   isTutorialEnabled: 0
 --- !u!4 &741319791
 Transform:
@@ -7400,7 +7399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1026319896
 Transform:
   m_ObjectHideFlags: 0
@@ -10308,7 +10307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1809799165
 MonoBehaviour:
   m_ObjectHideFlags: 0

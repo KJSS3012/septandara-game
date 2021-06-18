@@ -10,19 +10,17 @@ public class TutorialControl : MonoBehaviour
     [SerializeField] private GameObject tutorialUI;
     [SerializeField] private Text t_speechText;
 
-    [Header("Data Extra")]
-    public Player player;
-    public GameObject controlsUI;
-
     public static TutorialControl instance;
     [SerializeField] private bool isTutorialEnabled = false;
+
+    private void Start()
+    {
+        instance = this;
+    }
 
     public void ActiveTutorial(Speech[] speechs)
     {
         tutorialUI.SetActive(true);
-        player.RestartControls(false);
-        player.playerInput.enabled = false;
-        controlsUI.SetActive(false);
         isTutorialEnabled = true;
         StartCoroutine(WriteSpeech(speechs[0].speech));
     }
@@ -33,19 +31,14 @@ public class TutorialControl : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
     }
 
-    private void Update()
+
+    public void DesactiveUITutorial()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
+        if (isTutorialEnabled)
         {
-            if (isTutorialEnabled)
-            {
-                tutorialUI.SetActive(false);
-                controlsUI.SetActive(true);
-                player.RestartControls(true);
-                player.playerInput.enabled = true;
-                isTutorialEnabled = false;
-                Debug.Log("Desative");
-            }
+            tutorialUI.SetActive(false);
+            isTutorialEnabled = false;
         }
     }
+
 }

@@ -48,7 +48,7 @@ public class DialogueControl : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S) && isPass)
             {
-                if (contClick == 1 && length != 1)
+                if (contClick == 1 && length != 1 && speechs != null)
                 {
                     d_actorNameText.text = speechs[index].actorName;
                     d_speechText.text = speechs[index].speech;
