@@ -20,7 +20,6 @@ public class Tutorial : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isTutorialDialogue = true;
-            Debug.Log("ENTROUUUUUUUUUUUUUUUU!");
         }
     }
 
@@ -28,7 +27,6 @@ public class Tutorial : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("SAIUUUUUUUUUUUUUUU!");
             TutorialControl.instance.DesactiveUITutorial();
         }
     }
