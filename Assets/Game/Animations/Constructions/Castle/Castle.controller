@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: open-door
+    m_ConditionEvent: open
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4694933402266854577}
@@ -73,7 +73,7 @@ AnimatorController:
   m_Name: Castle
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: open-door
+  - m_Name: open
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -101,7 +101,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: open-door
+    m_ConditionEvent: open
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8289947060913289280}

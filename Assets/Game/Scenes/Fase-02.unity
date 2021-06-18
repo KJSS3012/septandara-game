@@ -9314,6 +9314,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
+      propertyPath: fadeUI
+      value: 
+      objectReference: {fileID: 7526920982984695304}
+    - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
+      propertyPath: animFade
+      value: 
+      objectReference: {fileID: 7526920982984695303}
+    - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
       propertyPath: textScoreCoins
       value: 
       objectReference: {fileID: 985754001}
@@ -9680,6 +9688,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1216e8585ca8634db7c76690fa2ea49, type: 3}
+--- !u!95 &7526920982984695303 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1517253864869233921, guid: c1216e8585ca8634db7c76690fa2ea49, type: 3}
+  m_PrefabInstance: {fileID: 7526920982984695302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7526920982984695304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8680577048581221059, guid: c1216e8585ca8634db7c76690fa2ea49, type: 3}
+  m_PrefabInstance: {fileID: 7526920982984695302}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7916344826599240515
 PrefabInstance:
   m_ObjectHideFlags: 0
