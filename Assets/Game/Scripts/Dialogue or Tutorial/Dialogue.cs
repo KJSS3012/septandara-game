@@ -11,7 +11,6 @@ public class Dialogue : MonoBehaviour
     private bool isCollisionPlayer;
     private bool isActiveDialogue;
 
-
     private void Start()
     {
         isActiveDialogue = false;
@@ -58,7 +57,6 @@ public class Dialogue : MonoBehaviour
         }
 
     }
-
 
     private void ShowDialogue()
     {
