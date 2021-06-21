@@ -8652,6 +8652,9 @@ MonoBehaviour:
   sceneIndex: 1
   isMouseDown: 0
   isCollider: 0
+  player: {fileID: 1369645412}
+  animPlayer: {fileID: 1119181328}
+  controlsUI: {fileID: 259328668}
 --- !u!4 &1095920118 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8027227905159223804, guid: 96970de714cb9d64a84805f4e4e0cba5, type: 3}
@@ -8869,6 +8872,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8027227905159223804, guid: 96970de714cb9d64a84805f4e4e0cba5, type: 3}
   m_PrefabInstance: {fileID: 1115146630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1119181328 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9196055453543619394, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
+  m_PrefabInstance: {fileID: 9196055454116454712}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1123912578 stripped
 MonoBehaviour:

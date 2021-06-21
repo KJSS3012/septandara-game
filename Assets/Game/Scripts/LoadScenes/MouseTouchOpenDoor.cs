@@ -14,6 +14,7 @@ public class MouseTouchOpenDoor : MonoBehaviour
     public bool isCollider;
     public Player player;
     public Animator animPlayer;
+    public GameObject controlsUI;
 
 
     private void OnMouseDown()
@@ -47,6 +48,8 @@ public class MouseTouchOpenDoor : MonoBehaviour
         if (isMouseDown && isCollider)
         {
             animObject.SetBool("open", true);
+            player.RestartControls(false);
+            controlsUI.SetActive(false);
         }
     }
 
@@ -54,6 +57,7 @@ public class MouseTouchOpenDoor : MonoBehaviour
     {
         if (player.isGround)
         {
+            player.spritePlayer.flipX = false;
             fadeUI.SetActive(true);
             animFade.SetTrigger("out");
             animPlayer.SetBool("entry", true);
