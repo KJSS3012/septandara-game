@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private bool isWalk;
 
     [Header("Collider CheckGround")]
-    [SerializeField] private bool isGround;
+    public bool isGround;
     [SerializeField] private float radious;
     [SerializeField] private Transform groundCheckCollider;
 

@@ -12,6 +12,8 @@ public class MouseTouchOpenDoor : MonoBehaviour
     public int sceneIndex;
     public bool isMouseDown;
     public bool isCollider;
+    public Player player;
+    public Animator animPlayer;
 
 
     private void OnMouseDown()
@@ -50,8 +52,13 @@ public class MouseTouchOpenDoor : MonoBehaviour
 
     public void StartTransition()
     {
-        fadeUI.SetActive(true);
-        animFade.SetTrigger("out");
+        if (player.isGround)
+        {
+            fadeUI.SetActive(true);
+            animFade.SetTrigger("out");
+            animPlayer.SetBool("entry", true);
+        }
+        
     }
 
   
