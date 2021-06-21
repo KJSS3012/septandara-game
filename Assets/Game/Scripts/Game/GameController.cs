@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour
 
     public StatusGame statusGame;
 
+
     private void Start()
     {
         instance = this;

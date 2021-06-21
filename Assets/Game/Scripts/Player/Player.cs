@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private bool isWalk;
 
     [Header("Collider CheckGround")]
-    [SerializeField] private bool isGround;
+    public bool isGround;
     [SerializeField] private float radious;
     [SerializeField] private Transform groundCheckCollider;
 
@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rig2D;
     private Animator animPlayer;
-    private SpriteRenderer spritePlayer;
+    public SpriteRenderer spritePlayer;
     public PlayerInput playerInput;
     [SerializeField] private bool isActiveMoviment;
 
