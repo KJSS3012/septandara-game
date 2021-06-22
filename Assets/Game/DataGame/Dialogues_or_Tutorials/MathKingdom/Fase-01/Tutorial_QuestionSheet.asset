@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58873661c23a3ef4494e32f6447e6e60, type: 3}
-  m_Name: Tutorial_Coins
+  m_Name: Tutorial_QuestionSheet
   m_EditorClassIdentifier: 
   speechsDialogueObjects:
-  - actorName: Tutorial Coin
-    speech: "(Tutorial): Os n\xFAmeros ao lado do \xEDcone representam a quantidade
-      de moedas que o jogador encontrar\xE1 durante as fases."
-  - actorName: Tutorial Coin
-    speech: '(Tutorial): As moedas podem ser utilizadas como um saldo para comprar
-      itens com o mercador.'
+  - actorName: Tutorial Question
+    speech: "(Tutorial): Este item \xE9 uma folha de quest\xE3o, trazendo uma quest\xE3o
+      sobre determinado conte\xFAdo. Para cada pergunta, ter\xE1-se quatro alternativas,
+      onde apenas uma \xE9 a correta."

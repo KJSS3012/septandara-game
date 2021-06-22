@@ -14,10 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speechsDialogueObjects:
   - actorName: Tutorial Vida
-    speech: "(Tutorial): Esse cora\xE7\xE3o representa a vida da personagem."
-  - actorName: Tutorial Vida
-    speech: "(Tutorial): Para cada dano sofrido pela personagem \xE9 descontado uma
-      certa quantidade da sua vida."
-  - actorName: Tutorial Vida
-    speech: "(Tutorial): Caso a personagem sofra muito dano e a vida chegue a zero,
-      a fase ser\xE1 reiniciada."
+    speech: "(Tutorial): Esse cora\xE7\xE3o representa a vida da personagem. Para
+      cada dano sofrido \xE9 retirado 20% da vida."
