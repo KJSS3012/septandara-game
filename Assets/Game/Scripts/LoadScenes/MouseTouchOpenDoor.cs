@@ -16,7 +16,6 @@ public class MouseTouchOpenDoor : MonoBehaviour
     public Animator animPlayer;
     public GameObject controlsUI;
 
-
     private void OnMouseDown()
     {
         isMouseDown = true;
@@ -52,18 +51,5 @@ public class MouseTouchOpenDoor : MonoBehaviour
             controlsUI.SetActive(false);
         }
     }
-
-    public void StartTransition()
-    {
-        if (player.isGround)
-        {
-            player.spritePlayer.flipX = false;
-            fadeUI.SetActive(true);
-            animFade.SetTrigger("out");
-            animPlayer.SetBool("entry", true);
-        }
-        
-    }
-
   
 }

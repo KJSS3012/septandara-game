@@ -8567,7 +8567,6 @@ GameObject:
   - component: {fileID: 1094184482}
   - component: {fileID: 1094184484}
   - component: {fileID: 1094184485}
-  - component: {fileID: 1094184486}
   m_Layer: 0
   m_Name: Castle
   m_TagString: Untagged
@@ -8660,23 +8659,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!58 &1094184485
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1094184481}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.54, y: -0.9418154}
-  serializedVersion: 2
-  m_Radius: 1.2073145
---- !u!114 &1094184486
+--- !u!114 &1094184485
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8685,18 +8668,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1094184481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9c9d5f1f636c084e8cc906b4deadf09, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d995719edb345e41a10a5a79ed3a85f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeUI: {fileID: 7526920982984695304}
-  animFade: {fileID: 7526920982984695303}
-  animObject: {fileID: 1094184484}
-  sceneIndex: 1
-  isMouseDown: 0
-  isCollider: 0
-  player: {fileID: 1369645412}
-  animPlayer: {fileID: 1119181328}
-  controlsUI: {fileID: 259328668}
+  mtObj: {fileID: 2318287704142615142}
 --- !u!4 &1095920118 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8027227905159223804, guid: 96970de714cb9d64a84805f4e4e0cba5, type: 3}
@@ -12183,8 +12158,43 @@ PrefabInstance:
       propertyPath: m_Name
       value: indicator_00
       objectReference: {fileID: 0}
+    - target: {fileID: 7082357099512115333, guid: af46d937947f87341bf5daa47dc2e150, type: 3}
+      propertyPath: fadeUI
+      value: 
+      objectReference: {fileID: 7526920982984695304}
+    - target: {fileID: 7082357099512115333, guid: af46d937947f87341bf5daa47dc2e150, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1369645412}
+    - target: {fileID: 7082357099512115333, guid: af46d937947f87341bf5daa47dc2e150, type: 3}
+      propertyPath: animFade
+      value: 
+      objectReference: {fileID: 7526920982984695303}
+    - target: {fileID: 7082357099512115333, guid: af46d937947f87341bf5daa47dc2e150, type: 3}
+      propertyPath: animObject
+      value: 
+      objectReference: {fileID: 1094184484}
+    - target: {fileID: 7082357099512115333, guid: af46d937947f87341bf5daa47dc2e150, type: 3}
+      propertyPath: animPlayer
+      value: 
+      objectReference: {fileID: 1119181328}
+    - target: {fileID: 7082357099512115333, guid: af46d937947f87341bf5daa47dc2e150, type: 3}
+      propertyPath: controlsUI
+      value: 
+      objectReference: {fileID: 259328668}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af46d937947f87341bf5daa47dc2e150, type: 3}
+--- !u!114 &2318287704142615142 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7082357099512115333, guid: af46d937947f87341bf5daa47dc2e150, type: 3}
+  m_PrefabInstance: {fileID: 2318287704142615139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c9d5f1f636c084e8cc906b4deadf09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4235966405089422577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12339,7 +12349,7 @@ PrefabInstance:
     - target: {fileID: 6334816320934544346, guid: c1216e8585ca8634db7c76690fa2ea49, type: 3}
       propertyPath: mtObj
       value: 
-      objectReference: {fileID: 1094184486}
+      objectReference: {fileID: 2318287704142615142}
     - target: {fileID: 7322828169014610069, guid: c1216e8585ca8634db7c76690fa2ea49, type: 3}
       propertyPath: m_Controller
       value: 
@@ -12468,10 +12478,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9087262644688704120, guid: c1216e8585ca8634db7c76690fa2ea49, type: 3}
-      propertyPath: mtObj
-      value: 
-      objectReference: {fileID: 1094184486}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1216e8585ca8634db7c76690fa2ea49, type: 3}
 --- !u!95 &7526920982984695303 stripped
