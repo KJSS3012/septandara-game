@@ -9,12 +9,18 @@ public class MouseTouchOpenDoor : MonoBehaviour
     public GameObject fadeUI;
     public Animator animFade;
     [SerializeField] private Animator animObject;
-    public int sceneIndex;
     public bool isMouseDown;
     public bool isCollider;
     public Player player;
     public Animator animPlayer;
     public GameObject controlsUI;
+
+    private void Start()
+    {
+        player = GameObject.FindObjectOfType<Player>();
+        animPlayer = player.GetComponent<Animator>();
+        controlsUI = GameObject.FindGameObjectWithTag("Controls");
+    }
 
     private void OnMouseDown()
     {

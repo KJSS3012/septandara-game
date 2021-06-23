@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mtObj: {fileID: 0}
+  activatorObjs: []
 --- !u!1 &7526920984100658216
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mtObj: {fileID: 0}
+  activatorObjs:
+  - {fileID: 0}
 --- !u!95 &1517253864869233921
 Animator:
   serializedVersion: 3

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Activator : MonoBehaviour
 {
     public MouseTouchOpenDoor mtObj;
+    public int sceneIndex;
 
     public void StartTransition()
     {
