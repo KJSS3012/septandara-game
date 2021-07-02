@@ -25,9 +25,16 @@ public class CameraFollow : MonoBehaviour
         }
         else
         {
-            VerticalFollow();
+            Follow();
         }
+        
+    }
 
+    public void Follow()
+    {
+        Vector3 startPosition = new Vector3(target.position.x + offset_X, target.position.y + offset_Y, -1f);
+        Vector3 smoothPosition = Vector3.Lerp(transform.position, startPosition, smoothSpeed);
+        transform.position = smoothPosition;
     }
 
     public void HorizontalFollow()
@@ -37,11 +44,5 @@ public class CameraFollow : MonoBehaviour
         transform.position = smoothPosition;
     }
 
-    public void VerticalFollow()
-    {
-        Vector3 startPosition = new Vector3(transform.position.x, target.position.y+ offset_Y, -1f);
-        Vector3 smoothPosition = Vector3.Lerp(transform.position, startPosition, smoothSpeed);
-        transform.position = smoothPosition;
-    }
 
 }

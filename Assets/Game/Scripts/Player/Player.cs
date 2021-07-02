@@ -113,6 +113,18 @@ public class Player : MonoBehaviour
         isTouchingWall = Physics2D.OverlapBox(wallCheckCollider.position, new Vector3(wallDistance / 2, wallDistance, 0), wallDistance, groundLayer);
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.collider.CompareTag("PlataformFloating"))
+        {
+            transform.parent = other.gameObject.transform;
+        }
+        else
+        {
+            transform.parent = null;
+        }
+    }
+
     public void RestartControls(bool value)
     {
         isActiveMoviment = value;

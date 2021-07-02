@@ -47,6 +47,11 @@ public class PlayerInput : MonoBehaviour
         jump = true;
     }
 
+    public void IsJumpFalse()
+    {
+        jump = false;
+    }
+
     public void MoveRightTrue()
     {
         moveRight = true;
