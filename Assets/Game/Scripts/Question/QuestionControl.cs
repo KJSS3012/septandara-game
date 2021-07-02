@@ -20,10 +20,8 @@ public class QuestionControl : MonoBehaviour
     public GameObject controlsUI;
 
     private int alternativeCorrect;
-    public int contActivated;
-    public bool isMissChance;
-
-
+    private int contActivated;
+    private bool isMissChance;
     public static QuestionControl instance;
     [SerializeField] private QuestionsLevel questionsLevel;
 
@@ -36,7 +34,6 @@ public class QuestionControl : MonoBehaviour
         //zerar o isActivated de todas as questões quando iniciar o objeto
         ClearActivatedData();
     }
-
 
     public void ActiveQuestion(QuestionSheet question)
     {
@@ -73,7 +70,6 @@ public class QuestionControl : MonoBehaviour
         return contActivated;
     }
 
-
     public void ClickAlternative(int valueAlternative)
     {
         if (alternativeCorrect == valueAlternative)
@@ -107,7 +103,5 @@ public class QuestionControl : MonoBehaviour
         questionUI.SetActive(false);
         resultsClick.gameObject.SetActive(false);
     }
-
-    
 
 }
