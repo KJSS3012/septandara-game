@@ -2,12 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(SpriteRenderer))]
-[RequireComponent(typeof(PlayerInput))]
-[RequireComponent(typeof(Physics2D))]
-
 public class Player : MonoBehaviour
 {
     [Header("Basic Components")]
@@ -15,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpForce = 280;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private bool isWalk;
+    [SerializeField] private bool isActiveMoviment;
 
     [Header("Collider CheckGround")]
     public bool isGround;
@@ -30,7 +25,6 @@ public class Player : MonoBehaviour
     private Animator animPlayer;
     public SpriteRenderer spritePlayer;
     public PlayerInput playerInput;
-    [SerializeField] private bool isActiveMoviment;
 
     void Start()
     {
@@ -113,6 +107,7 @@ public class Player : MonoBehaviour
         isTouchingWall = Physics2D.OverlapBox(wallCheckCollider.position, new Vector3(wallDistance / 2, wallDistance, 0), wallDistance, groundLayer);
     }
 
+    //Colisão com componentes/objetos do game
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.CompareTag("PlataformFloating"))
@@ -125,6 +120,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    //Reiniciar controles da personagem quando ela for desativada
     public void RestartControls(bool value)
     {
         isActiveMoviment = value;

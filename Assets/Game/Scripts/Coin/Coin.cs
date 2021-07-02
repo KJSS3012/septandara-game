@@ -5,7 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     [Header("Coin")]
-    [SerializeField] private int valueCoin;
+    [SerializeField] private int valueCoin = 10;
     private Animator animCoin;
     public bool animSpin;
 
@@ -22,7 +22,6 @@ public class Coin : MonoBehaviour
             animCoin.SetBool("other_spin", true);
         }
     }
-
 
     private void ColectCoin()
     {
@@ -41,7 +40,5 @@ public class Coin : MonoBehaviour
             ColectCoin();
         }
     }
-
-
 
 }

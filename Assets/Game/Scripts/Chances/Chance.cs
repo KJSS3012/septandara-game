@@ -39,6 +39,4 @@ public class Chance : MonoBehaviour
         animChance.SetBool(anim, active);
     }
 
-
-
 }

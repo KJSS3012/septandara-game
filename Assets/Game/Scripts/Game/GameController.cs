@@ -21,9 +21,7 @@ public class GameController : MonoBehaviour
     public int concecutiveCorrectQuestion;
 
     public static GameController instance;
-
     public StatusGame statusGame;
-
 
     private void Start()
     {
@@ -113,7 +111,5 @@ public class GameController : MonoBehaviour
             resultsChanceActive.gameObject.SetActive(false);
         }
     }
-
-
 
 }

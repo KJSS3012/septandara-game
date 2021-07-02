@@ -6,10 +6,10 @@ public class CameraFollow : MonoBehaviour
 {
 
     private Transform target;
-    public float smoothSpeed = 0.08f;
-    public float offset_X;
-    public float offset_Y;
-    public bool isFollowX;
+    [SerializeField] private float smoothSpeed = 0.08f;
+    [SerializeField] private float offset_X = 0;
+    [SerializeField] private float offset_Y = 1;
+    [SerializeField] private bool isFollowX = false;
 
     void Start()
     {
