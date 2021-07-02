@@ -99,6 +99,7 @@ public class Player : MonoBehaviour
         if (isGround)
         {
             animPlayer.SetBool("jump", false);
+            Debug.Log("eiiiiiiiiiiiiiiiiiii");
         }
     }
 
@@ -112,6 +113,7 @@ public class Player : MonoBehaviour
     {
         if (other.collider.CompareTag("PlataformFloating"))
         {
+            Debug.Log("oiiiiiiiiiiiiiii");
             transform.parent = other.gameObject.transform;
         }
         else
