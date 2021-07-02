@@ -40,14 +40,6 @@ public class MouseTouchOpenDoor : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            isCollider = false;
-        }
-    }
-
     private void Update()
     {
         if (isMouseDown && isCollider)

@@ -10,20 +10,19 @@ public class DialogueControl : MonoBehaviour
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private Text d_speechText;
     [SerializeField] private Text d_actorNameText;
-
+    [SerializeField] private float writeSpeedSpeech = 0.04f;
+    [SerializeField] private bool isDialogueEnabled;
+    
     [Header("Data Extra")]
     public Player player;
     public GameObject controlsUI;
 
     public static DialogueControl instance;
-
     private int length;
     private int index;
     private Speech[] speechs;
     private bool isPass;
-    [SerializeField] private float writeSpeedSpeech = 0.04f;
-    public bool isDialogueEnabled;
-    public int contClick = 0;
+    private int contClick = 0;
 
     private void Start()
     {
@@ -31,7 +30,6 @@ public class DialogueControl : MonoBehaviour
         index = 0;
         length = -1;
     }
-
 
     private void Update()
     {
@@ -70,7 +68,6 @@ public class DialogueControl : MonoBehaviour
             }
         }
     }
-
 
     public void ActiveDialogue(string actorName, string speech)
     {
