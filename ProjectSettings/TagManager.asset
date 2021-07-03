@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Controls
+  - PlataformFloating
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -61,4 +64,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1272341757
+    locked: 0
+  - name: Icons
+    uniqueID: 415391459
     locked: 0

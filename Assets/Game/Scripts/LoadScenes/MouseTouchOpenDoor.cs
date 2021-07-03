@@ -9,13 +9,18 @@ public class MouseTouchOpenDoor : MonoBehaviour
     public GameObject fadeUI;
     public Animator animFade;
     [SerializeField] private Animator animObject;
-    public int sceneIndex;
     public bool isMouseDown;
     public bool isCollider;
     public Player player;
     public Animator animPlayer;
     public GameObject controlsUI;
 
+    private void Start()
+    {
+        player = GameObject.FindObjectOfType<Player>();
+        animPlayer = player.GetComponent<Animator>();
+        controlsUI = GameObject.FindGameObjectWithTag("Controls");
+    }
 
     private void OnMouseDown()
     {
@@ -35,14 +40,6 @@ public class MouseTouchOpenDoor : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            isCollider = false;
-        }
-    }
-
     private void Update()
     {
         if (isMouseDown && isCollider)
@@ -52,18 +49,5 @@ public class MouseTouchOpenDoor : MonoBehaviour
             controlsUI.SetActive(false);
         }
     }
-
-    public void StartTransition()
-    {
-        if (player.isGround)
-        {
-            player.spritePlayer.flipX = false;
-            fadeUI.SetActive(true);
-            animFade.SetTrigger("out");
-            animPlayer.SetBool("entry", true);
-        }
-        
-    }
-
   
 }

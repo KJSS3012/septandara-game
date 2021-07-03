@@ -6,7 +6,6 @@ public class Life : MonoBehaviour
 {
 
     [Header("Heart Life")]
-
     private int partLife = 20; //20%, ou seja, serão 5 vidas no total
     private Animator animHeartLife;
 
@@ -35,6 +34,5 @@ public class Life : MonoBehaviour
             ColectHeart();
         }
     }
-
 
 }

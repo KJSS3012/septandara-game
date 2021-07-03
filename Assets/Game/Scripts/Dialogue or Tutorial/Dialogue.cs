@@ -65,6 +65,4 @@ public class Dialogue : MonoBehaviour
         isActiveDialogue = true;
     }
 
-    
-
 }

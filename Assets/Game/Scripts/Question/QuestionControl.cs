@@ -15,15 +15,12 @@ public class QuestionControl : MonoBehaviour
     public Text alternative_D;
     public Text resultsClick;
     public Image imageQuestion;
-    public Animator animQuestion;
-    public Player player;
-    public GameObject controlsUI;
-
     private int alternativeCorrect;
-    public int contActivated;
-    public bool isMissChance;
-
-
+    private int contActivated;
+    private bool isMissChance;
+    private Player player;
+    private GameObject controlsUI;
+    private Animator animQuestion;
     public static QuestionControl instance;
     [SerializeField] private QuestionsLevel questionsLevel;
 
@@ -32,11 +29,13 @@ public class QuestionControl : MonoBehaviour
         instance = this;
         contActivated = 0;
         isMissChance = false;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        controlsUI = GameObject.FindGameObjectWithTag("Controls");
+        animQuestion = questionUI.GetComponent<Animator>();
 
         //zerar o isActivated de todas as questões quando iniciar o objeto
         ClearActivatedData();
     }
-
 
     public void ActiveQuestion(QuestionSheet question)
     {
@@ -73,7 +72,6 @@ public class QuestionControl : MonoBehaviour
         return contActivated;
     }
 
-
     public void ClickAlternative(int valueAlternative)
     {
         if (alternativeCorrect == valueAlternative)
@@ -107,7 +105,5 @@ public class QuestionControl : MonoBehaviour
         questionUI.SetActive(false);
         resultsClick.gameObject.SetActive(false);
     }
-
-    
 
 }
