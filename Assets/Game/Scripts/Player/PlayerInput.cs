@@ -31,7 +31,7 @@ public class PlayerInput : MonoBehaviour
     {
         bool inputJump = Input.GetKeyDown(KeyCode.Space);
 
-        if (jump) 
+        if (jump && !inputJump) 
         {
             jump = false;
             return !jump;

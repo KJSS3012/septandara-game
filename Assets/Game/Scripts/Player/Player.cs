@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
     {
         if (isActiveMoviment)
         {
+            CheckGround();
             MovePlayer();
             JumpPlayer();
             CheckWall();
@@ -72,8 +73,6 @@ public class Player : MonoBehaviour
 
     private void JumpPlayer()
     {
-        CheckGround();
-
         if (isTouchingWall && isWalk)
         {
             speedMove = 0;
@@ -99,7 +98,6 @@ public class Player : MonoBehaviour
         if (isGround)
         {
             animPlayer.SetBool("jump", false);
-            Debug.Log("eiiiiiiiiiiiiiiiiiii");
         }
     }
 
@@ -113,7 +111,6 @@ public class Player : MonoBehaviour
     {
         if (other.collider.CompareTag("PlataformFloating"))
         {
-            Debug.Log("oiiiiiiiiiiiiiii");
             transform.parent = other.gameObject.transform;
         }
         else
