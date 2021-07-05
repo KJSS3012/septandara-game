@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
     {
         if (isActiveMoviment)
         {
+            CheckGround();
             MovePlayer();
             JumpPlayer();
             CheckWall();
@@ -72,8 +73,6 @@ public class Player : MonoBehaviour
 
     private void JumpPlayer()
     {
-        CheckGround();
-
         if (isTouchingWall && isWalk)
         {
             speedMove = 0;
