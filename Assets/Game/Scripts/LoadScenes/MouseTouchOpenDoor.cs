@@ -46,7 +46,7 @@ public class MouseTouchOpenDoor : MonoBehaviour
     {
         if (isMouseDown && isCollider)
         {
-            animObject.SetBool("open", true);
+            animObject.SetTrigger("open");
             player.RestartControls(false);
             controlsUI.SetActive(false);
         }
