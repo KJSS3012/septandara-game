@@ -60,13 +60,20 @@ public class DialogueControl : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
             {
-                dialogueUI.SetActive(false);
-                controlsUI.SetActive(true);
-                player.RestartControls(true);
-                player.playerInput.enabled = true;
-                isDialogueEnabled = false;
+                FinalyDialogue();
             }
         }
+    }
+
+
+    private void FinalyDialogue()
+    {
+        dialogueUI.SetActive(false);
+        controlsUI.SetActive(true);
+        player.RestartControls(true);
+        player.playerInput.enabled = true;
+        isDialogueEnabled = false;
+        GameController.instance.ReactiveChances();
     }
 
     public void ActiveDialogue(string actorName, string speech)

@@ -67,6 +67,14 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void ReactiveChances()
+    {
+        for (int i = 0; i < chances.Length; i++)
+        {
+            chances[i].StartUp();
+        }
+    }
+
     public void VerifyChances(bool isMissChange)
     {
         int indexDesactive = chances.Length-1;

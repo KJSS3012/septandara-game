@@ -12,6 +12,11 @@ public class Chance : MonoBehaviour
 
     private void Start()
     {
+        StartUp();
+    }
+
+    public void StartUp()
+    {
         animChance = GetComponent<Animator>();
         isActive = statusGame.chances[indetifyChance - 1];
         if (!isActive)
