@@ -130,6 +130,8 @@ public class Player : MonoBehaviour
 
             animPlayer.SetBool("walk", false);
             animPlayer.SetBool("jump", false);
+
+            playerInput.enabled = value;
         }
     }
 

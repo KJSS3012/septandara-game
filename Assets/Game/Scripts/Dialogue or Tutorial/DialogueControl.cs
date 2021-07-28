@@ -15,7 +15,7 @@ public class DialogueControl : MonoBehaviour
     
     [Header("Data Extra")]
     public Player player;
-    public GameObject controlsUI;
+    public VisibilityControls vsControls;
 
     public static DialogueControl instance;
     private int length;
@@ -29,6 +29,7 @@ public class DialogueControl : MonoBehaviour
         instance = this;
         index = 0;
         length = -1;
+        vsControls = GameObject.FindGameObjectWithTag("Controls").GetComponent<VisibilityControls>();
     }
 
     private void Update()
@@ -69,10 +70,8 @@ public class DialogueControl : MonoBehaviour
     private void FinalyDialogue()
     {
         dialogueUI.SetActive(false);
-        controlsUI.SetActive(true);
-        player.RestartControls(true);
-        player.playerInput.enabled = true;
         isDialogueEnabled = false;
+        vsControls.OpacityControls(1f, true);
         GameController.instance.ReactiveChances();
     }
 
@@ -81,9 +80,7 @@ public class DialogueControl : MonoBehaviour
         dialogueUI.SetActive(true);
         d_actorNameText.text = actorName;
         d_speechText.text = "";
-        player.RestartControls(false);
-        player.playerInput.enabled = false;
-        controlsUI.SetActive(false);
+        vsControls.OpacityControls(0.5f, false);
         isDialogueEnabled = true;
 
         StartCoroutine(WriteSpeech(speech));
