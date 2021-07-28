@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class MouseTouchOpenDoor : MonoBehaviour
+public class MouseTouchLoadScene : MonoBehaviour
 {
 
     public GameObject fadeUI;
@@ -14,12 +14,15 @@ public class MouseTouchOpenDoor : MonoBehaviour
     public Player player;
     public Animator animPlayer;
     public GameObject controlsUI;
+    [SerializeField] private ObjectActivator objAct;
 
     private void Start()
     {
         player = GameObject.FindObjectOfType<Player>();
         animPlayer = player.GetComponent<Animator>();
         controlsUI = GameObject.FindGameObjectWithTag("Controls");
+        objAct = GetComponentInParent<ObjectActivator>();
+        animObject = objAct.GetComponent<Animator>();
     }
 
     private void OnMouseDown()
@@ -49,7 +52,10 @@ public class MouseTouchOpenDoor : MonoBehaviour
             animObject.SetTrigger("open");
             player.RestartControls(false);
             controlsUI.SetActive(false);
+            objAct.Active();
         }
     }
-  
+
+    
+
 }
