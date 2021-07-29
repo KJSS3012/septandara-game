@@ -20,7 +20,7 @@ public class QuestionControl : MonoBehaviour
     private int contActivated;
     private bool isMissChance;
     private Player player;
-    private GameObject controlsUI;
+    public VisibilityControls vsControls;
     public static QuestionControl instance;
     [SerializeField] private QuestionsLevel questionsLevel;
 
@@ -30,7 +30,7 @@ public class QuestionControl : MonoBehaviour
         contActivated = 0;
         isMissChance = false;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        controlsUI = GameObject.FindGameObjectWithTag("Controls");
+        vsControls = GameObject.FindGameObjectWithTag("Controls").GetComponent<VisibilityControls>();
 
         //zerar o isActivated de todas as questões quando iniciar o objeto
         ClearActivatedData();
@@ -39,10 +39,7 @@ public class QuestionControl : MonoBehaviour
     public void ActiveQuestion(QuestionSheet question)
     {
         questionUI.SetActive(true);
-
-        player.RestartControls(false);
-        player.playerInput.enabled = false;
-        controlsUI.SetActive(false);
+        vsControls.OpacityControls(0.5f, false);
 
         enunciatedText.text = question.enunciated;
         alternative_A.text = question.alternative_A;
@@ -91,9 +88,7 @@ public class QuestionControl : MonoBehaviour
         StartCoroutine(DelayDesactiveQuestion());
 
         animQuestion.SetBool("exit", true);
-        controlsUI.SetActive(true);
-        player.RestartControls(true);
-        player.playerInput.enabled = true;
+        vsControls.OpacityControls(1f, true);
 
         GameController.instance.VerifyChances(isMissChance);
     }

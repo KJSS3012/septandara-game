@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2318287704112978435}
   - component: {fileID: 2318287704112978492}
   - component: {fileID: 2318287704112978434}
-  - component: {fileID: 7082357099512115333}
   - component: {fileID: 3877030370550364549}
+  - component: {fileID: 9044545772556191850}
   m_Layer: 0
   m_Name: indicator_00
   m_TagString: Untagged
@@ -104,26 +104,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7082357099512115333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2318287704112978493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9c9d5f1f636c084e8cc906b4deadf09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeUI: {fileID: 0}
-  animFade: {fileID: 0}
-  animObject: {fileID: 0}
-  isMouseDown: 0
-  isCollider: 0
-  player: {fileID: 0}
-  animPlayer: {fileID: 0}
-  controlsUI: {fileID: 0}
 --- !u!70 &3877030370550364549
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -140,3 +120,24 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0000025638474, y: -1.3220377}
   m_Size: {x: 1.2129408, y: 3.6440759}
   m_Direction: 0
+--- !u!114 &9044545772556191850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2318287704112978493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16a8019bdbd7704c9258c6259f90786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeUI: {fileID: 0}
+  animFade: {fileID: 0}
+  animObject: {fileID: 0}
+  isMouseDown: 0
+  isCollider: 0
+  player: {fileID: 0}
+  animPlayer: {fileID: 0}
+  controlsUI: {fileID: 0}
+  objAct: {fileID: 0}
