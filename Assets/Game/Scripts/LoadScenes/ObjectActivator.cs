@@ -8,13 +8,9 @@ public class ObjectActivator : MonoBehaviour
     public MouseTouchLoadScene mtLS;
     public int sceneIndex;
 
-    private void Start()
-    {
-        mtLS = GetComponentInChildren<MouseTouchLoadScene>();
-    }
-
     public void Active()
     {
+        mtLS = GetComponentInChildren<MouseTouchLoadScene>();
         StartCoroutine(Delay());
     }
 

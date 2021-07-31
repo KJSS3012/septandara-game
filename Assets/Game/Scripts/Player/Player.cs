@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
             speedMove = 2.5f;
         }
 
-        if (playerInput.IsJump())
+        if (playerInput.IsJumpButtonInterface() || playerInput.IsJumpKeyboard())
         {
             if (isGround)
             {

@@ -19,17 +19,15 @@ public class QuestionControl : MonoBehaviour
     private int alternativeCorrect;
     private int contActivated;
     private bool isMissChance;
-    private Player player;
-    public VisibilityControls vsControls;
+    private VisibilityControls vsControls;
     public static QuestionControl instance;
-    [SerializeField] private QuestionsLevel questionsLevel;
+    public QuestionsLevel questionsLevel;
 
     private void Start()
     {
         instance = this;
         contActivated = 0;
         isMissChance = false;
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         vsControls = GameObject.FindGameObjectWithTag("Controls").GetComponent<VisibilityControls>();
 
         //zerar o isActivated de todas as questões quando iniciar o objeto

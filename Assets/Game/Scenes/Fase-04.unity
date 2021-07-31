@@ -2035,6 +2035,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6973434446381592283, guid: 84a3097b92721ec4f9ef0a0045abfc5b, type: 3}
   m_PrefabInstance: {fileID: 177845034}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &191023170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5954507016242484454, guid: e12b4b71fac1222409eed5f43a6f0376, type: 3}
+  m_PrefabInstance: {fileID: 1830821531}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &191023172 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5954507016242484451, guid: e12b4b71fac1222409eed5f43a6f0376, type: 3}
+  m_PrefabInstance: {fileID: 1830821531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &206243776
 GameObject:
   m_ObjectHideFlags: 0
@@ -9727,6 +9737,14 @@ PrefabInstance:
       propertyPath: animObject
       value: 
       objectReference: {fileID: 1335200688}
+    - target: {fileID: 9044545772556191850, guid: af46d937947f87341bf5daa47dc2e150, type: 3}
+      propertyPath: fadeUI
+      value: 
+      objectReference: {fileID: 191023170}
+    - target: {fileID: 9044545772556191850, guid: af46d937947f87341bf5daa47dc2e150, type: 3}
+      propertyPath: animFade
+      value: 
+      objectReference: {fileID: 191023172}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af46d937947f87341bf5daa47dc2e150, type: 3}
 --- !u!4 &1239645517 stripped
@@ -9999,11 +10017,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1335200686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d995719edb345e41a10a5a79ed3a85f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e9239fb42341e04086edefd21f9e652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mtObj: {fileID: 0}
-  sceneIndex: 0
+  mtLS: {fileID: 1239645518}
+  sceneIndex: 4
 --- !u!95 &1335200688
 Animator:
   serializedVersion: 3
@@ -11637,15 +11655,19 @@ PrefabInstance:
     - target: {fileID: 5492418168447312433, guid: e12b4b71fac1222409eed5f43a6f0376, type: 3}
       propertyPath: activatorObjs.Array.data[0]
       value: 
-      objectReference: {fileID: 1335200687}
+      objectReference: {fileID: 0}
     - target: {fileID: 5492418168447312433, guid: e12b4b71fac1222409eed5f43a6f0376, type: 3}
       propertyPath: activatorObjs.Array.data[1]
       value: 
-      objectReference: {fileID: 1335200687}
+      objectReference: {fileID: 0}
     - target: {fileID: 5954507016242484452, guid: e12b4b71fac1222409eed5f43a6f0376, type: 3}
       propertyPath: mtLS
       value: 
       objectReference: {fileID: 1239645518}
+    - target: {fileID: 5954507016242484452, guid: e12b4b71fac1222409eed5f43a6f0376, type: 3}
+      propertyPath: objsActives.Array.data[0]
+      value: 
+      objectReference: {fileID: 1335200687}
     - target: {fileID: 5954507016242484453, guid: e12b4b71fac1222409eed5f43a6f0376, type: 3}
       propertyPath: m_RootOrder
       value: 4
