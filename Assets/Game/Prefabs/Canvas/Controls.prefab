@@ -528,7 +528,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 9196055453543619399, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
           m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
           m_MethodName: MoveLeftTrue
           m_Mode: 1
@@ -544,7 +544,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 9196055453543619399, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
           m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
           m_MethodName: MoveLeftFalse
           m_Mode: 1
@@ -1035,7 +1035,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 9196055453543619399, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
           m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
           m_MethodName: MoveRightTrue
           m_Mode: 1
@@ -1051,7 +1051,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 9196055453543619399, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
           m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
           m_MethodName: MoveRightFalse
           m_Mode: 1
@@ -1396,7 +1396,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 9196055453543619399, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
           m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
           m_MethodName: IsJumpTrue
           m_Mode: 1
@@ -1483,6 +1483,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlsUI: {fileID: 0}
+  value: 0
+  player: {fileID: 0}
 --- !u!1 &6167740292504993619
 GameObject:
   m_ObjectHideFlags: 0

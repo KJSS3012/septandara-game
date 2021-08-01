@@ -27,19 +27,20 @@ public class PlayerInput : MonoBehaviour
         return new Vector3(horizontalInput, 0f, 0f);
     }
     
-    public bool IsJump()
+    public bool IsJumpButtonInterface()
     {
-        bool inputJump = Input.GetKeyDown(KeyCode.Space);
-
-        if (jump && !inputJump) 
+        if (jump) 
         {
             jump = false;
             return !jump;
         }
-        else
-        {
-            return inputJump;
-        }
+        return false;
+    }
+
+    public bool IsJumpKeyboard()
+    {
+        bool inputJump = Input.GetKey(KeyCode.Space);
+        return inputJump;
     }
 
     public void IsJumpTrue()

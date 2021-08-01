@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-
+    
     [Header("Coin Controller")]
     public int totalScoreCoins;
     [SerializeField] private Text textScoreCoins;
