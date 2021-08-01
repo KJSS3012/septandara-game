@@ -17779,12 +17779,48 @@ PrefabInstance:
       value: MoveRightFalse
       objectReference: {fileID: 0}
     - target: {fileID: 6167740292327169916, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167740292327169916, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 9196055453543619399, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
     - target: {fileID: 6167740292327169916, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167740292327169916, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: IsJumpTrue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167740292327169917, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167740292327169917, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167740292327169917, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9196055454116454713}
+    - target: {fileID: 6167740292327169917, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167740292327169917, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IsJumpTrue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167740292327169917, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerInput, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167740292327169917, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6167740292502322848, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
       propertyPath: m_Name
