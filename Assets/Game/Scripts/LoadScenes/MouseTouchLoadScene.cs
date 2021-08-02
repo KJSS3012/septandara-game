@@ -47,7 +47,7 @@ public class MouseTouchLoadScene : MonoBehaviour
 
     private void Update()
     {
-        if (isMouseDown && isCollider)
+        if (isMouseDown && isCollider && player.isGround)
         {
             animObject.SetTrigger("open");
             player.RestartControls(false);
