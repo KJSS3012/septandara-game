@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489efddbc370a34d85c62b4e63ed2aa, type: 3}
+  m_Name: Fase-02
+  m_EditorClassIdentifier: 
+  questions:
+  - enunciated: "Em um quarto escuro h\xE1 uma gaveta com meias brancas e meias pretas.
+      Qual \xE9 o menor n\xFAmero de meias que voc\xEA precisa retirar para ter certeza
+      de que tirou um par da mesma cor?"
+    alternative_A: 2
+    alternative_B: 3
+    alternative_C: 4
+    alternative_D: 5
+    alternativeCorrect: 2
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Algumas garotas estavam dan\xE7ando em roda. Ant\xF4nia era a quarta
+      \xE0 esquerda de Bianca e a s\xE9tima \xE0 direita de Bianca. Quantas garotas
+      havia na roda?"
+    alternative_A: 11
+    alternative_B: 12
+    alternative_C: 14
+    alternative_D: 15
+    alternativeCorrect: 1
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "No m\xE1ximo, quantas vezes teremos que lan\xE7ar um dado para obter
+      o mesmo resultado?"
+    alternative_A: 5
+    alternative_B: 6
+    alternative_C: 7
+    alternative_D: 9
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Enquanto n\xE3o est\xE1 dormindo, o urso coala Dudu come 50 gramas
+      de folhas por hora. Ontem Dudu dormiu 20 horas. Quantos gramas de folhas ele
+      comeu ontem?"
+    alternative_A: 50
+    alternative_B: 100
+    alternative_C: 150
+    alternative_D: 200
+    alternativeCorrect: 4
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Numa corrida, dez atletas chegaram ao final. O n\xFAmero de competidores
+      que chegaram depois de Ant\xF4nio foi de tr\xEAs a mais do que o n\xFAmero
+      de competidores que venceram Ant\xF4nio. Em qual posi\xE7\xE3o chegou Ant\xF4nio?"
+    alternative_A: "2\xAA"
+    alternative_B: "4\xAA"
+    alternative_C: "5\xAA"
+    alternative_D: "6\xAA"
+    alternativeCorrect: 2
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Miguel resolve seis problemas de Matem\xE1tica todos os dias, enquanto
+      L\xE1zaro resolve quatro todos os dias. Quantos dias L\xE1zaro leva para resolver
+      o mesmo n\xFAmero de problemas que Miguel resolve em quatro dias?"
+    alternative_A: 4
+    alternative_B: 5
+    alternative_C: 6
+    alternative_D: 7
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Em um sal\xE3o de festas, 3 meninas e 2 meninos estavam dan\xE7ando.
+      Cada menina dan\xE7ou com cada menino exatamente um minuto e somente um par
+      dan\xE7ou de cada vez. Jana\xEDna filmou somente os momentos em que os pares
+      dan\xE7aram. Quantos minutos de dan\xE7a ela filmou?"
+    alternative_A: 5
+    alternative_B: 6
+    alternative_C: 7
+    alternative_D: 8
+    alternativeCorrect: 2
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Na sequ\xEAncia o n\xFAmero que sucede 12 \xE9 o: 16, 20, 14, 22,
+      12, __:"
+    alternative_A: 28
+    alternative_B: 26
+    alternative_C: 24
+    alternative_D: 18
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
