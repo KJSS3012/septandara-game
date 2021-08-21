@@ -28912,6 +28912,16 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5954507016242484453, guid: e12b4b71fac1222409eed5f43a6f0376, type: 3}
   m_PrefabInstance: {fileID: 950808640}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &950808642 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5954507016242484451, guid: e12b4b71fac1222409eed5f43a6f0376, type: 3}
+  m_PrefabInstance: {fileID: 950808640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &950808643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5954507016242484454, guid: e12b4b71fac1222409eed5f43a6f0376, type: 3}
+  m_PrefabInstance: {fileID: 950808640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &951265357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29161,6 +29171,14 @@ PrefabInstance:
       propertyPath: infoLoadSceneUI
       value: 
       objectReference: {fileID: 638258972}
+    - target: {fileID: 1363419456456219766, guid: 16190baa51e219746b84d07549d9cc6e, type: 3}
+      propertyPath: fadeUI
+      value: 
+      objectReference: {fileID: 950808643}
+    - target: {fileID: 1363419456456219766, guid: 16190baa51e219746b84d07549d9cc6e, type: 3}
+      propertyPath: animFade
+      value: 
+      objectReference: {fileID: 950808642}
     - target: {fileID: 1573999920040276866, guid: 16190baa51e219746b84d07549d9cc6e, type: 3}
       propertyPath: sceneIndex
       value: 6
