@@ -13,8 +13,40 @@ public class ButtonBook : MonoBehaviour
 
     void Start()
     {
-        button = this.gameObject;
+
     }
 
+    public void SetUpButton(int[] quant, bool[] unlocked)
+    {
+        if (number <= unlocked.Length)
+        {
+            bool IsLocked = unlocked[number - 1];
+            if (!IsLocked && number == quant[number - 1])
+            {
+                UnlockedButton();
+            }
+            else if (IsLocked && number == quant[number - 1])
+            {
+                LockedButton();
+            }
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
+
+    public void UnlockedButton()
+    {
+        childLock.SetActive(false);
+        childImage.SetActive(true);
+        Book.instance.world.fasesUnlocked[number - 1] = false;
+    }
+
+    public void LockedButton()
+    {
+        childLock.SetActive(true); //quando for lock true, lembrar de colocar uma trava pra impedir de clicar no butão
+        childImage.SetActive(false);
+    }
 
 }

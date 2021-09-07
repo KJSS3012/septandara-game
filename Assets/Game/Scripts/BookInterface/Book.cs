@@ -9,6 +9,7 @@ public class Book : MonoBehaviour
     public WorldMath world;
     public int sceneActive;
     public ButtonFase[] buttonsFase;
+    public ButtonCard[] buttonsCard;
     public static Book instance;
     public GameObject bookInterfaceUI;
     public VisibilityControls vsControls;
@@ -26,10 +27,27 @@ public class Book : MonoBehaviour
         
     }
 
+    private void UnlockedFase()
+    {
+        buttonsFase = FindObjectsOfType<ButtonFase>();
+        for (int i = 0; i<buttonsFase.Length; i++)
+        {
+            buttonsFase[i].GetButtonBook();
+            if (buttonsFase[i].buttonBook.number-1 == sceneActive)
+            {
+                Debug.Log(buttonsFase[i].buttonBook.number - 1);
+                Debug.Log(i);
+                buttonsFase[i].buttonBook.UnlockedButton();
+                world.fasesUnlocked[buttonsFase[i].buttonBook.number - 1] = false;
+                break;
+            }
+        }
+    }
+
     public void OpenBook()
     {
         bookInterfaceUI.SetActive(true);
-        buttonsFase[sceneActive].UnlockedButtonFase();
+        UnlockedFase();
         vsControls.OpacityControls(0.5f, false);
     }
 
