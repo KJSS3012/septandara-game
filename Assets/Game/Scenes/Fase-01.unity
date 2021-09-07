@@ -14024,6 +14024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookInterface
       objectReference: {fileID: 0}
+    - target: {fileID: 6151407342379047054, guid: 73da84eaf5c47b245b82425bf2c7cec9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6151407342379047055, guid: 73da84eaf5c47b245b82425bf2c7cec9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -14094,7 +14098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6151407342379047055, guid: 73da84eaf5c47b245b82425bf2c7cec9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6151407342379047055, guid: 73da84eaf5c47b245b82425bf2c7cec9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
