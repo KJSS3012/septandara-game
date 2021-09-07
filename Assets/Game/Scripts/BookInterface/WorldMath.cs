@@ -8,5 +8,4 @@ public class WorldMath : ScriptableObject
 {
     public int[] scenesFases;
     public bool[] fasesUnlocked;
-
 }
