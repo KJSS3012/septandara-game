@@ -24,7 +24,7 @@ public class Book : MonoBehaviour
 
     private void Update()
     {
-        
+        UnlockedFase();
     }
 
     private void UnlockedFase()
@@ -47,7 +47,6 @@ public class Book : MonoBehaviour
     public void OpenBook()
     {
         bookInterfaceUI.SetActive(true);
-        UnlockedFase();
         vsControls.OpacityControls(0.5f, false);
     }
 
