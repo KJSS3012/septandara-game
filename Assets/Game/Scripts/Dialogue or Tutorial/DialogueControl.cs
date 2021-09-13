@@ -66,7 +66,6 @@ public class DialogueControl : MonoBehaviour
         }
     }
 
-
     private void FinalyDialogue()
     {
         dialogueUI.SetActive(false);
