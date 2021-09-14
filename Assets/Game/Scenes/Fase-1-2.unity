@@ -232,7 +232,17 @@ Tilemap:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201577653}
   m_Enabled: 1
-  m_Tiles: {}
+  m_Tiles:
+  - first: {x: 43, y: 7, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 0
@@ -247,8 +257,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 485b59b283b21834fb8fb51ad5b7441f, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -262,35 +272,35 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 7362953334426243333, guid: 7fa3cb55f782e954a879144f2f82246c, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 0
+  - m_RefCount: 1
     m_Data:
-      e00: 1.084227e-19
-      e01: 1745.832
-      e02: 2.1139297
-      e03: -5.2425423
-      e10: 7.08e-43
-      e11: 4.5904e-41
-      e12: 7.09e-43
-      e13: 7.06e-43
-      e20: 5.38e-43
-      e21: 734.8408
-      e22: 734.7871
-      e23: 734.7871
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
       e30: 0
-      e31: 1.9e-43
-      e32: 1.9e-43
-      e33: 1.9e-43
+      e31: 0
+      e32: 0
+      e33: 1
   m_TileColorArray:
-  - m_RefCount: 0
-    m_Data: {r: 2.1139297, g: 2.1139297, b: 2.1139297, a: 2.1139297}
+  - m_RefCount: 1
+    m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -60, y: -4, z: 0}
-  m_Size: {x: 75, y: 38, z: 1}
+  m_Size: {x: 104, y: 38, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -4776,8 +4786,8 @@ Tilemap:
   - first: {x: 43, y: 7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 18
-      m_TileSpriteIndex: 18
+      m_TileIndex: 15
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4815,13 +4825,13 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 00a98848858bfd9428a7bfe31a4ab4fd, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 5aa5c677810be64429c191a5b51bd194, type: 2}
-  - m_RefCount: 4
+  - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 485b59b283b21834fb8fb51ad5b7441f, type: 2}
   - m_RefCount: 240
     m_Data: {fileID: 11400000, guid: c9c6ff92191c36f4b8e27bc599be168f, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 631cc520fb8e0f647bca312aa75def36, type: 2}
-  - m_RefCount: 62
+  - m_RefCount: 61
     m_Data: {fileID: 11400000, guid: 9704942176d104643acd8b71ebc69304, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -4854,13 +4864,13 @@ Tilemap:
     m_Data: {fileID: 7374904647102953695, guid: 7fa3cb55f782e954a879144f2f82246c, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 1861797406206926420, guid: 7fa3cb55f782e954a879144f2f82246c, type: 3}
-  - m_RefCount: 4
+  - m_RefCount: 5
     m_Data: {fileID: 7362953334426243333, guid: 7fa3cb55f782e954a879144f2f82246c, type: 3}
   - m_RefCount: 240
     m_Data: {fileID: 6813541834062870485, guid: 7fa3cb55f782e954a879144f2f82246c, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -6137807118874066138, guid: 7fa3cb55f782e954a879144f2f82246c, type: 3}
-  - m_RefCount: 62
+  - m_RefCount: 61
     m_Data: {fileID: 7769633986473350408, guid: 7fa3cb55f782e954a879144f2f82246c, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 357
@@ -5523,7 +5533,7 @@ RectTransform:
   - {fileID: 950808641}
   - {fileID: 638258971}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
