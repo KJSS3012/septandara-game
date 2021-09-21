@@ -22,7 +22,6 @@ public class DialogueControl : MonoBehaviour
     private int index;
     private Speech[] speechs;
     private bool isPass;
-    private int contClick = 0;
 
     private void Start()
     {
@@ -34,9 +33,9 @@ public class DialogueControl : MonoBehaviour
 
     private void Update()
     {
+        //Passa a fala
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
         {
-            contClick++;
             if (index < length - 1 && isPass)
             {
                 isPass = false;
@@ -44,10 +43,9 @@ public class DialogueControl : MonoBehaviour
                 d_speechText.text = "";
                 ActiveDialogue(speechs[index].actorName, speechs[index].speech);
             }
-
-            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S) && isPass)
+            else if (!isPass && length != 1 && speechs != null)
             {
-                if (contClick == 1 && length != 1 && speechs != null)
+                if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S)))
                 {
                     d_actorNameText.text = speechs[index].actorName;
                     d_speechText.text = speechs[index].speech;
@@ -76,19 +74,15 @@ public class DialogueControl : MonoBehaviour
 
     public void ActiveDialogue(string actorName, string speech)
     {
-        dialogueUI.SetActive(true);
         d_actorNameText.text = actorName;
         d_speechText.text = "";
-        vsControls.OpacityControls(0.5f, false);
         isDialogueEnabled = true;
-
         StartCoroutine(WriteSpeech(speech));
         
     }
 
     IEnumerator WriteSpeech(string speech)
     {
-        contClick = 0;
         foreach (char letter in speech.ToCharArray())
         { 
             if (d_speechText.text != speechs[index].speech)
@@ -106,7 +100,6 @@ public class DialogueControl : MonoBehaviour
             }
         }
         AlterVariables();
-
     }
 
     public void AlterVariables()
@@ -131,7 +124,8 @@ public class DialogueControl : MonoBehaviour
         length = speechs.Length;
         this.speechs = speechs;
         index = 0;
-
+        dialogueUI.SetActive(true);
+        vsControls.OpacityControls(0.5f, false);
         ActiveDialogue(speechs[index].actorName, speechs[index].speech);
     }
 

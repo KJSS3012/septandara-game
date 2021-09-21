@@ -8050,6 +8050,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 985754001}
     - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
+      propertyPath: faceStatusPlayer
+      value: 
+      objectReference: {fileID: 6167740292712887363}
+    - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
       propertyPath: resultsChanceActive
       value: 
       objectReference: {fileID: 1362050844}
@@ -8641,6 +8645,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6167740292502322849, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
   m_PrefabInstance: {fileID: 6167740292712887356}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6167740292712887363 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6167740292287629446, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+  m_PrefabInstance: {fileID: 6167740292712887356}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7916344826599240515
 PrefabInstance:
   m_ObjectHideFlags: 0

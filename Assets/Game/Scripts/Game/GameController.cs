@@ -13,6 +13,8 @@ public class GameController : MonoBehaviour
     [Header("Heart Life Controller")]
     public int percentageLife;
     [SerializeField] private Text textPercentageHeart;
+    public Image faceStatusPlayer;
+    public Sprite[] statusFacePlayer;
 
     [Header("Chances Controller")]
     public Text resultsChanceActive;
@@ -27,7 +29,7 @@ public class GameController : MonoBehaviour
     {
         instance = this;
         textPercentageHeart.text = percentageLife.ToString() + "%";
-        concecutiveCorrectQuestion = 0;
+        concecutiveCorrectQuestion = statusGame.consecutiveQuestion;
         
         totalScoreCoins = statusGame.scoreCoins;
         UpdateScoreCoins();
@@ -49,6 +51,32 @@ public class GameController : MonoBehaviour
     {
         textPercentageHeart.text = percentageLife.ToString() + "%";
         statusGame.quantLife = percentageLife;
+    }
+
+    public void UpdateConsecutiveQuestion()
+    {
+        statusGame.consecutiveQuestion = concecutiveCorrectQuestion;
+    }
+
+    private void Update()
+    {
+        ChangeFaceHeart();
+    }
+
+    public void ChangeFaceHeart()
+    {
+        if (percentageLife > 50)
+        {
+            faceStatusPlayer.sprite = statusFacePlayer[0];
+        }
+        else if (percentageLife <= 50 && percentageLife > 30)
+        {
+            faceStatusPlayer.sprite = statusFacePlayer[1];
+        }
+        else if(percentageLife <= 30)
+        {
+            faceStatusPlayer.sprite = statusFacePlayer[2];
+        }
     }
 
 

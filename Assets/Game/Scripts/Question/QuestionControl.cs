@@ -73,12 +73,14 @@ public class QuestionControl : MonoBehaviour
             resultsClick.text = "Correto";
             isMissChance = false;
             GameController.instance.concecutiveCorrectQuestion++;
+            GameController.instance.UpdateConsecutiveQuestion();
         }
         else
         {
             resultsClick.text = "Errado";
             isMissChance = true;
             GameController.instance.concecutiveCorrectQuestion = 0;
+            GameController.instance.UpdateConsecutiveQuestion();
         }
 
         resultsClick.gameObject.SetActive(true);

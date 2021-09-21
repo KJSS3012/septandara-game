@@ -11,11 +11,6 @@ public class ButtonBook : MonoBehaviour
     public GameObject childLock;
     public GameObject childImage;
 
-    void Start()
-    {
-
-    }
-
     public void SetUpButton(int[] quant, bool[] unlocked)
     {
         if (number <= unlocked.Length)

@@ -13,18 +13,29 @@ public class Book : MonoBehaviour
     public static Book instance;
     public GameObject bookInterfaceUI;
     public VisibilityControls vsControls;
-
+    private Player player;
+    private bool isActiveBook;
 
     private void Start()
     {
         instance = this;
         sceneActive = SceneManager.GetActiveScene().buildIndex;
         vsControls = GameObject.FindGameObjectWithTag("Controls").GetComponent<VisibilityControls>();
+        player = FindObjectOfType<Player>();
     }
 
     private void Update()
     {
         UnlockedFase();
+        
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            OpenBook();
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            CloseBook();
+        }
     }
 
     private void UnlockedFase()
@@ -35,8 +46,6 @@ public class Book : MonoBehaviour
             buttonsFase[i].GetButtonBook();
             if (buttonsFase[i].buttonBook.number-1 == sceneActive)
             {
-                Debug.Log(buttonsFase[i].buttonBook.number - 1);
-                Debug.Log(i);
                 buttonsFase[i].buttonBook.UnlockedButton();
                 world.fasesUnlocked[buttonsFase[i].buttonBook.number - 1] = false;
                 break;
@@ -46,14 +55,22 @@ public class Book : MonoBehaviour
 
     public void OpenBook()
     {
-        bookInterfaceUI.SetActive(true);
-        vsControls.OpacityControls(0.5f, false);
+        if (player.isActiveMoviment)
+        {
+            isActiveBook = true;
+            bookInterfaceUI.SetActive(true);
+            vsControls.OpacityControls(0.5f, false);
+        }
     }
 
     public void CloseBook()
     {
-        bookInterfaceUI.SetActive(false);
-        vsControls.OpacityControls(1f, true);
+        if (isActiveBook)
+        {
+            bookInterfaceUI.SetActive(false);
+            vsControls.OpacityControls(1f, true);
+            isActiveBook = false;
+        }
     }
 
 }

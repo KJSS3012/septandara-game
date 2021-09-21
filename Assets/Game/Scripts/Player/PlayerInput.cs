@@ -67,4 +67,13 @@ public class PlayerInput : MonoBehaviour
     {
         moveLeft = false;
     }
+
+    public bool PressedC()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            return true;
+        }
+        return false;
+    }
 }
