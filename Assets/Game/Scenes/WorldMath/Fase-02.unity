@@ -3839,7 +3839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6151407342379047055, guid: 73da84eaf5c47b245b82425bf2c7cec9, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6151407342379047055, guid: 73da84eaf5c47b245b82425bf2c7cec9, type: 3}
       propertyPath: m_AnchorMax.x
@@ -17708,6 +17708,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2645402434222969624}
     - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
+      propertyPath: faceStatusPlayer
+      value: 
+      objectReference: {fileID: 2645402434222969631}
+    - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
       propertyPath: resultsChanceActive
       value: 
       objectReference: {fileID: 2645402434222969622}
@@ -18147,6 +18151,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb7fbc021176924fbbddc7bb3a2eb98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2645402434222969631 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6167740292287629446, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+  m_PrefabInstance: {fileID: 2645402434222969620}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4190161242145474286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18306,7 +18321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4894370249000957588, guid: 620300b353b015049b027e6fa265231e, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4894370249000957588, guid: 620300b353b015049b027e6fa265231e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -18952,7 +18967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5954507016242484453, guid: e12b4b71fac1222409eed5f43a6f0376, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5954507016242484453, guid: e12b4b71fac1222409eed5f43a6f0376, type: 3}
       propertyPath: m_AnchorMax.x
