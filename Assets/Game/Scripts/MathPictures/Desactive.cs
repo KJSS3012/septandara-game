@@ -2,21 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Desactive : Lupe
+public class Desactive : MonoBehaviour
 {
-
-    private void Start()
-    {
-        vsControls = GameObject.FindGameObjectWithTag("Controls").GetComponent<VisibilityControls>();
-    }
+    public Lupe lupe;
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        DesactiveCanva();
+    }
+
+    public void DesactiveCanva()
+    {
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
         {
-            pictureUI.SetActive(false);
-            vsControls.OpacityControls(1f, true);
-            colliderLupe.enabled = true;
+            lupe.pictureUI.SetActive(false);
+            lupe.vsControls.OpacityControls(1f, true);
+            lupe.colliderLupe.enabled = true;
         }
     }
+
 }

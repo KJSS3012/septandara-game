@@ -67,4 +67,5 @@ public class PlayerInput : MonoBehaviour
     {
         moveLeft = false;
     }
+
 }

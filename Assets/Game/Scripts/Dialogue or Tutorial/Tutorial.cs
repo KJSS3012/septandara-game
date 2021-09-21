@@ -6,9 +6,7 @@ public class Tutorial : MonoBehaviour
 {
 
     [Header("Components")]
-    [SerializeField] public SpeechsDT speechsActors;
     [SerializeField] private bool isTutorialDialogue;
-    public LayerMask layer;
 
     private void Start()
     {
@@ -41,8 +39,7 @@ public class Tutorial : MonoBehaviour
 
     public void ShowTutorial()
     {
-        Speech[] speechsDialogue = speechsActors.speechsDialogueObjects;
-        TutorialControl.instance.ActiveTutorial(speechsDialogue);
+        TutorialControl.instance.ActiveTutorial();
         isTutorialDialogue = false;
     }
 
