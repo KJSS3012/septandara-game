@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpForce = 280;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private bool isWalk;
-    [SerializeField] private bool isActiveMoviment;
+    public bool isActiveMoviment;
 
     [Header("Collider CheckGround")]
     public bool isGround;

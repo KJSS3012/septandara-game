@@ -55,8 +55,6 @@ public class DialogueControl : MonoBehaviour
             }
         }
 
-        
-
         if (index == length - 1 && !isPass && isDialogueEnabled)
         {
             if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
@@ -76,12 +74,9 @@ public class DialogueControl : MonoBehaviour
 
     public void ActiveDialogue(string actorName, string speech)
     {
-        dialogueUI.SetActive(true);
         d_actorNameText.text = actorName;
         d_speechText.text = "";
-        vsControls.OpacityControls(0.5f, false);
         isDialogueEnabled = true;
-
         StartCoroutine(WriteSpeech(speech));
         
     }
@@ -129,7 +124,8 @@ public class DialogueControl : MonoBehaviour
         length = speechs.Length;
         this.speechs = speechs;
         index = 0;
-
+        dialogueUI.SetActive(true);
+        vsControls.OpacityControls(0.5f, false);
         ActiveDialogue(speechs[index].actorName, speechs[index].speech);
     }
 
