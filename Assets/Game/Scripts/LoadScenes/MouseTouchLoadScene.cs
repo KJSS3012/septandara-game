@@ -11,6 +11,7 @@ public class MouseTouchLoadScene : MonoBehaviour
     [SerializeField] private Animator animObject;
     public bool isMouseDown;
     public bool isCollider;
+    public bool isKeyDownS;
     public Player player;
     public Animator animPlayer;
     public GameObject controlsUI;
@@ -45,9 +46,22 @@ public class MouseTouchLoadScene : MonoBehaviour
         isCollider = false;
     }
 
+    private void OnKeyCodeS()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            isKeyDownS = true;
+        }
+        else
+        {
+            isKeyDownS = false;
+        }
+    }
+
     private void Update()
     {
-        if (isMouseDown && isCollider && player.isGround)
+        OnKeyCodeS();
+        if ((isMouseDown || isKeyDownS) && (isCollider && player.isGround))
         {
             animObject.SetTrigger("open");
             player.RestartControls(false);

@@ -38,9 +38,4 @@ public class FadeActive : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
-    public void LoadNewScene()
-    {
-        
-    }
-
 }
