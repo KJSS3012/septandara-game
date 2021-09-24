@@ -10,40 +10,61 @@ public class Enemy : MonoBehaviour
     private Vector3 nextPosition;
     [SerializeField] private SpriteRenderer enemySprite;
     [SerializeField] private Animator enemyAnim;
-    [SerializeField] private CircleCollider2D colliderAttack;
+    [SerializeField] private bool isMoviment;
+    [SerializeField] private CircleCollider2D colliderHeadEnemy;
+    [SerializeField] private CapsuleCollider2D colliderBodyEnemy;
+    [SerializeField] private Player player;
 
     private void Start()
     {
         nextPosition = posStart.position;
+        colliderHeadEnemy = GetComponent<CircleCollider2D>();
+        colliderBodyEnemy = GetComponent<CapsuleCollider2D>();
         enemySprite = GetComponent<SpriteRenderer>();
         enemyAnim = GetComponent<Animator>();
-        colliderAttack = GetComponent<CircleCollider2D>();
         enemyAnim.SetBool("cursed", true);
+        isMoviment = true;
     }
-
-    private void DetectHead()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (colliderAttack.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            Debug.Log("PISANDO NA CABEÇA!");
+            player = collision.gameObject.GetComponent<Player>();
         }
     }
+
+    public void DownEnemy()
+    {
+        enemyAnim.SetBool("cursed", false);
+        enemyAnim.SetBool("down", true);
+        isMoviment = false;
+        colliderHeadEnemy.enabled = false;
+        colliderBodyEnemy.enabled = false;
+    }
+
 
     private void FixedUpdate()
     {
-        DetectHead();
-        if (transform.position == posStart.position)
-        {
-            enemySprite.flipX = true;
-            nextPosition = posEnd.position;
-        }
-        if (transform.position == posEnd.position)
-        {
-            enemySprite.flipX = false;
-            nextPosition = posStart.position;
-        }
+        MoveEnemy();
+    }
 
-        transform.position = Vector3.MoveTowards(transform.position, nextPosition, speedEnemy * Time.fixedDeltaTime);
+    private void MoveEnemy()
+    {
+        if (isMoviment)
+        {
+            if (transform.position == posStart.position)
+            {
+                enemySprite.flipX = true;
+                nextPosition = posEnd.position;
+            }
+            if (transform.position == posEnd.position)
+            {
+                enemySprite.flipX = false;
+                nextPosition = posStart.position;
+            }
+
+            transform.position = Vector3.MoveTowards(transform.position, nextPosition, speedEnemy * Time.fixedDeltaTime);
+        }
     }
 
     private void OnDrawGizmos()
