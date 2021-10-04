@@ -7029,7 +7029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 121386906606013803, guid: 16190baa51e219746b84d07549d9cc6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16190baa51e219746b84d07549d9cc6e, type: 3}
@@ -26623,7 +26623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 121386906606013803, guid: 16190baa51e219746b84d07549d9cc6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16190baa51e219746b84d07549d9cc6e, type: 3}
@@ -28434,6 +28434,7 @@ MonoBehaviour:
   isMoviment: 0
   colliderHeadEnemy: {fileID: 0}
   colliderBodyEnemy: {fileID: 0}
+  player: {fileID: 0}
 --- !u!58 &9016592132776289617
 CircleCollider2D:
   m_ObjectHideFlags: 0
