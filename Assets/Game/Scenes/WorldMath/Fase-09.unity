@@ -7319,11 +7319,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3413106091680271912, guid: 3d8ba5b407e7b944a8ecb570ef8b93d0, type: 3}
   m_PrefabInstance: {fileID: 368118184}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &370530881 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 377248115726696504, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
-  m_PrefabInstance: {fileID: 1627174032}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &399980721 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6973434446381592283, guid: 84a3097b92721ec4f9ef0a0045abfc5b, type: 3}
@@ -25199,10 +25194,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4226280730623567676, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
-      propertyPath: m_Name
-      value: FootCheckCollider
-      objectReference: {fileID: 0}
     - target: {fileID: 9196055453543619393, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
       propertyPath: m_Name
       value: Player
@@ -25251,14 +25242,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9196055453543619398, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
-      propertyPath: footCheckCollider
-      value: 
-      objectReference: {fileID: 370530881}
-    - target: {fileID: 9196055453543619512, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 264ba8a2f6e6bab41a62975321970ab6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
 --- !u!1001 &1648689274

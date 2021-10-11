@@ -13,8 +13,7 @@ public class Player : MonoBehaviour
 
     [Header("Collider CheckGround")]
     public bool isGround;
-    [SerializeField] private float radious;
-    [SerializeField] private Transform groundCheckCollider;
+    public CircleCollider2D footCollider;
 
     [Header("Collider CheckWall")]
     [SerializeField] private Transform wallCheckCollider;
@@ -35,6 +34,7 @@ public class Player : MonoBehaviour
         spritePlayer = GetComponent<SpriteRenderer>();
         playerInput = GetComponent<PlayerInput>();
         isActiveMoviment = true;
+        footCollider = GetComponent<CircleCollider2D>();
     }
 
     void FixedUpdate()
@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
 
     private void CheckGround()
     {
-        isGround = Physics2D.OverlapCircle(groundCheckCollider.position, radious, groundLayer);
+        isGround = footCollider.IsTouchingLayers(groundLayer);
         if (isGround)
         {
             animPlayer.SetBool("jump", false);
@@ -137,10 +137,8 @@ public class Player : MonoBehaviour
         }
     }
 
-
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(groundCheckCollider.position, radious);
         Gizmos.DrawWireCube(wallCheckCollider.position, new Vector3(wallDistance / 2, wallDistance, 0));
     }
 
