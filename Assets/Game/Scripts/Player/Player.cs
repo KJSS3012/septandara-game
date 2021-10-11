@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float wallDistance;
     [SerializeField] private bool isTouchingWall;
 
+    public LayerMask enemyLayer;
+
     private Rigidbody2D rig2D;
     private Animator animPlayer;
     public SpriteRenderer spritePlayer;
