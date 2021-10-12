@@ -20,8 +20,6 @@ public class Player : MonoBehaviour
     [SerializeField] private float wallDistance;
     [SerializeField] private bool isTouchingWall;
 
-    public LayerMask enemyLayer;
-
     private Rigidbody2D rig2D;
     private Animator animPlayer;
     public SpriteRenderer spritePlayer;
@@ -34,7 +32,6 @@ public class Player : MonoBehaviour
         spritePlayer = GetComponent<SpriteRenderer>();
         playerInput = GetComponent<PlayerInput>();
         isActiveMoviment = true;
-        footCollider = GetComponent<CircleCollider2D>();
     }
 
     void FixedUpdate()
