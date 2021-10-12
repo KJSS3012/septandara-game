@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
     private void FixedUpdate()
     {
         MoveEnemy();
+        DownEnemy();
     }
 
     private void MoveEnemy()
@@ -53,21 +54,20 @@ public class Enemy : MonoBehaviour
 
             transform.position = Vector3.MoveTowards(transform.position, nextPosition, speedEnemy * Time.fixedDeltaTime);
         }
-        if (colliderHeadEnemy.IsTouchingLayers(footLayerPlayer) && isMoviment)
-        {
-            DownEnemy();
-        }
     }
 
     public void DownEnemy()
     {
-        enemyAnim.SetBool("cursed", false);
-        enemyAnim.SetBool("down", true);
-        isMoviment = false;
-        colliderHeadEnemy.enabled = false;
-        colliderBodyEnemy.enabled = false;
-        playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, forceReturnDown), ForceMode2D.Impulse);
-        StartCoroutine(DelayStandUp());
+        if (colliderHeadEnemy.IsTouchingLayers(footLayerPlayer) && isMoviment)
+        {
+            enemyAnim.SetBool("cursed", false);
+            enemyAnim.SetBool("down", true);
+            isMoviment = false;
+            colliderHeadEnemy.enabled = false;
+            colliderBodyEnemy.enabled = false;
+            playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, forceReturnDown), ForceMode2D.Impulse);
+            StartCoroutine(DelayStandUp());
+        }
     }
 
     IEnumerator DelayStandUp()
