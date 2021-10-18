@@ -13,14 +13,12 @@ public class Player : MonoBehaviour
 
     [Header("Collider CheckGround")]
     public bool isGround;
-    [SerializeField] private float radious;
-    [SerializeField] private Transform groundCheckCollider;
+    public CircleCollider2D footCollider;
 
-    [Header("Collider CheckWall")]
-    [SerializeField] private Transform wallCheckCollider;
-    [SerializeField] private float wallDistance;
+    [Header("Collider CheckWall and CheckColliderBody")]
     [SerializeField] private bool isTouchingWall;
-
+    [SerializeField] private bool isColliderEnemy;
+    public BoxCollider2D bodyCollider;
     public LayerMask enemyLayer;
 
     private Rigidbody2D rig2D;
@@ -34,6 +32,7 @@ public class Player : MonoBehaviour
         animPlayer = GetComponent<Animator>();
         spritePlayer = GetComponent<SpriteRenderer>();
         playerInput = GetComponent<PlayerInput>();
+        bodyCollider = GetComponent<BoxCollider2D>();
         isActiveMoviment = true;
     }
 
@@ -45,6 +44,7 @@ public class Player : MonoBehaviour
             MovePlayer();
             JumpPlayer();
             CheckWall();
+            CheckEnemy();
         }
     }
 
@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
 
     private void CheckGround()
     {
-        isGround = Physics2D.OverlapCircle(groundCheckCollider.position, radious, groundLayer);
+        isGround = footCollider.IsTouchingLayers(groundLayer);
         if (isGround)
         {
             animPlayer.SetBool("jump", false);
@@ -105,7 +105,24 @@ public class Player : MonoBehaviour
 
     private void CheckWall()
     {
-        isTouchingWall = Physics2D.OverlapBox(wallCheckCollider.position, new Vector3(wallDistance / 2, wallDistance, 0), wallDistance, groundLayer);
+        isTouchingWall = bodyCollider.IsTouchingLayers(groundLayer);
+    }
+
+    private void CheckEnemy()
+    {
+        isColliderEnemy = bodyCollider.IsTouchingLayers(enemyLayer);
+        if (isColliderEnemy)
+        {
+            //animPlayer.SetBool("hit", true);
+            //Vector2 force = new Vector2(-jumpForce*10, 0);
+            //rig2D.AddForce(force);
+            //bodyCollider.enabled = false;
+            //GameController.instance.SubtractLife(10);
+
+            
+
+            //Debug.Log(force);
+        }
     }
 
     //Colisão com componentes/objetos do game
@@ -136,12 +153,4 @@ public class Player : MonoBehaviour
             playerInput.enabled = value;
         }
     }
-
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.DrawWireSphere(groundCheckCollider.position, radious);
-        Gizmos.DrawWireCube(wallCheckCollider.position, new Vector3(wallDistance / 2, wallDistance, 0));
-    }
-
 }

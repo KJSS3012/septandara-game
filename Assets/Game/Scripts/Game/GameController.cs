@@ -53,6 +53,12 @@ public class GameController : MonoBehaviour
         statusGame.quantLife = percentageLife;
     }
 
+    public void SubtractLife(int partSubtractLife)
+    {
+        percentageLife -= partSubtractLife;
+        UpdatePercentageLife();
+    }
+
     public void UpdateConsecutiveQuestion()
     {
         statusGame.consecutiveQuestion = concecutiveCorrectQuestion;

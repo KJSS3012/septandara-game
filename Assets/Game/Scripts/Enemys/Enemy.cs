@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
     public float speedEnemy;
     public Transform posStart, posEnd;
     private Vector3 nextPosition;
@@ -13,7 +12,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] private bool isMoviment;
     [SerializeField] private CircleCollider2D colliderHeadEnemy;
     [SerializeField] private CapsuleCollider2D colliderBodyEnemy;
+    [SerializeField] private GameObject playerObject;
     [SerializeField] private Player player;
+    public LayerMask footLayerPlayer;
+    public float forceReturnDown;
 
     private void Start()
     {
@@ -24,28 +26,15 @@ public class Enemy : MonoBehaviour
         enemyAnim = GetComponent<Animator>();
         enemyAnim.SetBool("cursed", true);
         isMoviment = true;
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        isMoviment = true;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            player = collision.gameObject.GetComponent<Player>();
-        }
-    }
-
-    public void DownEnemy()
-    {
-        enemyAnim.SetBool("cursed", false);
-        enemyAnim.SetBool("down", true);
-        isMoviment = false;
-        colliderHeadEnemy.enabled = false;
-        colliderBodyEnemy.enabled = false;
-    }
-
 
     private void FixedUpdate()
     {
         MoveEnemy();
+        DownEnemy();
     }
 
     private void MoveEnemy()
@@ -65,6 +54,39 @@ public class Enemy : MonoBehaviour
 
             transform.position = Vector3.MoveTowards(transform.position, nextPosition, speedEnemy * Time.fixedDeltaTime);
         }
+    }
+
+    public void DownEnemy()
+    {
+        if (colliderHeadEnemy.IsTouchingLayers(footLayerPlayer) && isMoviment)
+        {
+            enemyAnim.SetBool("cursed", false);
+            enemyAnim.SetBool("down", true);
+            isMoviment = false;
+            colliderHeadEnemy.enabled = false;
+            colliderBodyEnemy.enabled = false;
+            playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, forceReturnDown), ForceMode2D.Impulse);
+            StartCoroutine(DelayStandUp());
+        }
+    }
+
+    IEnumerator DelayStandUp()
+    {
+        yield return new WaitForSeconds(3f);
+        StandUp();
+    }
+
+    public void StandUp()
+    {
+        enemyAnim.SetBool("down", false);
+    }
+
+    public void MovimentCursed()
+    {
+        enemyAnim.SetBool("cursed", true);
+        isMoviment = true;
+        colliderHeadEnemy.enabled = true;
+        colliderBodyEnemy.enabled = true;
     }
 
     private void OnDrawGizmos()
