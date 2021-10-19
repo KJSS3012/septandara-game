@@ -17,12 +17,10 @@ public class Player : MonoBehaviour
 
     [Header("Collider CheckWall and CheckColliderBody")]
     [SerializeField] private bool isTouchingWall;
-    [SerializeField] private bool isColliderEnemy;
     public BoxCollider2D bodyCollider;
-    public LayerMask enemyLayer;
 
     private Rigidbody2D rig2D;
-    private Animator animPlayer;
+    public Animator animPlayer;
     public SpriteRenderer spritePlayer;
     public PlayerInput playerInput;
 
@@ -44,7 +42,6 @@ public class Player : MonoBehaviour
             MovePlayer();
             JumpPlayer();
             CheckWall();
-            CheckEnemy();
         }
     }
 
@@ -108,21 +105,10 @@ public class Player : MonoBehaviour
         isTouchingWall = bodyCollider.IsTouchingLayers(groundLayer);
     }
 
-    private void CheckEnemy()
+    public void ActiveBodyCollider()
     {
-        isColliderEnemy = bodyCollider.IsTouchingLayers(enemyLayer);
-        if (isColliderEnemy)
-        {
-            //animPlayer.SetBool("hit", true);
-            //Vector2 force = new Vector2(-jumpForce*10, 0);
-            //rig2D.AddForce(force);
-            //bodyCollider.enabled = false;
-            //GameController.instance.SubtractLife(10);
-
-            
-
-            //Debug.Log(force);
-        }
+        bodyCollider.enabled = true;
+        animPlayer.SetBool("hit", false);
     }
 
     //Colisão com componentes/objetos do game

@@ -7785,6 +7785,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 564321890}
     m_Modifications:
+    - target: {fileID: 1421525562208554884, guid: 52258eacd4ef6c2489816da630fb5c07, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1421525562208554908, guid: 52258eacd4ef6c2489816da630fb5c07, type: 3}
       propertyPath: forceReturnAttack
       value: 4
@@ -27570,6 +27574,10 @@ PrefabInstance:
     - target: {fileID: 9196055453543619393, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196055453543619395, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9196055453543619396, guid: 4a88a7686aef4164699fe230c51356cf, type: 3}
       propertyPath: m_RootOrder
