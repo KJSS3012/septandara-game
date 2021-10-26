@@ -138,6 +138,7 @@ public class GameController : MonoBehaviour
             }
             indexDesactive--;
             indexActive++;
+            UpdateConsecutiveQuestion();
         } while (indexDesactive>=0 && indexActive>0);
     }
 
