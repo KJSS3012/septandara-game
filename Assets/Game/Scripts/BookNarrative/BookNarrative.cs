@@ -11,12 +11,14 @@ public class BookNarrative : MonoBehaviour
     public bool isMouseDown;
     public bool isCollider;
     public bool isKeyDownS;
-    private Player player;
+    public Player player;
+    public CapsuleCollider2D colliderCapsule;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         vsControls = GameObject.FindGameObjectWithTag("Controls").GetComponent<VisibilityControls>();
+        colliderCapsule = GetComponent<CapsuleCollider2D>();
     }
 
     private void OnMouseDown()
@@ -58,20 +60,6 @@ public class BookNarrative : MonoBehaviour
         {
             altarObject.GetComponent<Animator>().SetBool("open", true);
 ;        }
-    }
-
-    public void OpenNarrative()
-    {
-        bookNarrativeUI.SetActive(true);
-        player.RestartControls(false);
-        vsControls.OpacityControls(0.5f, false);
-    }
-
-    public void CloseBookNarrative()
-    {
-        bookNarrativeUI.SetActive(false);
-        player.RestartControls(true);
-        vsControls.OpacityControls(1f, true);
     }
 
 }
