@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
 
-    private Transform target;
+    public Transform target;
     [SerializeField] private float smoothSpeed = 0.08f;
     [SerializeField] private float offset_X = 0;
     [SerializeField] private float offset_Y = 1;
@@ -13,21 +13,25 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        if (GameObject.FindGameObjectWithTag("Player"))
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
     }
 
     void FixedUpdate()
     {
-
-        if (isFollowX)
+        if (GameObject.FindGameObjectWithTag("Player"))
         {
-            HorizontalFollow();
+            if (isFollowX)
+            {
+                HorizontalFollow();
+            }
+            else
+            {
+                Follow();
+            }
         }
-        else
-        {
-            Follow();
-        }
-        
     }
 
     public void Follow()

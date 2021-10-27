@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1962012824617047248}
   m_Layer: 8
   m_Name: Guard
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,7 +164,7 @@ CapsuleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.007931709, y: -0.035694838}
   m_Size: {x: 0.34162712, y: 0.9286103}

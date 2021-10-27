@@ -60,6 +60,7 @@ public class Book : MonoBehaviour
             isActiveBook = true;
             bookInterfaceUI.SetActive(true);
             vsControls.OpacityControls(0.5f, false);
+            vsControls.EnemysPause(false);
         }
     }
 
@@ -69,6 +70,7 @@ public class Book : MonoBehaviour
         {
             bookInterfaceUI.SetActive(false);
             vsControls.OpacityControls(1f, true);
+            vsControls.EnemysPause(true);
             isActiveBook = false;
         }
     }

@@ -33,6 +33,9 @@ public class Enemy : MonoBehaviour
         isAttack = false;
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        colliderHeadEnemy.enabled = true;
+        colliderBodyEnemy.enabled = true;
+        colliderDetect.enabled = true;
     }
 
     private void FixedUpdate()
@@ -127,6 +130,12 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         isAttack = false;
+    }
+
+    public void PauseEnemy(bool pause)
+    {
+        gameObject.SetActive(pause);
+        Start();
     }
 
 }

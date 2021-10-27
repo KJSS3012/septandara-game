@@ -9842,7 +9842,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speechsActors: {fileID: 11400000, guid: d04581668f67df2478a6d80b34682c16, type: 2}
-  isActiveDirect: 1
+  isActiveDirectCollision: 1
+  isActiveDirect: 0
 --- !u!212 &1809799166
 SpriteRenderer:
   m_ObjectHideFlags: 0
