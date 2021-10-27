@@ -11,10 +11,9 @@ public class DialogueControl : MonoBehaviour
     [SerializeField] private Text d_speechText;
     [SerializeField] private Text d_actorNameText;
     [SerializeField] private float writeSpeedSpeech = 0.04f;
-    [SerializeField] private bool isDialogueEnabled;
+    public bool isDialogueEnabled;
     
     [Header("Data Extra")]
-    public Player player;
     public VisibilityControls vsControls;
 
     public static DialogueControl instance;
@@ -23,12 +22,17 @@ public class DialogueControl : MonoBehaviour
     private Speech[] speechs;
     private bool isPass;
 
+    public bool isDesactiveControls; //For timeline
+
     private void Start()
     {
         instance = this;
         index = 0;
-        length = -1;
-        vsControls = GameObject.FindGameObjectWithTag("Controls").GetComponent<VisibilityControls>();
+        length = 0;
+        if (!isDesactiveControls)
+        {
+            vsControls = GameObject.FindGameObjectWithTag("Controls").GetComponent<VisibilityControls>();
+        }
     }
 
     private void Update()
@@ -36,12 +40,14 @@ public class DialogueControl : MonoBehaviour
         //Passa a fala
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
         {
-            if (index < length - 1 && isPass)
+            
+            if (index <= length - 1 && isPass)
             {
                 isPass = false;
                 index++;
                 d_speechText.text = "";
-                ActiveDialogue(speechs[index].actorName, speechs[index].speech);
+                if (index <= length-1)
+                    ActiveDialogue(speechs[index].actorName, speechs[index].speech);
             }
             else if (!isPass && length != 1 && speechs != null)
             {
@@ -55,7 +61,7 @@ public class DialogueControl : MonoBehaviour
             }
         }
 
-        if (index == length - 1 && !isPass && isDialogueEnabled)
+        if (index == length && !isPass && isDialogueEnabled)
         {
             if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
             {
@@ -68,8 +74,10 @@ public class DialogueControl : MonoBehaviour
     {
         dialogueUI.SetActive(false);
         isDialogueEnabled = false;
-        vsControls.OpacityControls(1f, true);
-        GameController.instance.ReactiveChances();
+        if (!isDesactiveControls) { 
+            vsControls.OpacityControls(1f, true);
+            GameController.instance.ReactiveChances();
+        }
     }
 
     public void ActiveDialogue(string actorName, string speech)
@@ -78,7 +86,6 @@ public class DialogueControl : MonoBehaviour
         d_speechText.text = "";
         isDialogueEnabled = true;
         StartCoroutine(WriteSpeech(speech));
-        
     }
 
     IEnumerator WriteSpeech(string speech)
@@ -104,7 +111,7 @@ public class DialogueControl : MonoBehaviour
 
     public void AlterVariables()
     {
-        if (index == length - 1)
+        if (index == length)
         {
             isPass = false;
         }
@@ -125,7 +132,9 @@ public class DialogueControl : MonoBehaviour
         this.speechs = speechs;
         index = 0;
         dialogueUI.SetActive(true);
-        vsControls.OpacityControls(0.5f, false);
+        isDialogueEnabled = true;
+        if (!isDesactiveControls)
+            vsControls.OpacityControls(0.5f, false);
         ActiveDialogue(speechs[index].actorName, speechs[index].speech);
     }
 

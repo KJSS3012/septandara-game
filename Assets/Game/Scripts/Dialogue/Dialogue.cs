@@ -7,24 +7,25 @@ public class Dialogue : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] public SpeechsDT speechsActors;
-    [SerializeField] private bool isActiveDirect;
     private bool isCollisionPlayer;
     private bool isActiveDialogue;
-
-    private void Start()
-    {
-        isActiveDialogue = false;
-    }
+    public bool isActiveDirectCollision;
+    public bool isActiveIndirectCollision;
+    public bool isActiveDirect;
 
     private void Update()
     {
-        if (isActiveDirect)
+        if (isActiveDirectCollision)
         {
-            DirectTriggerActivate();
+            CollisionDirectTriggerActivate();
         }
-        else
+        else if(isActiveIndirectCollision)
         {
-            IndirectTriggerActivate();
+            CollisionIndirectTriggerActivate();
+        }
+        else if(isActiveDirect)
+        {
+            DirectTriggerActive();
         }
     }
 
@@ -40,7 +41,13 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    private void DirectTriggerActivate() //Ativar direto
+    private void DirectTriggerActive()
+    {
+        ShowDialogue();
+        isActiveDirect = false;
+    }
+
+    private void CollisionDirectTriggerActivate() //Ativar direto
     {
         if (isCollisionPlayer && !isActiveDialogue)
         {
@@ -48,7 +55,7 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    private void IndirectTriggerActivate() //Ativar tando dentro do trigger e acionando uma tecla/botão na tela
+    private void CollisionIndirectTriggerActivate() //Ativar tando dentro do trigger e acionando uma tecla/botão na tela
     {
 
         if (isCollisionPlayer && (Input.GetKeyDown(KeyCode.S) || Input.GetMouseButtonDown(0)) && !isActiveDialogue)

@@ -12,41 +12,49 @@ public class Enemy : MonoBehaviour
     [SerializeField] private bool isMoviment;
     [SerializeField] private CircleCollider2D colliderHeadEnemy;
     [SerializeField] private CapsuleCollider2D colliderBodyEnemy;
+    [SerializeField] private BoxCollider2D colliderDetect;
     [SerializeField] private GameObject playerObject;
     [SerializeField] private Player player;
     public LayerMask footLayerPlayer;
+    public LayerMask playerLayer;
     public float forceReturnDown;
+    [SerializeField] private bool isAttack;
 
     private void Start()
     {
         nextPosition = posStart.position;
         colliderHeadEnemy = GetComponent<CircleCollider2D>();
         colliderBodyEnemy = GetComponent<CapsuleCollider2D>();
+        colliderDetect = GetComponent<BoxCollider2D>();
         enemySprite = GetComponent<SpriteRenderer>();
         enemyAnim = GetComponent<Animator>();
         enemyAnim.SetBool("cursed", true);
         isMoviment = true;
+        isAttack = false;
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        isMoviment = true;
+        colliderHeadEnemy.enabled = true;
+        colliderBodyEnemy.enabled = true;
+        colliderDetect.enabled = true;
     }
 
     private void FixedUpdate()
     {
         MoveEnemy();
         DownEnemy();
+        DetectPlayer();
     }
 
     private void MoveEnemy()
     {
         if (isMoviment)
         {
-            if (transform.position == posStart.position)
+            if (transform.position == posStart.position && !isAttack)
             {
                 enemySprite.flipX = true;
                 nextPosition = posEnd.position;
             }
-            if (transform.position == posEnd.position)
+            if (transform.position == posEnd.position && !isAttack)
             {
                 enemySprite.flipX = false;
                 nextPosition = posStart.position;
@@ -58,13 +66,14 @@ public class Enemy : MonoBehaviour
 
     public void DownEnemy()
     {
-        if (colliderHeadEnemy.IsTouchingLayers(footLayerPlayer) && isMoviment)
+        if (colliderHeadEnemy.IsTouchingLayers(footLayerPlayer))
         {
             enemyAnim.SetBool("cursed", false);
             enemyAnim.SetBool("down", true);
             isMoviment = false;
             colliderHeadEnemy.enabled = false;
             colliderBodyEnemy.enabled = false;
+            colliderDetect.enabled = false;
             playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, forceReturnDown), ForceMode2D.Impulse);
             StartCoroutine(DelayStandUp());
         }
@@ -84,14 +93,49 @@ public class Enemy : MonoBehaviour
     public void MovimentCursed()
     {
         enemyAnim.SetBool("cursed", true);
+        enemyAnim.SetBool("attack", false);
         isMoviment = true;
         colliderHeadEnemy.enabled = true;
         colliderBodyEnemy.enabled = true;
+        colliderDetect.enabled = true;
+        StartCoroutine(DelayProxAttack());
     }
 
-    private void OnDrawGizmos()
+    public void DetectPlayer()
     {
-        Gizmos.DrawLine(posStart.position, posEnd.position);
+        if (colliderDetect.IsTouchingLayers(playerLayer) && !isAttack)
+        {
+            isMoviment = false;
+            enemyAnim.SetBool("attack", true);
+            isAttack = true;
+            player.animPlayer.SetBool("hit", true);
+            player.bodyCollider.enabled = false;
+            GameController.instance.SubtractLife(10);
+            if (playerObject.GetComponent<SpriteRenderer>().flipX)
+            {
+                enemySprite.flipX = true;
+                nextPosition = posEnd.position;
+                playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(forceReturnDown/4, forceReturnDown/2), ForceMode2D.Impulse);
+            }
+            else
+            {
+                enemySprite.flipX = false;
+                nextPosition = posStart.position;
+                playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-forceReturnDown/4, forceReturnDown/2), ForceMode2D.Impulse);
+            }
+        }
+    }
+
+    IEnumerator DelayProxAttack()
+    {
+        yield return new WaitForSeconds(0.5f);
+        isAttack = false;
+    }
+
+    public void PauseEnemy(bool pause)
+    {
+        gameObject.SetActive(pause);
+        Start();
     }
 
 }

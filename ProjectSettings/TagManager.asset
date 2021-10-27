@@ -12,6 +12,7 @@ TagManager:
   - ButtonCard
   - Image
   - Lock
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Player
   - Enemy
   - PlayerFoot
-  - 
+  - NPC
   - 
   - 
   - 
@@ -64,9 +65,6 @@ TagManager:
   - name: Ground
     uniqueID: 190260485
     locked: 0
-  - name: Foreground
-    uniqueID: 1272341757
-    locked: 0
   - name: Icons
     uniqueID: 415391459
     locked: 0
@@ -75,4 +73,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 275740923
+    locked: 0
+  - name: Foreground
+    uniqueID: 1272341757
     locked: 0

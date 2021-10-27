@@ -38,6 +38,7 @@ public class QuestionControl : MonoBehaviour
     {
         questionUI.SetActive(true);
         vsControls.OpacityControls(0.5f, false);
+        vsControls.EnemysPause(false);
 
         enunciatedText.text = question.enunciated;
         alternative_A.text = question.alternative_A;
@@ -89,6 +90,7 @@ public class QuestionControl : MonoBehaviour
 
         animQuestion.SetBool("exit", true);
         vsControls.OpacityControls(1f, true);
+        vsControls.EnemysPause(true);
 
         GameController.instance.VerifyChances(isMissChance);
     }
