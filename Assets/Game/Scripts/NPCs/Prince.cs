@@ -6,6 +6,7 @@ public class Prince : MonoBehaviour
 {
     private Animator animPrince;
     public GameObject fadeUI;
+    public bool isAttack;
 
     private void Start()
     {
@@ -14,7 +15,7 @@ public class Prince : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (!DialogueControl.instance.isDialogueEnabled)
+        if (!DialogueControl.instance.isDialogueEnabled && isAttack)
         {
             animPrince.SetBool("attack", true);
         }

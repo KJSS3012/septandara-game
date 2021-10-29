@@ -6,7 +6,7 @@ public class CameraFollow : MonoBehaviour
 {
 
     public Transform target;
-    [SerializeField] private float smoothSpeed = 0.08f;
+    public float smoothSpeed = 0.08f;
     [SerializeField] private float offset_X = 0;
     [SerializeField] private float offset_Y = 1;
     [SerializeField] private bool isFollowX = false;
@@ -21,7 +21,7 @@ public class CameraFollow : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (GameObject.FindGameObjectWithTag("Player"))
+        if (target != null)
         {
             if (isFollowX)
             {
