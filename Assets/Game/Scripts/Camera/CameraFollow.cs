@@ -11,7 +11,15 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private float offset_Y = 1;
     [SerializeField] private bool isFollowX = false;
 
+    public static CameraFollow instance;
+
     void Start()
+    {
+        instance = this;
+        FollowPlayer();
+    }
+
+    public void FollowPlayer()
     {
         if (GameObject.FindGameObjectWithTag("Player"))
         {
