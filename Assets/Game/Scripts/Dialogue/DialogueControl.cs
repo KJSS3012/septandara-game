@@ -49,7 +49,7 @@ public class DialogueControl : MonoBehaviour
                 if (index <= length-1)
                     ActiveDialogue(speechs[index].actorName, speechs[index].speech);
             }
-            else if (!isPass && length != 1 && speechs != null)
+            else if (!isPass && length != 1 && speechs != null && index < length)
             {
                 if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S)))
                 {
