@@ -63,7 +63,7 @@ public class MouseTouchLoadScene : MonoBehaviour
         OnKeyCodeS();
         if ((isMouseDown || isKeyDownS) && (isCollider && player.isGround))
         {
-            animObject.SetTrigger("open");
+            if(animObject.parameterCount > 0) animObject.SetTrigger("open");
             player.RestartControls(false);
             controlsUI.SetActive(false);
             objAct.Active();
