@@ -111,7 +111,7 @@ public class Player : MonoBehaviour
         animPlayer.SetBool("hit", false);
     }
 
-    //Colisão com componentes/objetos do game
+    //Colisï¿½o com componentes/objetos do game
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.CompareTag("PlataformFloating"))
@@ -121,6 +121,11 @@ public class Player : MonoBehaviour
         else
         {
             transform.parent = null;
+        }
+        if (other.gameObject.tag == "GameOver")
+        {
+            animPlayer.SetBool("gameover", true);
+            other.gameObject.GetComponent<GameOver>().resetScene();
         }
     }
 
