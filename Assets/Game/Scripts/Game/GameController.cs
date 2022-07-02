@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    
+
     [Header("Coin Controller")]
     public int totalScoreCoins;
     [SerializeField] private Text textScoreCoins;
@@ -30,14 +31,14 @@ public class GameController : MonoBehaviour
         instance = this;
         textPercentageHeart.text = percentageLife.ToString() + "%";
         concecutiveCorrectQuestion = statusGame.consecutiveQuestion;
-        
+
         totalScoreCoins = statusGame.scoreCoins;
         UpdateScoreCoins();
         percentageLife = statusGame.quantLife;
         UpdatePercentageLife();
     }
 
-    
+
     // MECHANICAL COINS
     public void UpdateScoreCoins()
     {
@@ -55,8 +56,17 @@ public class GameController : MonoBehaviour
 
     public void SubtractLife(int partSubtractLife)
     {
-        percentageLife -= partSubtractLife;
-        UpdatePercentageLife();
+        if (percentageLife - partSubtractLife <= 0)
+        {
+            GameOver();
+            percentageLife = 50;
+            UpdatePercentageLife();
+        }
+        else
+        {
+            percentageLife -= partSubtractLife;
+            UpdatePercentageLife();
+        }
     }
 
     public void UpdateConsecutiveQuestion()
@@ -79,7 +89,7 @@ public class GameController : MonoBehaviour
         {
             faceStatusPlayer.sprite = statusFacePlayer[1];
         }
-        else if(percentageLife <= 30)
+        else if (percentageLife <= 30)
         {
             faceStatusPlayer.sprite = statusFacePlayer[2];
         }
@@ -94,7 +104,7 @@ public class GameController : MonoBehaviour
             chances[index].SwitchAnimation("idle-active", true);
             chances[index].SwitchAnimation("desactive", true);
         }
-        else if(!isDesactive)
+        else if (!isDesactive)
         {
             chances[index].SwitchAnimation("idle-desactive", true);
             chances[index].SwitchAnimation("active", true);
@@ -109,9 +119,13 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void GameOver()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     public void VerifyChances(bool isMissChange)
     {
-        int indexDesactive = chances.Length-1;
+        int indexDesactive = chances.Length - 1;
         int indexActive = 0;
         do
         {
@@ -125,7 +139,7 @@ public class GameController : MonoBehaviour
                 StartCoroutine(DelayDesactiveText(true));
                 break;
             }
-            else if(!chances[indexActive].IsActiveChance() && !isMissChange && concecutiveCorrectQuestion == 2)
+            else if (!chances[indexActive].IsActiveChance() && !isMissChange && concecutiveCorrectQuestion == 2)
             {
                 ActiveAnimChanceNow(indexActive, false);
                 chances[indexActive].SetActiveChance(true);
@@ -139,7 +153,7 @@ public class GameController : MonoBehaviour
             indexDesactive--;
             indexActive++;
             UpdateConsecutiveQuestion();
-        } while (indexDesactive>=0 && indexActive>0);
+        } while (indexDesactive >= 0 && indexActive > 0);
     }
 
     IEnumerator DelayDesactiveText(bool alternative)
@@ -154,5 +168,6 @@ public class GameController : MonoBehaviour
             resultsChanceActive.gameObject.SetActive(false);
         }
     }
+
 
 }

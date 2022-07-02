@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public Animator animPlayer;
     public SpriteRenderer spritePlayer;
     public PlayerInput playerInput;
+    public Vector3 respawnPoint;
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         bodyCollider = GetComponent<BoxCollider2D>();
         isActiveMoviment = true;
+        respawnPoint = transform.position;
     }
 
     void FixedUpdate()
@@ -124,8 +126,16 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.tag == "GameOver")
         {
-            animPlayer.SetBool("gameover", true);
-            other.gameObject.GetComponent<GameOver>().resetScene();
+            transform.position = respawnPoint;
+            GameController.instance.SubtractLife(30);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "CheckPoint")
+        {
+            respawnPoint = transform.position;
         }
     }
 
