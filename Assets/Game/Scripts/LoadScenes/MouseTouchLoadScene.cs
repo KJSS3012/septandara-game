@@ -38,7 +38,7 @@ public class MouseTouchLoadScene : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        isCollider = true;   
+        isCollider = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -70,6 +70,6 @@ public class MouseTouchLoadScene : MonoBehaviour
         }
     }
 
-    
+
 
 }
