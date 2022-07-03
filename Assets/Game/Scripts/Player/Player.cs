@@ -135,7 +135,10 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "CheckPoint")
         {
-            respawnPoint = transform.position;
+            if (transform.position.x > respawnPoint.x)
+            {
+                respawnPoint = transform.position;
+            }
         }
     }
 
