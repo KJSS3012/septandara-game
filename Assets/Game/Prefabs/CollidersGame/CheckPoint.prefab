@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1654808347884783399}
   - component: {fileID: 4545037073966093545}
   - component: {fileID: 5023469092266285400}
+  - component: {fileID: 8438408153210351937}
+  - component: {fileID: 446287832253273511}
   m_Layer: 0
   m_Name: CheckPoint
   m_TagString: CheckPoint
@@ -27,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6603659851517795846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 28.82, y: 2.23, z: 0}
-  m_LocalScale: {x: 7.4287305, y: 7.4287305, z: 7.4287305}
+  m_LocalScale: {x: 2.756781, y: 2.756781, z: 3.117105}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -573192269
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c2632808b9077654f8a497b1c8bec536, type: 3}
+  m_Sprite: {fileID: -1862657341525388894, guid: fd8ef89a858e69e4d88602ae7ca275c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +102,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.25, y: 0.43}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -109,3 +111,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.025290426, y: 0.16}
   m_EdgeRadius: 0
+--- !u!95 &8438408153210351937
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6603659851517795846}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4cfcb4d685b707b42bcc46b1239c98db, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &446287832253273511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6603659851517795846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f28d77b5c2e22479c6c17a2645139e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
