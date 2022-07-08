@@ -115,13 +115,13 @@ public class Enemy : MonoBehaviour
             {
                 enemySprite.flipX = true;
                 nextPosition = posEnd.position;
-                playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(forceReturnDown/4, forceReturnDown/2), ForceMode2D.Impulse);
+                playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(forceReturnDown / 4, forceReturnDown / 2), ForceMode2D.Impulse);
             }
             else
             {
                 enemySprite.flipX = false;
                 nextPosition = posStart.position;
-                playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-forceReturnDown/4, forceReturnDown/2), ForceMode2D.Impulse);
+                playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-forceReturnDown / 4, forceReturnDown / 2), ForceMode2D.Impulse);
             }
         }
     }
