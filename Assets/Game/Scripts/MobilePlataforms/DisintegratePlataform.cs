@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DisintegratePlataform : MonoBehaviour
 {
-
     private Animator anim;
 
     private void Start()
@@ -21,6 +20,7 @@ public class DisintegratePlataform : MonoBehaviour
 
     IEnumerator DelayReturn()
     {
+       
         yield return new WaitForSeconds(3f);
         ReturnPlataform();
     }
@@ -29,6 +29,7 @@ public class DisintegratePlataform : MonoBehaviour
     {
         anim.SetBool("activeEffect", false);
         anim.SetBool("exit", true);
+       
     }
 
     private void OnCollisionExit2D(Collision2D collision)
