@@ -1,0 +1,205 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.1f1 (270dd8c3da1c) revision 2559448'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'pt' Physical Memory: 7991 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/kaiqu/Desktop/septandara-game
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64551
+Successfully changed project path to: C:/Users/kaiqu/Desktop/septandara-game
+C:/Users/kaiqu/Desktop/septandara-game
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 241.64 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/kaiqu/Desktop/septandara-game/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x9a49)
+    Vendor:   
+    VRAM:     3995 MB
+    Driver:   27.20.100.8439
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56228
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004356 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 248.60 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.666 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004930 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 235.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.388 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 2.09 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3071 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 134.5 MB.
+System memory in use after: 134.7 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3514.
+Total: 5.970500 ms (FindLiveObjects: 0.482300 ms CreateObjectMapping: 0.223900 ms MarkObjects: 5.106600 ms  DeleteObjects: 0.153500 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Game/DataGame
+  artifactKey: Guid(04d3cc2507f147441843c01f3ec42217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/DataGame using Guid(04d3cc2507f147441843c01f3ec42217) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27a1c76f4115e8b9a5b9d6a6cfa500d4') in 0.037984 seconds
+  Import took 0.055233 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000612 seconds.
+  path: Assets/Game/DataGame/Questions/MathKingdom/Fase-01.asset
+  artifactKey: Guid(72c4e62efd7046f45bdb4c2af9f11561) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/DataGame/Questions/MathKingdom/Fase-01.asset using Guid(72c4e62efd7046f45bdb4c2af9f11561) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd097617ea3c2256334a6464546ffbb8b') in 0.078067 seconds
+  Import took 0.092585 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000573 seconds.
+  path: Assets/Game/DataGame/Questions/MathKingdom
+  artifactKey: Guid(3ff54bfd42f2b6846b63fd589b4869ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/DataGame/Questions/MathKingdom using Guid(3ff54bfd42f2b6846b63fd589b4869ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9908d454e23a1f4bda1f4bab4abeffec') in 0.017309 seconds
+  Import took 0.031494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000500 seconds.
+  path: Assets/Game/LWRP Asset.asset
+  artifactKey: Guid(20f315376203ea04aa7cb6fcf261bed4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/LWRP Asset.asset using Guid(20f315376203ea04aa7cb6fcf261bed4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fff647f4906d4851eba453f935e4513') in 0.017300 seconds
+  Import took 0.030197 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000384 seconds.
+  path: Assets/Game/DataGame/Questions/MathKingdom/Fase-03.asset
+  artifactKey: Guid(d3791027d7f5fff4a8626f638d4b62c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/DataGame/Questions/MathKingdom/Fase-03.asset using Guid(d3791027d7f5fff4a8626f638d4b62c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a15231ce454432fac39b44c239a3b37') in 0.017691 seconds
+  Import took 0.030880 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/Game/Renderer LWRP.asset
+  artifactKey: Guid(661485d0094fcda47b5a6a7cb34da71b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Renderer LWRP.asset using Guid(661485d0094fcda47b5a6a7cb34da71b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7515605d4150a138539ed80bacb1c036') in 0.019385 seconds
+  Import took 0.031536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000839 seconds.
+  path: Assets/Game/DataGame/Questions/MathKingdom/Fase-02.asset
+  artifactKey: Guid(652cc412bb688244c8709cabe7244821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/DataGame/Questions/MathKingdom/Fase-02.asset using Guid(652cc412bb688244c8709cabe7244821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09199c7e3eaa301c59566ebd852004c7') in 0.020245 seconds
+  Import took 0.035854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000427 seconds.
+  path: Assets/Game/DataGame/Questions
+  artifactKey: Guid(695d414bf0bc3914aab4b25135ab1259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/DataGame/Questions using Guid(695d414bf0bc3914aab4b25135ab1259) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a79c4c0828c8d811e2028302cc50043') in 0.026615 seconds
+  Import took 0.040388 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000847 seconds.
+  path: Assets/Game/DataGame/Questions/MathKingdom/Fase-04.asset
+  artifactKey: Guid(dd63c7e50086e7f409317c40640db847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/DataGame/Questions/MathKingdom/Fase-04.asset using Guid(dd63c7e50086e7f409317c40640db847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d5a10ff96fa7431a15372a8f38d7bb3') in 0.015760 seconds
+  Import took 0.031093 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 769.925622 seconds.
+  path: Assets/Game/Scenes/WorldAlgebra/Fase-3-desconhecida.unity
+  artifactKey: Guid(eed01c52f4374bd4097ca70738d78f4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Scenes/WorldAlgebra/Fase-3-desconhecida.unity using Guid(eed01c52f4374bd4097ca70738d78f4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '149e29161296b953fd9e28df422b90cd') in 0.024170 seconds
+  Import took 0.045931 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 76.857457 seconds.
+  path: Assets/Game/DataGame/Dialogues_or_Tutorials/MathKingdom
+  artifactKey: Guid(8058a5eed4ccb984e9a24a2ea4c4a6e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/DataGame/Dialogues_or_Tutorials/MathKingdom using Guid(8058a5eed4ccb984e9a24a2ea4c4a6e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82e4d95ed8304d2942d16e1668ceeab4') in 0.026372 seconds
+  Import took 0.042533 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.059860 seconds.
+  path: Assets/Game/DataGame/Dialogues_or_Tutorials/MathKingdom/Dialogue_00.asset
+  artifactKey: Guid(d04581668f67df2478a6d80b34682c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/DataGame/Dialogues_or_Tutorials/MathKingdom/Dialogue_00.asset using Guid(d04581668f67df2478a6d80b34682c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fdcd0149a6660d360511bd89580118f') in 0.012232 seconds
+  Import took 0.027920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000496 seconds.
+  path: Assets/Game/DataGame/Dialogues_or_Tutorials/MathKingdom/Dialogue_01.asset
+  artifactKey: Guid(58b316442f3301b4c8a8c3ad852f05a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/DataGame/Dialogues_or_Tutorials/MathKingdom/Dialogue_01.asset using Guid(58b316442f3301b4c8a8c3ad852f05a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d4540b2ab1c4437884fd1904dbcfabe') in 0.018645 seconds
+  Import took 0.032263 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000376 seconds.
+  path: Assets/Game/DataGame/Dialogues_or_Tutorials/MathKingdom/Dialogue_02.asset
+  artifactKey: Guid(7fd1a05c6cad75f43ba9c15eb75f7745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/DataGame/Dialogues_or_Tutorials/MathKingdom/Dialogue_02.asset using Guid(7fd1a05c6cad75f43ba9c15eb75f7745) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26a45ef7f2a19d690bba674625cb47ad') in 0.035404 seconds
+  Import took 0.047971 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1233.147827 seconds.
+  path: Assets/Game/DataGame/Questions/MathKingdom/Fase-01.asset
+  artifactKey: Guid(72c4e62efd7046f45bdb4c2af9f11561) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/DataGame/Questions/MathKingdom/Fase-01.asset using Guid(72c4e62efd7046f45bdb4c2af9f11561) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b317e7b37cd3c453a63070d68632754') in 0.024391 seconds
+  Import took 0.041611 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000530 seconds.
+  path: Assets/Game/DataGame/Questions/MathKingdom/Fase-03.asset
+  artifactKey: Guid(d3791027d7f5fff4a8626f638d4b62c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/DataGame/Questions/MathKingdom/Fase-03.asset using Guid(d3791027d7f5fff4a8626f638d4b62c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee0020747243d83a1627f0560079dcf4') in 0.017294 seconds
+  Import took 0.033596 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
