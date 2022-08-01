@@ -10614,6 +10614,37 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4894370249000957588, guid: 620300b353b015049b027e6fa265231e, type: 3}
   m_PrefabInstance: {fileID: 1940869813}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1946437275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9178908551311396407, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
+  m_PrefabInstance: {fileID: 9178908551936311836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1946437280
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946437275}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 0.5, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &1950082378
 GameObject:
   m_ObjectHideFlags: 0
@@ -11416,6 +11447,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9178908551311396401, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
+      propertyPath: m_SortingLayer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178908551311396401, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178908551311396401, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -142070095
+      objectReference: {fileID: 0}
+    - target: {fileID: 9178908551311396403, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
+      propertyPath: playerDetect
+      value: 
+      objectReference: {fileID: 9178908551936311837}
+    - target: {fileID: 9178908552088774444, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.76
+      objectReference: {fileID: 0}
     - target: {fileID: 9178908552279196374, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
       propertyPath: m_Name
       value: EnemyX
@@ -11426,11 +11477,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9178908552279196375, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 70.87573
+      value: -37.76
       objectReference: {fileID: 0}
     - target: {fileID: 9178908552279196375, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3189785
+      value: -8.2
       objectReference: {fileID: 0}
     - target: {fileID: 9178908552279196375, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11464,5 +11515,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9178908552847699494, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200760440552893855, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
+      propertyPath: m_Size.x
+      value: 10.267029
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200760440552893855, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.6823425
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
+--- !u!61 &9178908551936311837 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 9200760440552893855, guid: ed58c30cc2cd6a148b192bef89d170ad, type: 3}
+  m_PrefabInstance: {fileID: 9178908551936311836}
+  m_PrefabAsset: {fileID: 0}

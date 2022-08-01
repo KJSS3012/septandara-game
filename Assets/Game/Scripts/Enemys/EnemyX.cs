@@ -9,12 +9,12 @@ public class EnemyX : MonoBehaviour
     public Transform posStart, posEnd;
     public LayerMask playerLayer;
     public float forceReturnDown;
+    private bool isDetect;
     [SerializeField] private SpriteRenderer enemySprite;
-
+    [SerializeField] private Animator enemyAnim;
     [SerializeField] private GameObject playerObject;
     [SerializeField] private Player player;
-    [SerializeField] private Rigidbody2D rig2d;
-    [SerializeField] private BoxCollider2D colliderDetect;
+    [SerializeField] private BoxCollider2D colliderDetect, playerDetect;
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +22,11 @@ public class EnemyX : MonoBehaviour
         nextPosition = posStart.position;
         enemySprite = GetComponent<SpriteRenderer>();
         colliderDetect = GetComponent<BoxCollider2D>();
+        playerDetect = GetComponent<BoxCollider2D>();
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         colliderDetect.enabled = true;
+        enemyAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -36,18 +38,31 @@ public class EnemyX : MonoBehaviour
 
     private void MoveEnemy()
     {
-        if (transform.position == posStart.position)
+        if (isDetect)
         {
-            enemySprite.flipX = true;
-            nextPosition = posEnd.position;
+            StartCoroutine(DelayAnimationStart());
+            while (isDetect)
+            {
+
+                if (transform.position == posStart.position)
+                {
+                    enemySprite.flipX = true;
+                    nextPosition = posEnd.position;
+                }
+
+                if (transform.position == posEnd.position)
+                {
+                    enemySprite.flipX = false;
+                    nextPosition = posStart.position;
+                }
+                transform.position = Vector3.MoveTowards(transform.position, nextPosition, speedEnemy * Time.fixedDeltaTime);
+            }
+        }
+        else
+        {
+            StartCoroutine(DelayAnimationEnd());
         }
 
-        if (transform.position == posEnd.position)
-        {
-            enemySprite.flipX = false;
-            nextPosition = posStart.position;
-        }
-        transform.position = Vector3.MoveTowards(transform.position, nextPosition, speedEnemy * Time.fixedDeltaTime);
     }
 
     public void DetectPlayer()
@@ -71,18 +86,41 @@ public class EnemyX : MonoBehaviour
     IEnumerator DelayActiveCollider()
     {
         yield return new WaitForSeconds(2f);
-        ActiveBodyCollider();
-    }
-
-    public void ActiveBodyCollider()
-    {
         colliderDetect.enabled = true;
     }
 
+    IEnumerator DelayAnimationStart()
+    {
+        yield return new WaitForSeconds(1.5f);
+        enemyAnim.SetBool("preattack", true);
+        yield return new WaitForSeconds(1.5f);
+        enemyAnim.SetBool("preattack", false);
+        enemyAnim.SetBool("attack", true);
+    }
+
+    IEnumerator DelayAnimationEnd()
+    {
+        yield return new WaitForSeconds(1.5f);
+        enemyAnim.SetBool("outattack", true);
+        yield return new WaitForSeconds(1.5f);
+        enemyAnim.SetBool("outattack", false);
+    }
     public void DisableBodyCollider()
     {
         colliderDetect.enabled = false;
         StartCoroutine(DelayActiveCollider());
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (playerDetect.gameObject.tag == "Player")
+        {
+            isDetect = true;
+        }
+        else
+        {
+            isDetect = false;
+        }
     }
 
     private void OnDrawGizmos()

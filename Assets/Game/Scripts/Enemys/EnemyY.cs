@@ -13,7 +13,6 @@ public class EnemyY : MonoBehaviour
 
     [SerializeField] private GameObject playerObject;
     [SerializeField] private Player player;
-    [SerializeField] private Rigidbody2D rig2d;
     [SerializeField] private BoxCollider2D colliderDetect;
 
     // Start is called before the first frame update
@@ -71,14 +70,8 @@ public class EnemyY : MonoBehaviour
     IEnumerator DelayActiveCollider()
     {
         yield return new WaitForSeconds(2f);
-        ActiveBodyCollider();
-    }
-
-    public void ActiveBodyCollider()
-    {
         colliderDetect.enabled = true;
     }
-
     public void DisableBodyCollider()
     {
         colliderDetect.enabled = false;
