@@ -112,6 +112,17 @@ public class Player : MonoBehaviour
         bodyCollider.enabled = true;
         animPlayer.SetBool("hit", false);
     }
+    IEnumerator DelayStandUp()
+    {
+        yield return new WaitForSeconds(2f);
+        ActiveBodyCollider();
+    }
+    public void DisableBodyCollider()
+    {
+        bodyCollider.enabled = false;
+        animPlayer.SetBool("hit", true);
+        StartCoroutine(DelayStandUp());
+    }
 
     //Colis�o com componentes/objetos do game
     private void OnCollisionEnter2D(Collision2D other)
