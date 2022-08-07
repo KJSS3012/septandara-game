@@ -27,7 +27,7 @@ public class Book : MonoBehaviour
     private void Update()
     {
         UnlockedFase();
-        
+
         if (Input.GetKeyDown(KeyCode.C))
         {
             OpenBook();
@@ -41,10 +41,10 @@ public class Book : MonoBehaviour
     private void UnlockedFase()
     {
         buttonsFase = FindObjectsOfType<ButtonFase>();
-        for (int i = 0; i<buttonsFase.Length; i++)
+        for (int i = 0; i < buttonsFase.Length; i++)
         {
             buttonsFase[i].GetButtonBook();
-            if (buttonsFase[i].buttonBook.number-1 == sceneActive)
+            if (buttonsFase[i].buttonBook.number - 1 == sceneActive)
             {
                 buttonsFase[i].buttonBook.UnlockedButton();
                 world.fasesUnlocked[buttonsFase[i].buttonBook.number - 1] = false;

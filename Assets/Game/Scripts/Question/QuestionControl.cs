@@ -30,7 +30,7 @@ public class QuestionControl : MonoBehaviour
         isMissChance = false;
         vsControls = GameObject.FindGameObjectWithTag("Controls").GetComponent<VisibilityControls>();
 
-        //zerar o isActivated de todas as questões quando iniciar o objeto
+        //zerar o isActivated de todas as questï¿½es quando iniciar o objeto
         ClearActivatedData();
     }
 

@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
 
     [Header("Coin Controller")]
     public int totalScoreCoins;
+    private Player player;
     [SerializeField] private Text textScoreCoins;
 
     [Header("Heart Life Controller")]
@@ -36,6 +37,7 @@ public class GameController : MonoBehaviour
         UpdateScoreCoins();
         percentageLife = statusGame.quantLife;
         UpdatePercentageLife();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
 
@@ -64,6 +66,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            player.DisableBodyCollider();
             percentageLife -= partSubtractLife;
             UpdatePercentageLife();
         }

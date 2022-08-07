@@ -10,24 +10,24 @@ public class EnemyX : MonoBehaviour
     public LayerMask playerLayer;
     public float forceReturnDown;
     private Detect detect;
+    private bool isStart;
+
     [SerializeField] private SpriteRenderer enemySprite;
     [SerializeField] private Animator enemyAnim;
     [SerializeField] private GameObject playerObject;
     [SerializeField] private Player player;
-
-    [SerializeField] private BoxCollider2D colliderDetect;
-
+    [SerializeField] private CircleCollider2D colliderDetect;
     // Start is called before the first frame update
     void Start()
     {
         nextPosition = posStart.position;
         enemySprite = GetComponent<SpriteRenderer>();
-        colliderDetect = GetComponent<BoxCollider2D>();
+        colliderDetect = GetComponent<CircleCollider2D>();
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         detect = GameObject.FindGameObjectWithTag("Detect").GetComponent<Detect>();
-        colliderDetect.enabled = true;
         enemyAnim = GetComponent<Animator>();
+        isStart = false;
     }
 
     // Update is called once per frame
@@ -37,14 +37,29 @@ public class EnemyX : MonoBehaviour
         DetectPlayer();
     }
 
+    public void DetectPlayer()
+    {
+        if (colliderDetect.IsTouchingLayers(playerLayer))
+        {
+            GameController.instance.SubtractLife(10);
+            if (playerObject.GetComponent<SpriteRenderer>().flipX)
+            {
+                playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(forceReturnDown / 4, forceReturnDown / 2), ForceMode2D.Impulse);
+            }
+            else
+            {
+                playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-forceReturnDown / 4, forceReturnDown / 2), ForceMode2D.Impulse);
+            }
+        }
+    }
+
     private void MoveEnemy()
     {
         if (detect.isDetect)
         {
             StartCoroutine(DelayAnimationStart());
-            while (detect.isDetect)
+            if (isStart)
             {
-
                 if (transform.position == posStart.position)
                 {
                     enemySprite.flipX = true;
@@ -61,57 +76,43 @@ public class EnemyX : MonoBehaviour
         }
         else
         {
-            StartCoroutine(DelayAnimationEnd());
-        }
-
-    }
-
-    public void DetectPlayer()
-    {
-        if (colliderDetect.IsTouchingLayers(playerLayer))
-        {
-            player.DisableBodyCollider();
-            DisableBodyCollider();
-            GameController.instance.SubtractLife(10);
-            if (playerObject.GetComponent<SpriteRenderer>().flipX)
-            {
-                playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(forceReturnDown / 4, forceReturnDown / 2), ForceMode2D.Impulse);
-            }
-            else
-            {
-                playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-forceReturnDown / 4, forceReturnDown / 2), ForceMode2D.Impulse);
-            }
+            StartCoroutine(DelayAnimationRollingExit());
         }
     }
-
-    IEnumerator DelayActiveCollider()
-    {
-        yield return new WaitForSeconds(2f);
-        colliderDetect.enabled = true;
-    }
-
     IEnumerator DelayAnimationStart()
     {
-        yield return new WaitForSeconds(1.5f);
-        enemyAnim.SetBool("preattack", true);
-        yield return new WaitForSeconds(1.5f);
-        enemyAnim.SetBool("preattack", false);
-        enemyAnim.SetBool("attack", true);
+        enemyAnim.SetBool("Idle", false);
+        enemyAnim.SetBool("Attack", true);
+        yield return new WaitForSeconds(0.8f);
+        isStart = true;
+        StartCoroutine(DelayAnimationRolling());
+    }
+    IEnumerator DelayAnimationRolling()
+    {
+        yield return new WaitForSeconds(0);
+        enemyAnim.SetBool("Attack", false);
+        enemyAnim.SetBool("Rolling", true);
+        if (!detect.isDetect)
+        {
+            StartCoroutine(DelayAnimationRollingExit());
+        }
     }
 
-    IEnumerator DelayAnimationEnd()
+    IEnumerator DelayAnimationRollingExit()
     {
-        yield return new WaitForSeconds(1.5f);
-        enemyAnim.SetBool("outattack", true);
-        yield return new WaitForSeconds(1.5f);
-        enemyAnim.SetBool("outattack", false);
-    }
-    public void DisableBodyCollider()
-    {
-        colliderDetect.enabled = false;
-        StartCoroutine(DelayActiveCollider());
+        enemyAnim.SetBool("Rolling", false);
+        enemyAnim.SetBool("RollingExit", true);
+        yield return new WaitForSeconds(0.3f);
+        StartCoroutine(DelayAnimationIdle());
     }
 
+    IEnumerator DelayAnimationIdle()
+    {
+        yield return new WaitForSeconds(0);
+        enemyAnim.SetBool("RollingExit", false);
+        enemyAnim.SetBool("Idle", true);
+        isStart = false;
+    }
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(posStart.position, posEnd.position);

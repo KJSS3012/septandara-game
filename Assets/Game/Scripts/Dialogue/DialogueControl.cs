@@ -12,7 +12,7 @@ public class DialogueControl : MonoBehaviour
     [SerializeField] private Text d_actorNameText;
     [SerializeField] private float writeSpeedSpeech = 0.04f;
     public bool isDialogueEnabled;
-    
+
     [Header("Data Extra")]
     public VisibilityControls vsControls;
 
@@ -40,13 +40,13 @@ public class DialogueControl : MonoBehaviour
         //Passa a fala
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.S))
         {
-            
+
             if (index <= length - 1 && isPass)
             {
                 isPass = false;
                 index++;
                 d_speechText.text = "";
-                if (index <= length-1)
+                if (index <= length - 1)
                     ActiveDialogue(speechs[index].actorName, speechs[index].speech);
             }
             else if (!isPass && length != 1 && speechs != null && index < length)
@@ -74,7 +74,8 @@ public class DialogueControl : MonoBehaviour
     {
         dialogueUI.SetActive(false);
         isDialogueEnabled = false;
-        if (!isDesactiveControls) { 
+        if (!isDesactiveControls)
+        {
             vsControls.OpacityControls(1f, true);
             GameController.instance.ReactiveChances();
         }
@@ -91,7 +92,7 @@ public class DialogueControl : MonoBehaviour
     IEnumerator WriteSpeech(string speech)
     {
         foreach (char letter in speech.ToCharArray())
-        { 
+        {
             if (d_speechText.text != speechs[index].speech)
             {
                 d_speechText.text += letter;

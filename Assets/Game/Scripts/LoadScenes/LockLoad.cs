@@ -45,7 +45,7 @@ public class LockLoad : MonoBehaviour
     private void ShowMessageLock()
     {
         infoLoadSceneUI.SetActive(true);
-        textUI.text = "Resolva todas as questões para prosseguir!";
+        textUI.text = "Resolva todas as questï¿½es para prosseguir!";
     }
 
     private void DesactiveMessageLock()

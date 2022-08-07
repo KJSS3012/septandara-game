@@ -22,8 +22,8 @@ public class CardActive : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         vsControls.OpacityControls(0.5f, false);
-        cardName.text = cards.cards[idCard-1].name;
-        cardDescription.text = cards.cards[idCard-1].description;
+        cardName.text = cards.cards[idCard - 1].name;
+        cardDescription.text = cards.cards[idCard - 1].description;
         showCardUI.SetActive(true);
         StartCoroutine(Delay());
     }

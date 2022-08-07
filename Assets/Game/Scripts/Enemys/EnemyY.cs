@@ -9,8 +9,8 @@ public class EnemyY : MonoBehaviour
     public Transform posStart, posEnd;
     public LayerMask playerLayer;
     public float forceReturnDown;
-    [SerializeField] private SpriteRenderer enemySprite;
 
+    [SerializeField] private SpriteRenderer enemySprite;
     [SerializeField] private GameObject playerObject;
     [SerializeField] private Player player;
     [SerializeField] private BoxCollider2D colliderDetect;
@@ -54,7 +54,6 @@ public class EnemyY : MonoBehaviour
         if (colliderDetect.IsTouchingLayers(playerLayer))
         {
             player.DisableBodyCollider();
-            DisableBodyCollider();
             GameController.instance.SubtractLife(10);
             if (playerObject.GetComponent<SpriteRenderer>().flipX)
             {
@@ -66,18 +65,6 @@ public class EnemyY : MonoBehaviour
             }
         }
     }
-
-    IEnumerator DelayActiveCollider()
-    {
-        yield return new WaitForSeconds(2f);
-        colliderDetect.enabled = true;
-    }
-    public void DisableBodyCollider()
-    {
-        colliderDetect.enabled = false;
-        StartCoroutine(DelayActiveCollider());
-    }
-
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(posStart.position, posEnd.position);

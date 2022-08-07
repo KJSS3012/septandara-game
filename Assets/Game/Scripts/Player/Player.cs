@@ -106,22 +106,19 @@ public class Player : MonoBehaviour
     {
         isTouchingWall = bodyCollider.IsTouchingLayers(groundLayer);
     }
-
-    public void ActiveBodyCollider()
+    public void DisableBodyCollider()
     {
-        bodyCollider.enabled = true;
-        animPlayer.SetBool("hit", false);
+        animPlayer.SetBool("hit", true);
+        StartCoroutine(DelayStandUp());
     }
     IEnumerator DelayStandUp()
     {
         yield return new WaitForSeconds(2f);
         ActiveBodyCollider();
     }
-    public void DisableBodyCollider()
+    public void ActiveBodyCollider()
     {
-        bodyCollider.enabled = false;
-        animPlayer.SetBool("hit", true);
-        StartCoroutine(DelayStandUp());
+        animPlayer.SetBool("hit", false);
     }
 
     //Colis�o com componentes/objetos do game
