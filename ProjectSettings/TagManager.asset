@@ -15,7 +15,7 @@ TagManager:
   - Enemy
   - GameOver
   - CheckPoint
-  - Spikes
+  - Detect
   layers:
   - Default
   - TransparentFX
@@ -79,4 +79,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1272341757
+    locked: 0
+  - name: Traps
+    uniqueID: 3032102375
     locked: 0

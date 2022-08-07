@@ -15,11 +15,11 @@ C:/Users/kaiqu/Desktop/septandara-game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56899
+55485
 Successfully changed project path to: C:/Users/kaiqu/Desktop/septandara-game
 C:/Users/kaiqu/Desktop/septandara-game
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 83.84 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 237.58 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -36,202 +36,81 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56012
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56244
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001649 seconds.
+Registered in 0.005563 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 104.88 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 275.19 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.379 seconds
+- Completed reload, in 10.080 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001471 seconds.
+Registered in 0.004669 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 92.30 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 261.10 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.309 seconds
+- Completed reload, in  3.427 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.61 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 1.42 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3072 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 134.6 MB.
-System memory in use after: 134.8 MB.
+Unloading 3074 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 134.7 MB.
+System memory in use after: 134.9 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3515.
-Total: 3.615000 ms (FindLiveObjects: 0.183500 ms CreateObjectMapping: 0.059200 ms MarkObjects: 3.269600 ms  DeleteObjects: 0.101000 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Game/Scenes/WorldAlgebra/Fase-3-05.unity
-  artifactKey: Guid(ba9709aa16e2e0f46b92b440d0ee7446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Scenes/WorldAlgebra/Fase-3-05.unity using Guid(ba9709aa16e2e0f46b92b440d0ee7446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6b2ba73397a70e276b0a80f1e3fc8d6') in 0.022758 seconds
-  Import took 0.029801 seconds .
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3517.
+Total: 5.829400 ms (FindLiveObjects: 0.458700 ms CreateObjectMapping: 0.246900 ms MarkObjects: 4.957800 ms  DeleteObjects: 0.161700 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 10.771229 seconds.
-  path: Assets/Game/Prefabs/AlgebraEnemys/EnemyY.prefab
-  artifactKey: Guid(2bd7f9861db78c444b4b4a3a4506877a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Prefabs/AlgebraEnemys/EnemyY.prefab using Guid(2bd7f9861db78c444b4b4a3a4506877a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1384d41663b1d6b1bc6af1ef37603156') in 0.273295 seconds
-  Import took 0.281075 seconds .
+  path: Assets/Game/Scripts/Enemys/EnemyMechanics/Detect.cs
+  artifactKey: Guid(9abd4fede9f8e474d86aa98f8efdaec1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Scripts/Enemys/EnemyMechanics/Detect.cs using Guid(9abd4fede9f8e474d86aa98f8efdaec1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abb0e01ae4d5db5228c857c9a727ba85') in 0.075779 seconds
+  Import took 0.092021 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 161.447575 seconds.
-  path: Assets/Game/Scenes/WorldAlgebra/Fase-3-09.unity
-  artifactKey: Guid(e17e4c6d4e7e59d4893f3b9fb460f397) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Scenes/WorldAlgebra/Fase-3-09.unity using Guid(e17e4c6d4e7e59d4893f3b9fb460f397) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2af02c8532e4fd4028cf28c580ad482a') in 0.006306 seconds
-  Import took 0.011198 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 57.688650 seconds.
-  path: Assets/Game/Scenes/WorldAlgebra/Fase-3-07.unity
-  artifactKey: Guid(4ee76955076a08846a6f3f8b1830c9b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Scenes/WorldAlgebra/Fase-3-07.unity using Guid(4ee76955076a08846a6f3f8b1830c9b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f438465ead63d033ef0bc800e7e131a') in 0.020514 seconds
-  Import took 0.025839 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 121.303113 seconds.
-  path: Assets/Game/Scenes/WorldAlgebra/Fase-3-06.unity
-  artifactKey: Guid(82da34ccd26455e459d43b74fb4c23aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Scenes/WorldAlgebra/Fase-3-06.unity using Guid(82da34ccd26455e459d43b74fb4c23aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '903d5342e4430cd51c9973ce62021308') in 0.006320 seconds
-  Import took 0.012374 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 928.167707 seconds.
-  path: Assets/Game/Arts/Scenarios
-  artifactKey: Guid(ffc207b48f52a1c469bde194eaf3458a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Arts/Scenarios using Guid(ffc207b48f52a1c469bde194eaf3458a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4fa6d3b5500b3ae5c27637433ab0de9') in 0.021844 seconds
-  Import took 0.043065 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.241711 seconds.
-  path: Assets/Game/Arts/Scenarios/WorldNumber
-  artifactKey: Guid(028f6142b0f3fbf4f975852c02f0e8a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Arts/Scenarios/WorldNumber using Guid(028f6142b0f3fbf4f975852c02f0e8a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b88c5cbefff56bd145e3c14083ee64a') in 0.017483 seconds
-  Import took 0.042168 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.749987 seconds.
-  path: Assets/Game/Arts/Scenarios/WorldAlgebra
-  artifactKey: Guid(e2539586c085e6048ac07f652a0a52ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Arts/Scenarios/WorldAlgebra using Guid(e2539586c085e6048ac07f652a0a52ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11c5b60713a65d540b017e7740986cb7') in 0.015635 seconds
-  Import took 0.032757 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.186608 seconds.
-  path: Assets/Game/Arts/Scenarios/WorldAlgebra/Enemies
-  artifactKey: Guid(e447180acdb08bb47bdf519ffdae06ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Arts/Scenarios/WorldAlgebra/Enemies using Guid(e447180acdb08bb47bdf519ffdae06ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e8988f32350c21539d028dd0f473d50') in 0.015728 seconds
-  Import took 0.040858 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 186.067676 seconds.
-  path: Assets/Game/Animations/NPCs/AlgebraEnemies/X/inimigo_x_idle_0.controller
-  artifactKey: Guid(fa4dd7a93e86f694585d390156e1dbfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Animations/NPCs/AlgebraEnemies/X/inimigo_x_idle_0.controller using Guid(fa4dd7a93e86f694585d390156e1dbfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee4eec547c8360f19ea0e123cdf66883') in 0.028041 seconds
-  Import took 0.043305 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 255.529351 seconds.
-  path: Assets/Game/Animations/NPCs/AlgebraEnemies/X/inimigo_x_idle_0.controller
-  artifactKey: Guid(fa4dd7a93e86f694585d390156e1dbfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Animations/NPCs/AlgebraEnemies/X/inimigo_x_idle_0.controller using Guid(fa4dd7a93e86f694585d390156e1dbfb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '992742db752c877e1005d70189476a9d') in 0.013306 seconds
-  Import took 0.032736 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 396.814704 seconds.
-  path: Assets/Game/Scripts/Enemys/EnemyX.cs
-  artifactKey: Guid(3e1e9e6ba425d2c47b7f059e14a4c1a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Scripts/Enemys/EnemyX.cs using Guid(3e1e9e6ba425d2c47b7f059e14a4c1a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f73dc31e882ce71457d40c138f104cbf') in 0.022981 seconds
-  Import took 0.037709 seconds .
+  Time since last request: 114.857765 seconds.
+  path: Assets/Game/Scripts/Enemys/EnemyMechanics/Detect.cs
+  artifactKey: Guid(9abd4fede9f8e474d86aa98f8efdaec1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Scripts/Enemys/EnemyMechanics/Detect.cs using Guid(9abd4fede9f8e474d86aa98f8efdaec1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d2894a9c542fc3a844691a1810ff11c') in 0.005746 seconds
+  Import took 0.025372 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.005008 seconds.
+Registered in 0.005211 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.18 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.46 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.404 seconds
+- Completed reload, in  3.001 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.45 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.50 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2946 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 132.3 MB.
-System memory in use after: 132.6 MB.
+Unloading 2947 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 127.5 MB.
+System memory in use after: 127.7 MB.
 
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3564.
-Total: 8.138500 ms (FindLiveObjects: 0.745800 ms CreateObjectMapping: 0.337300 ms MarkObjects: 6.974400 ms  DeleteObjects: 0.076800 ms)
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3520.
+Total: 5.972500 ms (FindLiveObjects: 0.453000 ms CreateObjectMapping: 0.216500 ms MarkObjects: 5.231200 ms  DeleteObjects: 0.068400 ms)
 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002327 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.48 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  7.715 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 2.27 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2946 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 132.7 MB.
-System memory in use after: 133.0 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3567.
-Total: 5.476100 ms (FindLiveObjects: 0.459700 ms CreateObjectMapping: 0.215300 ms MarkObjects: 4.747800 ms  DeleteObjects: 0.050500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 59.865566 seconds.
-  path: Assets/Game/Scripts/Enemys/EnemyX.cs
-  artifactKey: Guid(3e1e9e6ba425d2c47b7f059e14a4c1a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Scripts/Enemys/EnemyX.cs using Guid(3e1e9e6ba425d2c47b7f059e14a4c1a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76cd83d2eba74a84bb3066d5ed6c0373') in 0.034471 seconds
-  Import took 0.050091 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 102.662843 seconds.
-  path: Assets/Game/Prefabs/AlgebraEnemys/EnemyX.prefab
-  artifactKey: Guid(ed58c30cc2cd6a148b192bef89d170ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Game/Prefabs/AlgebraEnemys/EnemyX.prefab using Guid(ed58c30cc2cd6a148b192bef89d170ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fca6d44d341395618a1beacb43fd398d') in 0.496926 seconds
-  Import took 0.509785 seconds .
-
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
