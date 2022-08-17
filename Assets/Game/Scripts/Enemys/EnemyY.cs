@@ -53,8 +53,8 @@ public class EnemyY : MonoBehaviour
     {
         if (colliderDetect.IsTouchingLayers(playerLayer))
         {
-            player.DisableBodyCollider();
             GameController.instance.SubtractLife(10);
+            DisableCollider();
             if (playerObject.GetComponent<SpriteRenderer>().flipX)
             {
                 playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(forceReturnDown / 4, forceReturnDown / 2), ForceMode2D.Impulse);
@@ -68,5 +68,16 @@ public class EnemyY : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(posStart.position, posEnd.position);
+    }
+
+    public void DisableCollider()
+    {
+        colliderDetect.enabled = false;
+         StartCoroutine(ColliderActive());
+    }
+
+    IEnumerator ColliderActive(){
+       yield return new WaitForSeconds(2f);
+        colliderDetect.enabled = true;
     }
 }

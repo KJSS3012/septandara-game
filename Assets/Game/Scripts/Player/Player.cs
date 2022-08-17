@@ -106,16 +106,21 @@ public class Player : MonoBehaviour
     {
         isTouchingWall = bodyCollider.IsTouchingLayers(groundLayer);
     }
+
+    //Aperfeiçoar
     public void DisableBodyCollider()
     {
         animPlayer.SetBool("hit", true);
         StartCoroutine(DelayStandUp());
     }
+
+    //Aperfeiçoar
     IEnumerator DelayStandUp()
     {
         yield return new WaitForSeconds(2f);
         ActiveBodyCollider();
     }
+    //Aperfeiçoar
     public void ActiveBodyCollider()
     {
         animPlayer.SetBool("hit", false);
