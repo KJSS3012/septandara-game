@@ -73,11 +73,12 @@ public class EnemyY : MonoBehaviour
     public void DisableCollider()
     {
         colliderDetect.enabled = false;
-         StartCoroutine(ColliderActive());
+        StartCoroutine(ColliderActive());
     }
 
-    IEnumerator ColliderActive(){
-       yield return new WaitForSeconds(2f);
+    IEnumerator ColliderActive()
+    {
+        yield return new WaitForSeconds(2f);
         colliderDetect.enabled = true;
     }
 }

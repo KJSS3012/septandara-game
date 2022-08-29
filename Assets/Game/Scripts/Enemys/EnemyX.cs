@@ -9,7 +9,7 @@ public class EnemyX : MonoBehaviour
     public Transform posStart, posEnd;
     public LayerMask playerLayer;
     public float forceReturnDown;
-    private Detect detect;
+    [SerializeField] private Detect detect;
     private bool isStart;
 
     [SerializeField] private SpriteRenderer enemySprite;
@@ -25,7 +25,6 @@ public class EnemyX : MonoBehaviour
         colliderDetect = GetComponent<CircleCollider2D>();
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        detect = GameObject.FindGameObjectWithTag("Detect").GetComponent<Detect>();
         enemyAnim = GetComponent<Animator>();
         isStart = false;
     }
@@ -45,10 +44,12 @@ public class EnemyX : MonoBehaviour
             DisableCollider();
             if (playerObject.GetComponent<SpriteRenderer>().flipX)
             {
+                DisableCollider();
                 playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(forceReturnDown / 4, forceReturnDown / 2), ForceMode2D.Impulse);
             }
             else
             {
+                DisableCollider();
                 playerObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-forceReturnDown / 4, forceReturnDown / 2), ForceMode2D.Impulse);
             }
         }
@@ -119,14 +120,15 @@ public class EnemyX : MonoBehaviour
         Gizmos.DrawLine(posStart.position, posEnd.position);
     }
 
-      public void DisableCollider()
+    public void DisableCollider()
     {
         colliderDetect.enabled = false;
         StartCoroutine(ColliderActive());
     }
 
-    IEnumerator ColliderActive(){
-       yield return new WaitForSeconds(2f);
+    IEnumerator ColliderActive()
+    {
+        yield return new WaitForSeconds(2f);
         colliderDetect.enabled = true;
     }
 }

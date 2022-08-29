@@ -88,7 +88,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11664009, y: 0}
+  m_Offset: {x: 0.11664009, y: 0.72538185}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -99,7 +99,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.698376, y: 1}
+  m_Size: {x: 8.698376, y: 2.4507637}
   m_EdgeRadius: 0
 --- !u!1 &4413480773828948973
 GameObject:
@@ -142,8 +142,8 @@ GameObject:
   - component: {fileID: 4413480773901224457}
   - component: {fileID: 4413480773901224458}
   - component: {fileID: 4413480773901224456}
-  - component: {fileID: 4413480773901224455}
   - component: {fileID: 4413480773901224454}
+  - component: {fileID: 4413480773901224455}
   - component: {fileID: 4413480773901224453}
   m_Layer: 0
   m_Name: X
@@ -236,6 +236,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &4413480773901224454
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4413480773901224459}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0020099026, y: 0.00402099}
+  serializedVersion: 2
+  m_Radius: 0.12381089
 --- !u!61 &4413480773901224455
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -262,22 +278,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14710414, y: 0.1851824}
   m_EdgeRadius: 0
---- !u!58 &4413480773901224454
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4413480773901224459}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0020099026, y: 0.00402099}
-  serializedVersion: 2
-  m_Radius: 0.12381089
 --- !u!114 &4413480773901224453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,8 +295,9 @@ MonoBehaviour:
   posEnd: {fileID: 4413480773828948972}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   forceReturnDown: 2
+  detect: {fileID: 4413480773431912657}
   enemySprite: {fileID: 0}
   enemyAnim: {fileID: 0}
   playerObject: {fileID: 0}
