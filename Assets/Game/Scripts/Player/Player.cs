@@ -25,6 +25,12 @@ public class Player : MonoBehaviour
     public PlayerInput playerInput;
     public Vector3 respawnPoint;
 
+    [Header("Elements for Slingshot")]
+    private float side = -1f;
+    public Transform bullet;
+    public Transform pivot;
+    public GameObject Slingshot;
+
     void Start()
     {
         rig2D = GetComponent<Rigidbody2D>();
@@ -34,6 +40,20 @@ public class Player : MonoBehaviour
         bodyCollider = GetComponent<BoxCollider2D>();
         isActiveMoviment = true;
         respawnPoint = transform.position;
+    }
+
+    private void SlingshotShoot(){
+        Slingshot.transform.right = Vector2.right * side;
+
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            Instantiate(bullet, pivot.position, transform.rotation);
+        }
+    }
+
+    void Update()
+    {
+        SlingshotShoot();
     }
 
     void FixedUpdate()
@@ -58,6 +78,7 @@ public class Player : MonoBehaviour
             animPlayer.SetBool("walk", true);
             spritePlayer.flipX = false;
             isWalk = true;
+            side = 1;
         }
         else if (movement.x == 0f)
         {
@@ -69,6 +90,7 @@ public class Player : MonoBehaviour
             animPlayer.SetBool("walk", true);
             spritePlayer.flipX = true;
             isWalk = true;
+            side = -1;
         }
     }
 
