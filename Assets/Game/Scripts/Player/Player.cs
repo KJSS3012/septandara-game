@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     public Vector3 respawnPoint;
 
     [Header("Elements for Slingshot")]
-    private float side = -1f;
+    private float side = 1f;
     public Transform bullet;
     public Transform pivot;
     public GameObject Slingshot;
@@ -40,15 +40,6 @@ public class Player : MonoBehaviour
         bodyCollider = GetComponent<BoxCollider2D>();
         isActiveMoviment = true;
         respawnPoint = transform.position;
-    }
-
-    private void SlingshotShoot(){
-        Slingshot.transform.right = Vector2.right * side;
-
-        if(Input.GetKeyDown(KeyCode.C))
-        {
-            Instantiate(bullet, pivot.position, transform.rotation);
-        }
     }
 
     void Update()
@@ -192,4 +183,15 @@ public class Player : MonoBehaviour
             playerInput.enabled = value;
         }
     }
+    //Slingshot schemes for shooting
+    private void SlingshotShoot(){
+        Slingshot.transform.right = Vector2.right * side;
+        Slingshot.GetComponent<Transform>().position = new Vector3(Slingshot.GetComponent<Transform>().position.x, Slingshot.GetComponent<Transform>().position.y, 0); 
+
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            Instantiate(bullet, pivot.position, pivot.transform.rotation);
+        }
+    }
+
 }
