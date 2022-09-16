@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     public Vector3 respawnPoint;
 
     [Header("Elements for Slingshot")]
+    private bool isSlingshot = false;
     private float side = 1f;
     public Transform bullet;
     public Transform pivot;
@@ -40,11 +41,15 @@ public class Player : MonoBehaviour
         bodyCollider = GetComponent<BoxCollider2D>();
         isActiveMoviment = true;
         respawnPoint = transform.position;
+        Slingshot.SetActive(isSlingshot);
     }
 
     void Update()
     {
-        SlingshotShoot();
+        if (isSlingshot)
+        {
+            SlingshotShoot();
+        }
     }
 
     void FixedUpdate()
@@ -55,6 +60,7 @@ public class Player : MonoBehaviour
             MovePlayer();
             JumpPlayer();
             CheckWall();
+            activateSlingshot();
         }
     }
 
@@ -155,6 +161,8 @@ public class Player : MonoBehaviour
             transform.position = respawnPoint;
             GameController.instance.SubtractLife(30);
         }
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -166,6 +174,12 @@ public class Player : MonoBehaviour
                 respawnPoint = transform.position;
             }
         }
+
+        if (other.gameObject.name == "SlingshotActivation")
+        {
+            isSlingshot = true;
+        }
+
     }
 
     //Reiniciar controles da personagem quando ela for desativada
@@ -193,5 +207,12 @@ public class Player : MonoBehaviour
             Instantiate(bullet, pivot.position, pivot.transform.rotation);
         }
     }
+
+    private void activateSlingshot(){
+        if(isSlingshot){
+            Slingshot.SetActive(isSlingshot);
+        }
+    }
+    
 
 }
