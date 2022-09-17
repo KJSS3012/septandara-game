@@ -10,6 +10,9 @@ public class EnemyY : MonoBehaviour
     public LayerMask playerLayer;
     public float forceReturnDown;
 
+    [Header("Enemy Y Life")]
+    public int life;
+
     [SerializeField] private SpriteRenderer enemySprite;
     [SerializeField] private GameObject playerObject;
     [SerializeField] private Player player;
@@ -24,6 +27,7 @@ public class EnemyY : MonoBehaviour
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         colliderDetect.enabled = true;
+        life = 3;
     }
 
     // Update is called once per frame
@@ -31,6 +35,7 @@ public class EnemyY : MonoBehaviour
     {
         MoveEnemy();
         DetectPlayer();
+        ToDie();
     }
 
     private void MoveEnemy()
@@ -81,4 +86,19 @@ public class EnemyY : MonoBehaviour
         yield return new WaitForSeconds(2f);
         colliderDetect.enabled = true;
     }
+
+    private void OnTriggerEnter2D(Collider2D col){
+
+        if (col.gameObject.tag == "Bullet"){
+            life = life - 1;
+            
+        }
+    }
+
+    private void ToDie(){
+        if(life<=0){
+            Destroy(gameObject);
+        }
+    }
+
 }

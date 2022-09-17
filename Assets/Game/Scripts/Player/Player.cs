@@ -162,7 +162,6 @@ public class Player : MonoBehaviour
             GameController.instance.SubtractLife(30);
         }
 
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)

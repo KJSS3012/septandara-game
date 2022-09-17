@@ -13,7 +13,6 @@ public class BulletScript : MonoBehaviour
         GetComponent<Rigidbody2D>().AddForce(transform.right * speedBuleet);
         Destroy(gameObject, 2);
     }
-
     
     
 }
