@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
             CheckWall();
             activateSlingshot();
         }
+        
     }
 
     private void MovePlayer()
@@ -196,14 +197,27 @@ public class Player : MonoBehaviour
             playerInput.enabled = value;
         }
     }
+
+    IEnumerator DelayFireSlingshot(){
+        yield return new WaitForSeconds(0.3f);
+        Instantiate(bullet, pivot.position, pivot.transform.rotation);
+        isSlingshot = true;
+        isActiveMoviment = true;
+        animPlayer.SetBool("fire", false);
+    }
+
     //Slingshot schemes for shooting
     private void SlingshotShoot(){
+        
         Slingshot.transform.right = Vector2.right * side;
         Slingshot.GetComponent<Transform>().position = new Vector3(Slingshot.GetComponent<Transform>().position.x, Slingshot.GetComponent<Transform>().position.y, 0); 
 
         if(Input.GetKeyDown(KeyCode.C))
         {
-            Instantiate(bullet, pivot.position, pivot.transform.rotation);
+            isSlingshot = false;
+            isActiveMoviment = false;
+            animPlayer.SetBool("fire", true);
+            StartCoroutine(DelayFireSlingshot());
         }
     }
 
