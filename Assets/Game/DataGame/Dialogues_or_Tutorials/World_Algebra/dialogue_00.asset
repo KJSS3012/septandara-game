@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58873661c23a3ef4494e32f6447e6e60, type: 3}
+  m_Name: dialogue_00
+  m_EditorClassIdentifier: 
+  speechsDialogueObjects:
+  - actorName: Estranho
+    speech: "Ol\xE1 Dandara, que surpresa boa encontrar voc\xEA aqui!"
+  - actorName: Dandara
+    speech: "Espera, acho que te conhe\xE7o de algum lugar, voc\xEA parece muito
+      com aquele cara, o que denominam o \u201Cpai da \xC1lgebra\"."
+  - actorName: Diofanto
+    speech: "Prazer, Diofanto de Alexandria, sou o guardi\xE3o do Mundo da \xC1lgebra,
+      e vim ajudar voc\xEA nessa jornada, para isso, lhe trouxe um presente."
+  - actorName: Dandara
+    speech: 'Nossa, um presente, o que seria. '
+  - actorName: Diofanto
+    speech: "Os sapatos alados, ao us\xE1-lo, voc\xEA conseguir\xE1 dar pulos duplos
+      e conseguir\xE1 andar mais r\xE1pido, habilidades que ser\xE3o de grande import\xE2ncia
+      para voc\xEA nesse caminho. "
+  - actorName: Dandara
+    speech: "Nossa, esses sapatos v\xE3o mesmo ser muito \xFAteis para mim. "
+  - actorName: Diofanto
+    speech: Tchau Dandara, boa sorte no seu percurso.
+  - actorName: Dandara
+    speech: 'Muito obrigada, tchau Diofanto. '

@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489efddbc370a34d85c62b4e63ed2aa, type: 3}
+  m_Name: Questions_Algebra
+  m_EditorClassIdentifier: 
+  questions:
+  - enunciated: "As express\xF5es matem\xE1ticas formadas por n\xFAmeros e letras
+      ou somente por letras s\xE3o chamadas de express\xF5es:"
+    alternative_A: "alg\xE9bricas"
+    alternative_B: "num\xE9ricas"
+    alternative_C: "trigonom\xE9tricas"
+    alternative_D: "quadr\xE1ticas"
+    alternativeCorrect: 1
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Equa\xE7\xE3o \xE9 uma senten\xE7a matem\xE1tica expressa por uma
+      igualdade em que h\xE1 pelo menos uma letra que representa um valor desconhecido.
+      Como se chama essa letra?"
+    alternative_A: "inc\xF3gnita"
+    alternative_B: "invari\xE1vel"
+    alternative_C: "pot\xEAncia"
+    alternative_D: radical
+    alternativeCorrect: 1
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Se Helena tem x anos, qual express\xE3o determina o dobro da sua
+      idade daqui a 4 anos?"
+    alternative_A: 2x + 4
+    alternative_B: 2(x + 4)
+    alternative_C: 2x + 4x
+    alternative_D: 2x * 4
+    alternativeCorrect: 2
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Dandara pensou em um n\xFAmero e a ele somou 7. Ap\xF3s isso, multiplicou-o
+      por 3 e somou o pr\xF3prio n\xFAmero. Sabendo que o resultado da express\xE3o
+      foi 37, qual o n\xFAmero que Dandara escolheu? *"
+    alternative_A: 5
+    alternative_B: 3
+    alternative_C: 7
+    alternative_D: 4
+    alternativeCorrect: 4
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Em uma elei\xE7\xE3o para escolher o presidente do gr\xEAmio estudantil,
+      votaram 943 alunos. Carlos teve 7 votos a mais que Paulo, e Andr\xE9 teve 5
+      votos a mais que Carlos. Quantos votos teve o aluno vencedor?"
+    alternative_A: 315
+    alternative_B: 307
+    alternative_C: 308
+    alternative_D: 320
+    alternativeCorrect: 4
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "O valor num\xE9rico da express\xE3o 2x \u2013 3y para x = 2 e y
+      = \u2013 1 \xE9:"
+    alternative_A: -1
+    alternative_B: 1
+    alternative_C: 7
+    alternative_D: 10
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "O valor num\xE9rico da express\xE3o a2 + b2, para a = \u2013 3 e
+      b = 2 \xE9:"
+    alternative_A: -5
+    alternative_B: -1
+    alternative_C: 13
+    alternative_D: 15
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "O valor num\xE9rico da express\xE3o (a + b)2, para a = \u2013 5
+      e b = 2 \xE9:"
+    alternative_A: -3
+    alternative_B: 3
+    alternative_C: 6
+    alternative_D: 9
+    alternativeCorrect: 4
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "A express\xE3o alg\xE9brica \u201Co triplo de um n\xFAmero somado
+      com o seu quadrado\u201D pode ser escrita por:"
+    alternative_A: "3x + x\xB2"
+    alternative_B: "3x + x\xB3"
+    alternative_C: "x + 3x\xB2"
+    alternative_D: "3x \u2013 x2"
+    alternativeCorrect: 1
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Se x = 1, y = 2x e z = 2y, o valor de x + y + z \xE9:"
+    alternative_A: 3
+    alternative_B: 5
+    alternative_C: 7
+    alternative_D: 9
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Considere a equa\xE7\xE3o 3(x \u2013 4) + 2y = x. Para x = 5, tem-se
+      y igual a:"
+    alternative_A: 1
+    alternative_B: 2
+    alternative_C: 3
+    alternative_D: 5
+    alternativeCorrect: 1
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Catarina e Teresa tinham a mesma quantia em dinheiro para lanchar
+      na cantina. Catarina comprou duas coxinhas e um suco pequeno, j\xE1 sua amiga
+      Teresa comprou apenas uma coxinha e um refrigerante. Sabendo que n\xE3o sobrou
+      dinheiro e que o suco foi 3 reais e o refrigerante foi 5,00 R$ quanto custa
+      a coxinha?"
+    alternative_A: 1
+    alternative_B: 2
+    alternative_C: 3
+    alternative_D: 4
+    alternativeCorrect: 2
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "O valor de x na equa\xE7\xE3o x \u2013 2x + 4x = 81 \xE9:"
+    alternative_A: 9
+    alternative_B: 15
+    alternative_C: 21
+    alternative_D: 27
+    alternativeCorrect: 4
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "O conjunto solu\xE7\xE3o da equa\xE7\xE3o 7x + 3 = 7 + 3x, considerando
+      o universo dos n\xFAmeros reais \xE9:"
+    alternative_A: "{\u2013 3}"
+    alternative_B: "{\u2013 1}"
+    alternative_C: '{1}'
+    alternative_D: '{3}'
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "A raz\xE3o entre um n\xFAmero x e 3 \xE9 igual a 5. Qual \xE9 o
+      valor de x?"
+    alternative_A: 9
+    alternative_B: 12
+    alternative_C: 15
+    alternative_D: 18
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "O dobro de um n\xFAmero adicionado com seu triplo \xE9 igual a 45.
+      Ent\xE3o, o qu\xE1druplo desse n\xFAmero \xE9:"
+    alternative_A: 36
+    alternative_B: 45
+    alternative_C: 30
+    alternative_D: 32
+    alternativeCorrect: 1
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Qual n\xFAmero natural sou eu? O dobro de meu antecessor, menos
+      3, \xE9 igual a 25."
+    alternative_A: 7
+    alternative_B: 10
+    alternative_C: 15
+    alternative_D: 18
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Se adicionarmos um n\xFAmero inteiro a seu triplo e o resultado
+      for 24, o n\xFAmero em quest\xE3o \xE9:"
+    alternative_A: 6
+    alternative_B: 8
+    alternative_C: 18
+    alternative_D: 20
+    alternativeCorrect: 1
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Daniel pensou em um n\xFAmero. Dividiu esse n\xFAmero por 5, obteve
+      quociente igual a 7 e o resto 4. Em que n\xFAmero Daniel pensou?"
+    alternative_A: 12
+    alternative_B: 19
+    alternative_C: 25
+    alternative_D: 39
+    alternativeCorrect: 4
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Paulo \xE9 dono de uma f\xE1brica de m\xF3veis. Para calcular o
+      pre\xE7o V de venda de cada m\xF3vel que fabrica, ele usa a seguinte f\xF3rmula:
+      V = 1,5C + 10, sendo C o pre\xE7o de custo desse m\xF3vel. Considere que o
+      pre\xE7o de custo de um m\xF3vel que Paulo fabrica \xE9 R$ 100,00. Ent\xE3o,
+      ele vende esse m\xF3vel por:"
+    alternative_A: R$ 110,00
+    alternative_B: R$ 150,00
+    alternative_C: R$ 160,00
+    alternative_D: R$ 210,00
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Leonardo pagou R$ 140,00 por duas camisetas de mesmo valor e um
+      bon\xE9. Sabendo que o bon\xE9 custou R$ 32,00, qual \xE9 o pre\xE7o de cada
+      camiseta?"
+    alternative_A: R$ 45,00
+    alternative_B: R$ 54,00
+    alternative_C: R$ 58,00
+    alternative_D: R$ 62,00
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
