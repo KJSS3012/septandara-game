@@ -1,0 +1,653 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.1f1 (270dd8c3da1c) revision 2559448'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'pt' Physical Memory: 12193 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+D:/septandara-game
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+59416
+Successfully changed project path to: D:/septandara-game
+D:/septandara-game
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 94.80 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/septandara-game/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics 620 (ID=0x5917)
+    Vendor:   
+    VRAM:     6096 MB
+    Driver:   31.0.101.2111
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56904
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002796 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 116.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.497 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002322 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 116.47 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.923 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.26 seconds
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3078 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 134.9 MB.
+System memory in use after: 135.1 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 3521.
+Total: 4.480300 ms (FindLiveObjects: 0.473300 ms CreateObjectMapping: 0.240800 ms MarkObjects: 3.651900 ms  DeleteObjects: 0.100000 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Game/Scenes/3 - WorldAlgebra/Fase-3-01.unity
+  artifactKey: Guid(f07692c0fcee33940b47aab19079ba9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Scenes/3 - WorldAlgebra/Fase-3-01.unity using Guid(f07692c0fcee33940b47aab19079ba9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6800ce85fc5c20b152f3566f2a573c58') in 0.066612 seconds
+  Import took 0.077300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Game/Scenes/3 - WorldAlgebra/Fase-3-02.unity
+  artifactKey: Guid(51253a17ec618084d908936900f94aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Scenes/3 - WorldAlgebra/Fase-3-02.unity using Guid(51253a17ec618084d908936900f94aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '615f68a732491ce3460e44042913ba48') in 0.032336 seconds
+  Import took 0.042617 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001477 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.279 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2951 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 127.8 MB.
+System memory in use after: 128.0 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3524.
+Total: 2.853000 ms (FindLiveObjects: 0.256400 ms CreateObjectMapping: 0.143300 ms MarkObjects: 2.430600 ms  DeleteObjects: 0.020900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 542.971710 seconds.
+  path: Assets/Game/Prefabs/Slingshot/Projetil.prefab
+  artifactKey: Guid(df1648a93a32c254da482589c0e0beab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/Slingshot/Projetil.prefab using Guid(df1648a93a32c254da482589c0e0beab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37bac576d41a742183f3ec1d356b215c') in 0.432985 seconds
+  Import took 0.440930 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000429 seconds.
+  path: Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab
+  artifactKey: Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab using Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '703f094676f011557f17a59eaa10b34e') in 0.037332 seconds
+  Import took 0.046649 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Game/Prefabs/Slingshot/Slingshot.prefab
+  artifactKey: Guid(2e4a1dcb691f2a74f84c61f5fe8b5dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/Slingshot/Slingshot.prefab using Guid(2e4a1dcb691f2a74f84c61f5fe8b5dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f6656405ba74bfeca45bdd510f52b48') in 0.024369 seconds
+  Import took 0.034016 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.922280 seconds.
+  path: Assets/Game/Arts/Scenarios/Part II - WordMath/Treasure/chest_treasure.png
+  artifactKey: Guid(573f10c6a2044374ebb09d862fbb2769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Scenarios/Part II - WordMath/Treasure/chest_treasure.png using Guid(573f10c6a2044374ebb09d862fbb2769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f49ff3d23e9c0129e9d34a7323f4cde') in 0.164689 seconds
+  Import took 0.172885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Game/Arts/Scenarios/Part I - WordMath/Background/clouds_normal.png
+  artifactKey: Guid(8aa15d6227553634c94311538f6627e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Scenarios/Part I - WordMath/Background/clouds_normal.png using Guid(8aa15d6227553634c94311538f6627e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ca63be1509706af431a049c4989975') in 0.044180 seconds
+  Import took 0.051564 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000705 seconds.
+  path: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/CircleMask.png
+  artifactKey: Guid(87aaca0a643d54397ba969dab4fc8875) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/CircleMask.png using Guid(87aaca0a643d54397ba969dab4fc8875) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c471f194a9edccf09e022b087bffee4') in 0.074456 seconds
+  Import took 0.081546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Game/Arts/Interface/Player/Score-coins/coin.png
+  artifactKey: Guid(428e63e95f54f674381601570a4d5cba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Interface/Player/Score-coins/coin.png using Guid(428e63e95f54f674381601570a4d5cba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69d6eac5e60281a61da3f699d67ca593') in 0.014674 seconds
+  Import took 0.021810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Game/Arts/CollectableItems/coin_00/coin_00_colect.png
+  artifactKey: Guid(f8a51226364b04a47b312189be7f3954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/CollectableItems/coin_00/coin_00_colect.png using Guid(f8a51226364b04a47b312189be7f3954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '615dc88dff3379933917bf046a8364e9') in 0.066320 seconds
+  Import took 0.073676 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/Circle.png
+  artifactKey: Guid(4adeaf2d2b1c7417e89f026626d8264f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.sprite/Editor/ObjectMenuCreation/DefaultAssets/Textures/Circle.png using Guid(4adeaf2d2b1c7417e89f026626d8264f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '339601365a3ce5204555e138fdf6683d') in 0.022495 seconds
+  Import took 0.030535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Game/Arts/Scenarios/Part I - WordMath/Background/clouds_num.png
+  artifactKey: Guid(9fb19accc94a10f49b36ed1e72b26add) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Scenarios/Part I - WordMath/Background/clouds_num.png using Guid(9fb19accc94a10f49b36ed1e72b26add) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae4aa4163220d005a4d5bdef2f380220') in 0.037025 seconds
+  Import took 0.045810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/Game/Arts/Scenarios/Part II - WordMath/Treasure/chest_treasure.png
+  artifactKey: Guid(573f10c6a2044374ebb09d862fbb2769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Scenarios/Part II - WordMath/Treasure/chest_treasure.png using Guid(573f10c6a2044374ebb09d862fbb2769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f49ff3d23e9c0129e9d34a7323f4cde') in 0.039121 seconds
+  Import took 0.047096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.157624 seconds.
+  path: Assets/Game/Arts/Indicators/checkpoint-flag.png
+  artifactKey: Guid(fd8ef89a858e69e4d88602ae7ca275c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Indicators/checkpoint-flag.png using Guid(fd8ef89a858e69e4d88602ae7ca275c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '663d7ff53c771282f4f8e72e351ece8b') in 0.053370 seconds
+  Import took 0.061204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000784 seconds.
+  path: Assets/Game/Arts/Indicators/checkpoint-flag.png
+  artifactKey: Guid(fd8ef89a858e69e4d88602ae7ca275c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Indicators/checkpoint-flag.png using Guid(fd8ef89a858e69e4d88602ae7ca275c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '663d7ff53c771282f4f8e72e351ece8b') in 0.037944 seconds
+  Import took 0.046768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.187960 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode@4x.png
+  artifactKey: Guid(748ae8b33df036b46a86e0387f1602cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode@4x.png using Guid(748ae8b33df036b46a86e0387f1602cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fefb815871b0d0a15e54a2a5cf73281') in 0.032375 seconds
+  Import took 0.041764 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/character_Mode@4x.png
+  artifactKey: Guid(0ccc508108fa6ed4fa11b4a467d7f609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/character_Mode@4x.png using Guid(0ccc508108fa6ed4fa11b4a467d7f609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00c2944796e1b8f267a166136a5760e4') in 0.037470 seconds
+  Import took 0.045879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/character_Mode@2x.png
+  artifactKey: Guid(5d52b20f865aff242bfcb08c3b6f61a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/character_Mode@2x.png using Guid(5d52b20f865aff242bfcb08c3b6f61a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a9810b961a3ecfcf4ff1539fdff00cb') in 0.066109 seconds
+  Import took 0.074506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode@2x.png
+  artifactKey: Guid(25096ce515c063c48a2bd6b108c95912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode@2x.png using Guid(25096ce515c063c48a2bd6b108c95912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a65f3d8c46084eac0a9e6a203c271d5') in 0.050683 seconds
+  Import took 0.057168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode@3x.png
+  artifactKey: Guid(17fa84703485d314b8d6b5216987d4b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode@3x.png using Guid(17fa84703485d314b8d6b5216987d4b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13bfbab5a237de08b727d1470da4dd43') in 0.172498 seconds
+  Import took 0.178124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/Game/Arts/Interface/Player/Chances/chance.png
+  artifactKey: Guid(5b83f3da64762b84084ac03ad41aa9ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Interface/Player/Chances/chance.png using Guid(5b83f3da64762b84084ac03ad41aa9ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e33e69aaa62bc74451b8acccca8d17bb') in 0.066767 seconds
+  Import took 0.072054 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000350 seconds.
+  path: Assets/Game/Arts/Interface/Player/Chances/chance-red.png
+  artifactKey: Guid(5e2c3e66ab7174548a2f7c1c6ea5d4c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Interface/Player/Chances/chance-red.png using Guid(5e2c3e66ab7174548a2f7c1c6ea5d4c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '699bb07f6d037fbae403da95ce30d80b') in 0.039247 seconds
+  Import took 0.045251 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Game/Arts/Interface/Player/Chances/chances.png
+  artifactKey: Guid(60bd7452491d24f408ad96b2ab4b7257) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Interface/Player/Chances/chances.png using Guid(60bd7452491d24f408ad96b2ab4b7257) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63018d3fbea560d905daac8ff5a3bae7') in 0.072958 seconds
+  Import took 0.080570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000310 seconds.
+  path: Assets/Game/Arts/Scenarios/Part II - WordMath/Decorations/Furniture/chair_00.png
+  artifactKey: Guid(3fd61603222216a4ba7eac878ad70a93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Scenarios/Part II - WordMath/Decorations/Furniture/chair_00.png using Guid(3fd61603222216a4ba7eac878ad70a93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f02d42a68369f62b076429ab0d64a45f') in 0.056712 seconds
+  Import took 0.066572 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Game/Arts/Scenarios/Part I - WordMath/Constructions/castle_reino_matematico.png
+  artifactKey: Guid(97dbfd89b66c69c45ac67c666da8ff79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Scenarios/Part I - WordMath/Constructions/castle_reino_matematico.png using Guid(97dbfd89b66c69c45ac67c666da8ff79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '215cc35a66115460a16e9e55c8a8c9d3') in 0.049377 seconds
+  Import took 0.056824 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000372 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/character_Mode@3x.png
+  artifactKey: Guid(dcea51d6065d64246aeec467afeff684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/character_Mode@3x.png using Guid(dcea51d6065d64246aeec467afeff684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3084152013ae6a8933320848f377e7ae') in 0.029404 seconds
+  Import took 0.038378 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/CenterLight@2x.png
+  artifactKey: Guid(8063050a249eef441beb8cbbd04c086c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/CenterLight@2x.png using Guid(8063050a249eef441beb8cbbd04c086c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '654944b0e60670326c62083f405e37e9') in 0.034142 seconds
+  Import took 0.042513 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000588 seconds.
+  path: Assets/Game/Arts/Scenarios/Part II - WordMath/Decorations/Furniture/chair_02.png
+  artifactKey: Guid(8e0b9450b5a65b54db49d7c7aa5a22b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Scenarios/Part II - WordMath/Decorations/Furniture/chair_02.png using Guid(8e0b9450b5a65b54db49d7c7aa5a22b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a8861b64bd1cbedb7f0c4a5462ed109') in 0.066907 seconds
+  Import took 0.075119 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/character_Mode.png
+  artifactKey: Guid(e60718119cec31e4190849292fcde068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/character_Mode.png using Guid(e60718119cec31e4190849292fcde068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3f6f996024769c3083db4ee281d9557') in 0.046185 seconds
+  Import took 0.054305 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Game/Arts/Scenarios/Part II - WordMath/Decorations/Furniture/chair_01.png
+  artifactKey: Guid(ae16511afb0932e4fa2512408bde90fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Scenarios/Part II - WordMath/Decorations/Furniture/chair_01.png using Guid(ae16511afb0932e4fa2512408bde90fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f7253be5d1f48dbd5d40102a6b2f9d2') in 0.039427 seconds
+  Import took 0.046526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/CenterLight.png
+  artifactKey: Guid(3092b2985cafe0b43b1f02ce1d6829d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.core/Editor/LookDev/Icons/CenterLight.png using Guid(3092b2985cafe0b43b1f02ce1d6829d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1395bce5e2be38451a31be78e24603f5') in 0.047403 seconds
+  Import took 0.054130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode.png
+  artifactKey: Guid(d4d64a6cd9624c34a815dd79fb2a20a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode.png using Guid(d4d64a6cd9624c34a815dd79fb2a20a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '193eab486938c82a28e427c9cff7148b') in 0.044670 seconds
+  Import took 0.050209 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.986172 seconds.
+  path: Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab
+  artifactKey: Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab using Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43d69fa381e59a3b092615f8c1af9200') in 0.029848 seconds
+  Import took 0.037251 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.829623 seconds.
+  path: Assets/Game/Arts/Slingshot/dado de dandara idle.png
+  artifactKey: Guid(af11c0dfe9e2dd94996dbce7f15bcd85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Slingshot/dado de dandara idle.png using Guid(af11c0dfe9e2dd94996dbce7f15bcd85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eac6af75e0b2ec5b929eb618eb20596') in 0.017143 seconds
+  Import took 0.024130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004619 seconds.
+  path: Assets/Game/Arts/Slingshot/dado jogado.png
+  artifactKey: Guid(b4758e33508de5a4caddc033918bf56f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Slingshot/dado jogado.png using Guid(b4758e33508de5a4caddc033918bf56f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bc763e9e241a49d1067f0ae4ca617aa') in 0.043138 seconds
+  Import took 0.051325 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/Game/Arts/Slingshot/estilingue.png
+  artifactKey: Guid(7600a2c11ec46ff4c9e8c23f4828c81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Slingshot/estilingue.png using Guid(7600a2c11ec46ff4c9e8c23f4828c81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '930ac16e888871ac9e533e5740efbc58') in 0.030640 seconds
+  Import took 0.039154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Game/Arts/Slingshot/dado jogado.png
+  artifactKey: Guid(b4758e33508de5a4caddc033918bf56f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Slingshot/dado jogado.png using Guid(b4758e33508de5a4caddc033918bf56f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bc763e9e241a49d1067f0ae4ca617aa') in 0.029948 seconds
+  Import took 0.040982 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.335586 seconds.
+  path: Assets/Game/Arts/Slingshot/estilingue.png
+  artifactKey: Guid(7600a2c11ec46ff4c9e8c23f4828c81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Slingshot/estilingue.png using Guid(7600a2c11ec46ff4c9e8c23f4828c81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c98e6bc3424a451b2c113d4ab3e57a00') in 0.013352 seconds
+  Import took 0.021489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.756824 seconds.
+  path: Assets/Game/Arts/Scenarios/WorldNumber/Decorations/Stands/abaco.png
+  artifactKey: Guid(bf62c2829df44df4d9e05f3429c68f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Scenarios/WorldNumber/Decorations/Stands/abaco.png using Guid(bf62c2829df44df4d9e05f3429c68f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '529ecaa7b3334a942d5d733e041af635') in 0.048772 seconds
+  Import took 0.055748 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Game/Arts/NPCs/MathematicalAdvice/algebra_disappear.png
+  artifactKey: Guid(da458012cc1eee34f9d525d6176f0644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/NPCs/MathematicalAdvice/algebra_disappear.png using Guid(da458012cc1eee34f9d525d6176f0644) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '375b0d9074b66ffcc90c78f34ee46c9d') in 0.080093 seconds
+  Import took 0.087323 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000449 seconds.
+  path: Assets/Game/Arts/Scenarios/WorldNumber/Decorations/Stands/abaco.png
+  artifactKey: Guid(bf62c2829df44df4d9e05f3429c68f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Scenarios/WorldNumber/Decorations/Stands/abaco.png using Guid(bf62c2829df44df4d9e05f3429c68f52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '529ecaa7b3334a942d5d733e041af635') in 0.011021 seconds
+  Import took 0.020003 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Game/Arts/NPCs/MathematicalAdvice/Algebra.png
+  artifactKey: Guid(5e549ba79b931974391dd64177d85604) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/NPCs/MathematicalAdvice/Algebra.png using Guid(5e549ba79b931974391dd64177d85604) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59c934e939febc4009ca51ce4ba0272d') in 0.050010 seconds
+  Import took 0.059128 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.119922 seconds.
+  path: Assets/Game/Arts/Slingshot/estilingue.png
+  artifactKey: Guid(7600a2c11ec46ff4c9e8c23f4828c81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Slingshot/estilingue.png using Guid(7600a2c11ec46ff4c9e8c23f4828c81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1a6cc4f8236b81ab350224bf86449fd') in 0.016360 seconds
+  Import took 0.023623 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007349 seconds.
+  path: Assets/Game/Arts/Slingshot/estilingue.png
+  artifactKey: Guid(7600a2c11ec46ff4c9e8c23f4828c81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Slingshot/estilingue.png using Guid(7600a2c11ec46ff4c9e8c23f4828c81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1a6cc4f8236b81ab350224bf86449fd') in 0.022081 seconds
+  Import took 0.033366 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 86.488732 seconds.
+  path: Assets/Game/Arts/Slingshot/estilingue.png
+  artifactKey: Guid(7600a2c11ec46ff4c9e8c23f4828c81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Slingshot/estilingue.png using Guid(7600a2c11ec46ff4c9e8c23f4828c81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9474574d94c227d0bf9c7bf110460f0e') in 0.023455 seconds
+  Import took 0.032848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004761 seconds.
+  path: Assets/Game/Arts/Slingshot/estilingue.png
+  artifactKey: Guid(7600a2c11ec46ff4c9e8c23f4828c81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Slingshot/estilingue.png using Guid(7600a2c11ec46ff4c9e8c23f4828c81e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9474574d94c227d0bf9c7bf110460f0e') in 0.011267 seconds
+  Import took 0.018425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 108.398619 seconds.
+  path: Assets/Game/Arts/Slingshot/estilingue-1.png
+  artifactKey: Guid(36455327e1120a744b1ce6477bb9e16b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Slingshot/estilingue-1.png using Guid(36455327e1120a744b1ce6477bb9e16b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b36e456aecc5d2427945f8c89e76a0ec') in 0.021940 seconds
+  Import took 0.029790 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.420200 seconds.
+  path: Assets/Game/Arts/Scenarios/WorldAlgebra/Traps/espinhos_ativados.png
+  artifactKey: Guid(c699e4aa568e3934e8c906d7557c7b57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Scenarios/WorldAlgebra/Traps/espinhos_ativados.png using Guid(c699e4aa568e3934e8c906d7557c7b57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e470897e59f3ca02b5b518ec04738ac') in 0.117253 seconds
+  Import took 0.126954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/Game/Arts/Scenarios/WorldAlgebra/Traps/espinhos_parados.png
+  artifactKey: Guid(08a063ca248362b49b66b4bbbe6fae90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Scenarios/WorldAlgebra/Traps/espinhos_parados.png using Guid(08a063ca248362b49b66b4bbbe6fae90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ba227b0f6f86471a0b538450a63b436') in 0.042646 seconds
+  Import took 0.049674 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Game/Arts/Interface/Player/Expressions-Faces/Expressions.png
+  artifactKey: Guid(768ebd0b12c558e4186448037ad80b29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Interface/Player/Expressions-Faces/Expressions.png using Guid(768ebd0b12c558e4186448037ad80b29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee5314452535d1dc74053da173138490') in 0.059743 seconds
+  Import took 0.067112 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Game/Arts/NPCs/Numbers Enemys/five_attack.png
+  artifactKey: Guid(e9f5a0f9b3a342240ac56b03a3becaa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/NPCs/Numbers Enemys/five_attack.png using Guid(e9f5a0f9b3a342240ac56b03a3becaa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a73df1c0559696a6ed6dac7b9501690') in 0.048453 seconds
+  Import took 0.057976 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Game/Arts/Interface/Player/Expressions-Faces/Expressions.png
+  artifactKey: Guid(768ebd0b12c558e4186448037ad80b29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Interface/Player/Expressions-Faces/Expressions.png using Guid(768ebd0b12c558e4186448037ad80b29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee5314452535d1dc74053da173138490') in 0.017544 seconds
+  Import took 0.025743 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/Game/Arts/Scenarios/WorldAlgebra/Traps/espinhos_ativados.png
+  artifactKey: Guid(c699e4aa568e3934e8c906d7557c7b57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Scenarios/WorldAlgebra/Traps/espinhos_ativados.png using Guid(c699e4aa568e3934e8c906d7557c7b57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e470897e59f3ca02b5b518ec04738ac') in 0.049582 seconds
+  Import took 0.057956 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.806008 seconds.
+  path: Assets/Game/Arts/Slingshot/estilingue-1.png
+  artifactKey: Guid(36455327e1120a744b1ce6477bb9e16b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Arts/Slingshot/estilingue-1.png using Guid(36455327e1120a744b1ce6477bb9e16b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '269235fa309c07a4357dc7d27ae608b7') in 0.014056 seconds
+  Import took 0.022604 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002800 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.073 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2951 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 133.3 MB.
+System memory in use after: 133.5 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3601.
+Total: 3.122200 ms (FindLiveObjects: 0.407700 ms CreateObjectMapping: 0.189900 ms MarkObjects: 2.494000 ms  DeleteObjects: 0.029100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002248 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.693 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2951 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 133.8 MB.
+System memory in use after: 134.1 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 3604.
+Total: 2.870300 ms (FindLiveObjects: 0.254100 ms CreateObjectMapping: 0.125500 ms MarkObjects: 2.465600 ms  DeleteObjects: 0.023400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 305.452188 seconds.
+  path: Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab
+  artifactKey: Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab using Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc87d0f59ef4e6a08cd1c19f69e83bab') in 0.325047 seconds
+  Import took 0.332456 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.717445 seconds.
+  path: Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab
+  artifactKey: Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab using Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8417e90e2268ab85155e6dab44b4de43') in 0.019297 seconds
+  Import took 0.027348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.868969 seconds.
+  path: Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab
+  artifactKey: Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab using Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f20989b6444e5c45f32d2f4db56498be') in 0.024821 seconds
+  Import took 0.032998 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.179997 seconds.
+  path: Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab
+  artifactKey: Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab using Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b34ac6b39a6699a69e1544ec8872c631') in 0.022552 seconds
+  Import took 0.030710 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.500878 seconds.
+  path: Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab
+  artifactKey: Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab using Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44bbc5f7c5e76a90982bed27aa2ea240') in 0.022858 seconds
+  Import took 0.031188 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.167966 seconds.
+  path: Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab
+  artifactKey: Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab using Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ffd7346e937ae70dc996a01b604ab88') in 0.014563 seconds
+  Import took 0.024712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.399495 seconds.
+  path: Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab
+  artifactKey: Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab using Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e383bb446fbb657cb7473e060cdd2a57') in 0.016650 seconds
+  Import took 0.026129 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.997263 seconds.
+  path: Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab
+  artifactKey: Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab using Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aeea8af0ebeb2c0f65028db8860c738f') in 0.020215 seconds
+  Import took 0.036937 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.101279 seconds.
+  path: Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab
+  artifactKey: Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Prefabs/Slingshot/SlingshotActivation.prefab using Guid(5a522196867de9847a5d3e895d4aee4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a5b14558a52c9b91ae81c7385b15d90') in 0.017134 seconds
+  Import took 0.024593 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
