@@ -11,5 +11,4 @@ public class DesactiveObject : MonoBehaviour
         objectComponent = this.gameObject;
         objectComponent.SetActive(false);
     }
-
 }

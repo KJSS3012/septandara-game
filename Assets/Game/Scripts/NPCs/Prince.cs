@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Prince : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Prince : MonoBehaviour
     public GameObject target;
     public VisibilityControls vsControls;
     public bool isDesactiveControls; //For timeline
+    public bool isNextScene = false;
+    public int sceneIndex;
 
     private void Start()
     {
@@ -33,6 +36,11 @@ public class Prince : MonoBehaviour
     public void FinalyAttack()
     {
         animPrince.SetBool("attack", false);
+
+        if (isNextScene == true)
+        {
+            SceneManager.LoadScene(sceneIndex);
+        }
     }
 
     public void FadeOutAttack()
@@ -40,7 +48,6 @@ public class Prince : MonoBehaviour
         fadeUI.SetActive(true);
         vsControls.OpacityControls(1f, true);
         target.SetActive(false);
-        CameraFollow.instance.FollowPlayer();
     }
 
 }
