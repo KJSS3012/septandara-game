@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjectActivator : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class ObjectActivator : MonoBehaviour
         {
             mtLS.fadeUI.SetActive(true);
             mtLS.animPlayer.SetBool("entry", true);
+            yield return new WaitForSeconds(1.5f);
+            SceneManager.LoadScene(sceneIndex);
         }
     }
 }
