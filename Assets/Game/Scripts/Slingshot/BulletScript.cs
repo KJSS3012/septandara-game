@@ -6,21 +6,23 @@ public class BulletScript : MonoBehaviour
 {
 
     public int speedBuleet;
-    public Animator bulletAnimator;
+    private Animator bulletAnimator;
 
     // Start is called before the first frame update
     void Start()
     {
         bulletAnimator = GetComponent<Animator>();
-        GetComponent<Rigidbody2D>().AddForce(transform.right * speedBuleet);
-        Destroy(gameObject, 4);
+        GetComponent<Rigidbody2D>().AddForce(transform.right * speedBuleet * speedBuleet);
+        Destroy(gameObject, 2f);
     }
 
-    void animationsDestroy(){
+    void animationsDestroy()
+    {
         bulletAnimator.SetBool("destruct", true);
     }
 
-    void OnTriggerEnter2D(Collider2D col){
+    void OnTriggerEnter2D(Collider2D col)
+    {
         if (col.gameObject.tag == "Enemy")
         {
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;
@@ -28,11 +30,12 @@ public class BulletScript : MonoBehaviour
         }
     }
 
-    IEnumerator DelayFireSlingshot(){
+    IEnumerator DelayFireSlingshot()
+    {
         animationsDestroy();
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
     }
-    
-    
+
+
 }

@@ -18,7 +18,6 @@ public class Player : MonoBehaviour
     [Header("Collider CheckWall and CheckColliderBody")]
     [SerializeField] private bool isTouchingWall;
     public BoxCollider2D bodyCollider;
-
     private Rigidbody2D rig2D;
     public Animator animPlayer;
     public SpriteRenderer spritePlayer;
@@ -26,7 +25,7 @@ public class Player : MonoBehaviour
     public Vector3 respawnPoint;
 
     [Header("Elements for Slingshot")]
-    private bool isSlingshot = false;
+    public bool isGetSlingShot = false;
     private float side = 1f;
     public Transform bullet;
     public Transform pivot;
@@ -41,12 +40,10 @@ public class Player : MonoBehaviour
         bodyCollider = GetComponent<BoxCollider2D>();
         isActiveMoviment = true;
         respawnPoint = transform.position;
-        Slingshot.SetActive(isSlingshot);
     }
-
     void Update()
     {
-        if (isSlingshot)
+        if (isGetSlingShot)
         {
             SlingshotShoot();
         }
@@ -60,15 +57,12 @@ public class Player : MonoBehaviour
             MovePlayer();
             JumpPlayer();
             CheckWall();
-            activateSlingshot();
         }
-        
     }
 
     private void MovePlayer()
     {
         Vector3 movement = playerInput.GetMovimentInput();
-
         transform.position += movement * Time.fixedDeltaTime * speedMove;
 
         if (movement.x > 0f)
@@ -127,25 +121,6 @@ public class Player : MonoBehaviour
         isTouchingWall = bodyCollider.IsTouchingLayers(groundLayer);
     }
 
-    //Aperfeiçoar
-    public void DisableBodyCollider()
-    {
-        animPlayer.SetBool("hit", true);
-        StartCoroutine(DelayStandUp());
-    }
-
-    //Aperfeiçoar
-    IEnumerator DelayStandUp()
-    {
-        yield return new WaitForSeconds(2f);
-        ActiveBodyCollider();
-    }
-    //Aperfeiçoar
-    public void ActiveBodyCollider()
-    {
-        animPlayer.SetBool("hit", false);
-    }
-
     //Colis�o com componentes/objetos do game
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -162,7 +137,6 @@ public class Player : MonoBehaviour
             transform.position = respawnPoint;
             GameController.instance.SubtractLife(30);
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -174,12 +148,6 @@ public class Player : MonoBehaviour
                 respawnPoint = transform.position;
             }
         }
-
-        if (other.gameObject.name == "SlingshotActivation")
-        {
-            isSlingshot = true;
-        }
-
     }
 
     //Reiniciar controles da personagem quando ela for desativada
@@ -198,34 +166,25 @@ public class Player : MonoBehaviour
         }
     }
 
-    IEnumerator DelayFireSlingshot(){
-        yield return new WaitForSeconds(0.3f);
-        Instantiate(bullet, pivot.position, pivot.transform.rotation);
-        isSlingshot = true;
-        isActiveMoviment = true;
-        animPlayer.SetBool("fire", false);
-    }
-
     //Slingshot schemes for shooting
-    private void SlingshotShoot(){
-        
-        Slingshot.transform.right = Vector2.right * side;
-        Slingshot.GetComponent<Transform>().position = new Vector3(Slingshot.GetComponent<Transform>().position.x, Slingshot.GetComponent<Transform>().position.y, 0); 
-
-        if(Input.GetKeyDown(KeyCode.C))
+    private void SlingshotShoot()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            isSlingshot = false;
-            isActiveMoviment = false;
+            Slingshot.transform.right = Vector2.right * side;
+            Slingshot.GetComponent<Transform>().position = new Vector3(Slingshot.GetComponent<Transform>().position.x, Slingshot.GetComponent<Transform>().position.y, 0);
             animPlayer.SetBool("fire", true);
+            isGetSlingShot = false;
             StartCoroutine(DelayFireSlingshot());
         }
     }
 
-    private void activateSlingshot(){
-        if(isSlingshot){
-            Slingshot.SetActive(isSlingshot);
-        }
+    IEnumerator DelayFireSlingshot()
+    {
+        yield return new WaitForSeconds(0.3f);
+        Instantiate(bullet, pivot.position, pivot.transform.rotation);
+        isActiveMoviment = true;
+        animPlayer.SetBool("fire", false);
+        isGetSlingShot = true;
     }
-    
-
 }

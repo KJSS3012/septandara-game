@@ -64,12 +64,12 @@ public class GameController : MonoBehaviour
             percentageLife = 50;
             UpdatePercentageLife();
         }
-        else
-        {
-            player.DisableBodyCollider();
-            percentageLife -= partSubtractLife;
-            UpdatePercentageLife();
-        }
+        // else
+        // {
+        //     player.DisableBodyCollider();
+        //     percentageLife -= partSubtractLife;
+        //     UpdatePercentageLife();
+        // }
     }
 
     public void UpdateConsecutiveQuestion()

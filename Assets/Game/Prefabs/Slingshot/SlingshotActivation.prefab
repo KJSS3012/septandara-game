@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 767464991524360431}
   - component: {fileID: 767464991524360430}
   - component: {fileID: 767464991524360429}
+  - component: {fileID: 9175955803506546936}
   m_Layer: 0
   m_Name: SlingshotActivation
   m_TagString: Untagged
@@ -118,6 +119,18 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0430727, y: -0.0023931265}
+  m_Offset: {x: 0.0430727, y: -0.019050837}
   serializedVersion: 2
-  m_Radius: 0.21046937
+  m_Radius: 0.3381741
+--- !u!114 &9175955803506546936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767464991524360209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918a74def6aac8e4da9eb147cfcff3db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
