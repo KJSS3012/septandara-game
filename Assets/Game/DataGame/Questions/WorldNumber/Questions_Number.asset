@@ -12,4 +12,117 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8489efddbc370a34d85c62b4e63ed2aa, type: 3}
   m_Name: Questions_Number
   m_EditorClassIdentifier: 
-  questions: []
+  questions:
+  - enunciated: "Qual \xE9 o sucessor do sucessor de 199?"
+    alternative_A: 199
+    alternative_B: 200
+    alternative_C: 201
+    alternative_D: 202
+    alternativeCorrect: 2
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "O valor da express\xE3o (100 \u2212 40) : 3 \xE9:"
+    alternative_A: 10
+    alternative_B: 15
+    alternative_C: 20
+    alternative_D: 22
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Em um anfiteatro, as cadeiras est\xE3o dispostas em 20 linhas e
+      15 colunas. Qual \xE9 o n\xFAmero total de cadeiras?"
+    alternative_A: 35
+    alternative_B: 150
+    alternative_C: 200
+    alternative_D: 300
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Fazendo-se as opera\xE7\xF5es indicadas em 0,74 + 0,5 \u2013 1,5,
+      obt\xE9m-se:"
+    alternative_A: "\u2013 0,64"
+    alternative_B: "\u2013 0,26"
+    alternative_C: 0,26
+    alternative_D: 0,64
+    alternativeCorrect: 2
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "O quadrado da metade de (\u2212 6) \xE9:"
+    alternative_A: 3
+    alternative_B: 9
+    alternative_C: 27
+    alternative_D: 36
+    alternativeCorrect: 2
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "O cubo do quadrado de 2 \xE9:"
+    alternative_A: 4
+    alternative_B: 8
+    alternative_C: 16
+    alternative_D: 64
+    alternativeCorrect: 4
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "O valor da express\xE3o 3 . 5\xB2 + 3 \xE9?"
+    alternative_A: 25
+    alternative_B: 54
+    alternative_C: 78
+    alternative_D: 98
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Na multiplica\xE7\xE3o de pot\xEAncias de mesma base, o produto
+      \xE9 obtido mantendo-se a base e _______ os expoentes."
+    alternative_A: 'adicionando-se '
+    alternative_B: subtraindo-se
+    alternative_C: multiplicando-se
+    alternative_D: dividindo-se
+    alternativeCorrect: 1
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "O valor de  \xE9 igual a \u221A64+36:"
+    alternative_A: 6
+    alternative_B: 8
+    alternative_C: 10
+    alternative_D: 14
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: Alvimar pagou uma compra de R$ 3,50 com uma nota de R$ 5,00 e recebeu
+      o troco em moedas de R$ 0,25. Quantas moedas ele recebeu?
+    alternative_A: 4
+    alternative_B: 5
+    alternative_C: 6
+    alternative_D: 7
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Carlos guardou sua cole\xE7\xE3o de latas de refrigerante em casa.
+      Em cada caixa couberam 28 latas. Ele usou 7 caixas e sobraram 6 latas de refrigerante.
+      Quantas latas tem a cole\xE7\xE3o de Carlos?"
+    alternative_A: 194
+    alternative_B: 196
+    alternative_C: 202
+    alternative_D: 238
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Um granjeiro tem 3 333 ovos para vender. Se colocar 33 ovos em cada
+      caixa, quantas caixas completas v\xE3o formar?"
+    alternative_A: 100
+    alternative_B: 101
+    alternative_C: 110
+    alternative_D: 111
+    alternativeCorrect: 2
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "D\xE9cio estava precisando de dinheiro e aceitou vender sua bicicleta
+      a Rafael, com desconto de R$ 50,00 sobre o pre\xE7o pedido que era R$ 400,00.
+      Qual foi a taxa porcentual do desconto concedido?"
+    alternative_A: 10%
+    alternative_B: 12,5%
+    alternative_C: 15%
+    alternative_D: 20%
+    alternativeCorrect: 2
+    imageQuestion: {fileID: 0}
+    isActivated: 0
