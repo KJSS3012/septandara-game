@@ -7,11 +7,13 @@ public class Coin : MonoBehaviour
     [Header("Coin")]
     [SerializeField] private int valueCoin = 10;
     private Animator animCoin;
+    private AudioSource sound;
     public bool animSpin;
 
     private void Start()
     {
         animCoin = GetComponent<Animator>();
+        sound = GetComponent<AudioSource>();
         ChangeSpinCoin(animSpin);
     }
 
@@ -26,6 +28,7 @@ public class Coin : MonoBehaviour
     private void ColectCoin()
     {
         animCoin.SetBool("colect", true);
+        sound.Play();
 
         GameController.instance.totalScoreCoins += valueCoin;
         GameController.instance.UpdateScoreCoins();

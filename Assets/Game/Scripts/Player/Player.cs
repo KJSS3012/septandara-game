@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private bool isWalk;
     public bool isActiveMoviment;
+    private AudioSource sound;
 
     [Header("Collider CheckGround")]
     public bool isGround;
@@ -40,6 +41,7 @@ public class Player : MonoBehaviour
         bodyCollider = GetComponent<BoxCollider2D>();
         isActiveMoviment = true;
         respawnPoint = transform.position;
+        sound = GetComponent<AudioSource>();
     }
     void Update()
     {

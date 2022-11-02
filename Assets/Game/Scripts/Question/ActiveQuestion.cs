@@ -9,11 +9,15 @@ public class ActiveQuestion : MonoBehaviour
     [SerializeField] private bool isColliderQuestion;
     [SerializeField] private bool isActive;
     public GameObject questionObject;
+    [SerializeField] private AudioSource sound;
+
 
     private void Update()
     {
         if (isColliderQuestion && !isActive)
         {
+            sound = GetComponent<AudioSource>();
+            sound.Play();
             ShowQuestion();
         }
     }
@@ -30,13 +34,13 @@ public class ActiveQuestion : MonoBehaviour
     {
         QuestionControl.instance.ActiveQuestion(SortQuestionLevel());
         isActive = true;
-        Destroy(questionObject);
+        Destroy(questionObject, 1f);
     }
 
     public QuestionSheet SortQuestionLevel()
     {
         int indexQuestion = Random.Range(0, questionsLevel.questions.Length);
-        
+
         if (QuestionControl.instance.GetContActivated() == questionsLevel.questions.Length)
         {
             QuestionControl.instance.ClearActivatedData();

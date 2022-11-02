@@ -40,6 +40,7 @@
      <Compile Include="Assets\Game\Scripts\LoadScenes\MouseTouchLoadScene.cs" />
      <Compile Include="Assets\Game\Scripts\Question\QuestionSheet.cs" />
      <Compile Include="Assets\Game\Scripts\ColisionGround\ColiderWithElements.cs" />
+     <Compile Include="Assets\Game\Scripts\Slingshot\SlingShot.cs" />
      <Compile Include="Assets\Game\Scripts\Game\VisibilityControls.cs" />
      <Compile Include="Assets\Game\Scripts\Coin\Coin.cs" />
      <Compile Include="Assets\Game\Scripts\BookInterface\ButtonFase.cs" />
@@ -86,7 +87,6 @@
      <Compile Include="Assets\Game\Scripts\Game\CheckPoint.cs" />
      <Compile Include="Assets\Game\Scripts\Enemys\EnemyY.cs" />
      <Compile Include="Assets\Game\Scripts\BookInterface\ButtonBook.cs" />
-     <Compile Include="Assets\Game\Scripts\Slingshot\SlingShot.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
