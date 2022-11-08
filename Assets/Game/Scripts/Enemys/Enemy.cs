@@ -111,6 +111,7 @@ public class Enemy : MonoBehaviour
             player.animPlayer.SetBool("hit", true);
             player.bodyCollider.enabled = false;
             GameController.instance.SubtractLife(10);
+            StartCoroutine(DelayEndHit());
             if (playerObject.GetComponent<SpriteRenderer>().flipX)
             {
                 enemySprite.flipX = true;
@@ -136,6 +137,13 @@ public class Enemy : MonoBehaviour
     {
         gameObject.SetActive(pause);
         Start();
+    }
+
+    IEnumerator DelayEndHit(){
+        player.DisableMoviment();
+        yield return new WaitForSeconds(0.5f);
+        player.EnableMoviment();
+        player.animPlayer.SetBool("hit", false);
     }
 
 }

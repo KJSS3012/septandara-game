@@ -189,4 +189,13 @@ public class Player : MonoBehaviour
         animPlayer.SetBool("fire", false);
         isGetSlingShot = true;
     }
+
+    public void DisableMoviment(){
+        isActiveMoviment = false;
+        animPlayer.SetBool("walk", false);
+    }
+
+    public void EnableMoviment(){
+        isActiveMoviment = true;
+    }
 }

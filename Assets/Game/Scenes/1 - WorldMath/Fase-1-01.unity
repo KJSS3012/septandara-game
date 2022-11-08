@@ -3621,17 +3621,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96970de714cb9d64a84805f4e4e0cba5, type: 3}
---- !u!114 &66041106 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4066689874523247154, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
-  m_PrefabInstance: {fileID: 2645402434074112449}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb7fbc021176924fbbddc7bb3a2eb98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &77079376
 GameObject:
   m_ObjectHideFlags: 0
@@ -4478,17 +4467,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &322319892 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1939963120742004527, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
-  m_PrefabInstance: {fileID: 2645402434074112449}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb7fbc021176924fbbddc7bb3a2eb98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &347953050
 GameObject:
   m_ObjectHideFlags: 0
@@ -6626,17 +6604,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96970de714cb9d64a84805f4e4e0cba5, type: 3}
---- !u!114 &1011634035 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3202328373537180671, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
-  m_PrefabInstance: {fileID: 2645402434074112449}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb7fbc021176924fbbddc7bb3a2eb98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1018651649 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2318287704112978493, guid: af46d937947f87341bf5daa47dc2e150, type: 3}
@@ -9179,17 +9146,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96970de714cb9d64a84805f4e4e0cba5, type: 3}
---- !u!114 &1520576725 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5249287031625289020, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
-  m_PrefabInstance: {fileID: 2645402434074112449}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb7fbc021176924fbbddc7bb3a2eb98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1565574498
 GameObject:
   m_ObjectHideFlags: 0
@@ -11666,17 +11622,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1876078820 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5978480073039472095, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
-  m_PrefabInstance: {fileID: 2645402434074112449}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb7fbc021176924fbbddc7bb3a2eb98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1886062505
 GameObject:
   m_ObjectHideFlags: 0
@@ -12650,6 +12595,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1668330525}
     - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
+      propertyPath: chances.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
       propertyPath: resultsChanceActive
       value: 
       objectReference: {fileID: 2645402434074112451}
@@ -12660,23 +12609,23 @@ PrefabInstance:
     - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
       propertyPath: chances.Array.data[0]
       value: 
-      objectReference: {fileID: 1520576725}
+      objectReference: {fileID: 0}
     - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
       propertyPath: chances.Array.data[1]
       value: 
-      objectReference: {fileID: 1876078820}
+      objectReference: {fileID: 0}
     - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
       propertyPath: chances.Array.data[2]
       value: 
-      objectReference: {fileID: 322319892}
+      objectReference: {fileID: 0}
     - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
       propertyPath: chances.Array.data[3]
       value: 
-      objectReference: {fileID: 1011634035}
+      objectReference: {fileID: 0}
     - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
       propertyPath: chances.Array.data[4]
       value: 
-      objectReference: {fileID: 66041106}
+      objectReference: {fileID: 0}
     - target: {fileID: 180138478567164486, guid: 05723450999ea6e45b3b74f2dea4c5a9, type: 3}
       propertyPath: resultsChanceDesactive
       value: 
@@ -13005,6 +12954,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8155575139250948047}
     m_Modifications:
+    - target: {fileID: 1939963120742004527, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202328373537180671, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066689874523247154, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: isActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978480073039472095, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
+      propertyPath: isActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6167740291729724185, guid: dbf8271ae9d036047b9d03338f5b554f, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
