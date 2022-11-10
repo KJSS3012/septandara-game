@@ -43,6 +43,11 @@ public class PlayerInput : MonoBehaviour
         return inputJump;
     }
 
+    public bool IsJumpArrowUp(){
+        bool inputJump = Input.GetKey("up");
+        return inputJump;
+    }
+
     public void IsJumpTrue()
     {
         jump = true;

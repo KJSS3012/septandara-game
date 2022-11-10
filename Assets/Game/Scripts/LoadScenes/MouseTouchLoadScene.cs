@@ -48,7 +48,7 @@ public class MouseTouchLoadScene : MonoBehaviour
 
     private void OnKeyCodeS()
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             isKeyDownS = true;
         }

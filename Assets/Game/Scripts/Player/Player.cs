@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
             speedMove = 2.5f;
         }
 
-        if (playerInput.IsJumpButtonInterface() || playerInput.IsJumpKeyboard())
+        if (playerInput.IsJumpButtonInterface() || playerInput.IsJumpKeyboard() || playerInput.IsJumpArrowUp())
         {
             if (isGround)
             {

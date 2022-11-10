@@ -45,7 +45,7 @@ public class Lupe : MonoBehaviour
 
     private void Activate()
     {
-        if (isCollider && (isClick || Input.GetKeyDown(KeyCode.S)))
+        if (isCollider && (isClick || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)))
         {
             vsControls.OpacityControls(0.5f, false);
             pictureUI.SetActive(true);
