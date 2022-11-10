@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489efddbc370a34d85c62b4e63ed2aa, type: 3}
+  m_Name: Fase-07
+  m_EditorClassIdentifier: 
+  questions:
+  - enunciated: "A professora Elisa aplicou uma prova para cinco alunos. A nota de
+      um deles foi 8,0, e a m\xE9dia das notas dos outros quatro alunos foi 7,0.
+      Qual foi a m\xE9dia das notas desses cinco alunos?"
+    alternative_A: 7,2
+    alternative_B: 7,4
+    alternative_C: 7,3
+    alternative_D: 7,5
+    alternativeCorrect: 1
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Armando sobe 8 degraus, sendo 1 ou 2 degraus de cada vez. O sexto
+      degrau est\xE1 quebrado, logo ele n\xE3o pode pisar neste. De quantas maneiras
+      diferentes Armando pode chegar ao \xFAltimo degrau? "
+    alternative_A: 6
+    alternative_B: 7
+    alternative_C: 8
+    alternative_D: 9
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "O pr\xF3ximo n\xFAmero da sequ\xEAncia 1, 4, 8, 13, 19 \xE9:"
+    alternative_A: 26
+    alternative_B: 27
+    alternative_C: 28
+    alternative_D: 29
+    alternativeCorrect: 1
+    imageQuestion: {fileID: 0}
+    isActivated: 0

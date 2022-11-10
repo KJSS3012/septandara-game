@@ -13,6 +13,23 @@ MonoBehaviour:
   m_Name: Fase-02
   m_EditorClassIdentifier: 
   questions:
+  - enunciated: "Sapato e meio mais sapato e meio, quantos pares s\xE3o? "
+    alternative_A: 1
+    alternative_B: 2
+    alternative_C: 3
+    alternative_D: 4
+    alternativeCorrect: 1
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: 'Ana tem 73 anos e sua neta tem 19 anos. Quantos anos Ana tem a mais
+      do que a neta? '
+    alternative_A: 46
+    alternative_B: 52
+    alternative_C: 54
+    alternative_D: 62
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
   - enunciated: "Em um quarto escuro h\xE1 uma gaveta com meias brancas e meias pretas.
       Qual \xE9 o menor n\xFAmero de meias que voc\xEA precisa retirar para ter certeza
       de que tirou um par da mesma cor?"
@@ -21,54 +38,5 @@ MonoBehaviour:
     alternative_C: 4
     alternative_D: 5
     alternativeCorrect: 2
-    imageQuestion: {fileID: 0}
-    isActivated: 0
-  - enunciated: "Algumas garotas estavam dan\xE7ando em roda. Ant\xF4nia era a quarta
-      \xE0 esquerda de Bianca e a s\xE9tima \xE0 direita de Bianca. Quantas garotas
-      havia na roda?"
-    alternative_A: 11
-    alternative_B: 12
-    alternative_C: 14
-    alternative_D: 15
-    alternativeCorrect: 1
-    imageQuestion: {fileID: 0}
-    isActivated: 0
-  - enunciated: "No m\xE1ximo, quantas vezes teremos que lan\xE7ar um dado para obter
-      o mesmo resultado?"
-    alternative_A: 5
-    alternative_B: 6
-    alternative_C: 7
-    alternative_D: 9
-    alternativeCorrect: 3
-    imageQuestion: {fileID: 0}
-    isActivated: 0
-  - enunciated: "Enquanto n\xE3o est\xE1 dormindo, o urso coala Dudu come 50 gramas
-      de folhas por hora. Ontem Dudu dormiu 20 horas. Quantos gramas de folhas ele
-      comeu ontem?"
-    alternative_A: 50
-    alternative_B: 100
-    alternative_C: 150
-    alternative_D: 200
-    alternativeCorrect: 4
-    imageQuestion: {fileID: 0}
-    isActivated: 0
-  - enunciated: "Numa corrida, dez atletas chegaram ao final. O n\xFAmero de competidores
-      que chegaram depois de Ant\xF4nio foi de tr\xEAs a mais do que o n\xFAmero
-      de competidores que venceram Ant\xF4nio. Em qual posi\xE7\xE3o chegou Ant\xF4nio?"
-    alternative_A: "2\xAA"
-    alternative_B: "4\xAA"
-    alternative_C: "5\xAA"
-    alternative_D: "6\xAA"
-    alternativeCorrect: 2
-    imageQuestion: {fileID: 0}
-    isActivated: 0
-  - enunciated: "Miguel resolve seis problemas de Matem\xE1tica todos os dias, enquanto
-      L\xE1zaro resolve quatro todos os dias. Quantos dias L\xE1zaro leva para resolver
-      o mesmo n\xFAmero de problemas que Miguel resolve em quatro dias?"
-    alternative_A: 4
-    alternative_B: 5
-    alternative_C: 6
-    alternative_D: 7
-    alternativeCorrect: 3
     imageQuestion: {fileID: 0}
     isActivated: 0

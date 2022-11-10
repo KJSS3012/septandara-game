@@ -7225,6 +7225,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeIn
       objectReference: {fileID: 0}
+    - target: {fileID: 8803744685499833501, guid: 0a3d78a27d612eb4cb81e3f07ed2a967, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8803744685499833502, guid: 0a3d78a27d612eb4cb81e3f07ed2a967, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8378,7 +8382,7 @@ PrefabInstance:
     - target: {fileID: 5226789363211972569, guid: 36bfe32106572884ca2a4a1d4bd06968, type: 3}
       propertyPath: questionsLevel
       value: 
-      objectReference: {fileID: 11400000, guid: d3791027d7f5fff4a8626f638d4b62c8, type: 2}
+      objectReference: {fileID: 11400000, guid: bea0104d28afb5d4b9a0c6439ef221b7, type: 2}
     - target: {fileID: 5226789363211972582, guid: 36bfe32106572884ca2a4a1d4bd06968, type: 3}
       propertyPath: m_Name
       value: Question_00
@@ -27178,7 +27182,7 @@ PrefabInstance:
     - target: {fileID: 5226789363211972569, guid: 36bfe32106572884ca2a4a1d4bd06968, type: 3}
       propertyPath: questionsLevel
       value: 
-      objectReference: {fileID: 11400000, guid: d3791027d7f5fff4a8626f638d4b62c8, type: 2}
+      objectReference: {fileID: 11400000, guid: bea0104d28afb5d4b9a0c6439ef221b7, type: 2}
     - target: {fileID: 5226789363211972582, guid: 36bfe32106572884ca2a4a1d4bd06968, type: 3}
       propertyPath: m_Name
       value: Question_02
@@ -29175,7 +29179,7 @@ PrefabInstance:
     - target: {fileID: 5226789363211972569, guid: 36bfe32106572884ca2a4a1d4bd06968, type: 3}
       propertyPath: questionsLevel
       value: 
-      objectReference: {fileID: 11400000, guid: d3791027d7f5fff4a8626f638d4b62c8, type: 2}
+      objectReference: {fileID: 11400000, guid: bea0104d28afb5d4b9a0c6439ef221b7, type: 2}
     - target: {fileID: 5226789363211972582, guid: 36bfe32106572884ca2a4a1d4bd06968, type: 3}
       propertyPath: m_Name
       value: Question_01
@@ -32188,10 +32192,6 @@ PrefabInstance:
     - target: {fileID: 1002921364260886173, guid: 7834b4001d7af874f97098cc7fa47d23, type: 3}
       propertyPath: m_Name
       value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 1002921364260886173, guid: 7834b4001d7af874f97098cc7fa47d23, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1002921364615302426, guid: 7834b4001d7af874f97098cc7fa47d23, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

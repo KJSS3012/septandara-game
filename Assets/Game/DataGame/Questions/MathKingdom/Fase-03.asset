@@ -13,60 +13,30 @@ MonoBehaviour:
   m_Name: Fase-03
   m_EditorClassIdentifier: 
   questions:
-  - enunciated: "Em um sal\xE3o de festas, 3 meninas e 2 meninos estavam dan\xE7ando.
-      Cada menina dan\xE7ou com cada menino exatamente um minuto e somente um par
-      dan\xE7ou de cada vez. Jana\xEDna filmou somente os momentos em que os pares
-      dan\xE7aram. Quantos minutos de dan\xE7a ela filmou?"
-    alternative_A: 5
+  - enunciated: "Uma placa de madeira ser\xE1 cortada em 5 partes por uma serra.
+      S\xE3o necess\xE1rios 3 minutos para serrar cada parte. Quantos minutos ser\xE3o
+      gastos para obter as 5 partes? "
+    alternative_A: 4
     alternative_B: 6
-    alternative_C: 7
-    alternative_D: 8
-    alternativeCorrect: 2
-    imageQuestion: {fileID: 0}
-    isActivated: 0
-  - enunciated: "Na sequ\xEAncia o n\xFAmero que sucede 12 \xE9 o: 16, 20, 14, 22,
-      12, __:"
-    alternative_A: 28
-    alternative_B: 26
-    alternative_C: 24
-    alternative_D: 18
+    alternative_C: 12
+    alternative_D: 15
     alternativeCorrect: 3
     imageQuestion: {fileID: 0}
     isActivated: 0
-  - enunciated: "Escolha o n\xFAmero que corresponde \xE0 sequ\xEAncia num\xE9rica
-      abaixo: 11, 33, 99, ...?"
-    alternative_A: 180
-    alternative_B: 197
-    alternative_C: 297
-    alternative_D: 333
-    alternativeCorrect: 3
-    imageQuestion: {fileID: 0}
-    isActivated: 0
-  - enunciated: "Na sequ\xEAncia o n\xFAmero que sucede 16 \xE9 o: 20, 24, 18, 26,
-      16, __:"
-    alternative_A: 32
-    alternative_B: 28
-    alternative_C: 22
-    alternative_D: 14
+  - enunciated: "Uma caixa grande cont\xE9m quatro caixas menores e cada uma destas
+      cont\xE9m outras quatro caixas ainda menores. Quantas caixas h\xE1 ao todo? "
+    alternative_A: 9
+    alternative_B: 21
+    alternative_C: 16
+    alternative_D: 17
     alternativeCorrect: 2
     imageQuestion: {fileID: 0}
     isActivated: 0
-  - enunciated: "Considere que os n\xFAmeros que comp\xF5em a sequ\xEAncia seguinte
-      obedecem a uma lei de forma\xE7\xE3o. (374, 372, 186, 184, 92, 90, ...) A soma
-      do s\xE9timo com o oitavo termos dessa sequ\xEAncia \xE9?"
-    alternative_A: 88
-    alternative_B: 98
-    alternative_C: 136
-    alternative_D: 162
-    alternativeCorrect: 1
-    imageQuestion: {fileID: 0}
-    isActivated: 0
-  - enunciated: "Se o filho de Jos\xE9 \xE9 pai do meu filho, que parentesco eu tenho
-      com Jos\xE9?"
-    alternative_A: "Sou seu av\xF4"
-    alternative_B: Sou seu neto
-    alternative_C: Sou seu filho
-    alternative_D: "Eu sou Jos\xE9"
+  - enunciated: "Qual \xE9 o pr\xF3ximo termo da sequ\xEAncia 3, 9, 27, 81, ...? "
+    alternative_A: 135
+    alternative_B: 180
+    alternative_C: 243
+    alternative_D: 729
     alternativeCorrect: 3
     imageQuestion: {fileID: 0}
     isActivated: 0

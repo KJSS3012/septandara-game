@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8489efddbc370a34d85c62b4e63ed2aa, type: 3}
+  m_Name: Fase-05
+  m_EditorClassIdentifier: 
+  questions:
+  - enunciated: "Numa corrida, dez atletas chegaram ao final. O n\xFAmero de competidores
+      que chegaram depois de Ant\xF4nio foi de tr\xEAs a mais do que o n\xFAmero
+      de competidores que venceram Ant\xF4nio. Em qual posi\xE7\xE3o chegou Ant\xF4nio?"
+    alternative_A: "2\xAA"
+    alternative_B: "4\xAA"
+    alternative_C: "5\xAA"
+    alternative_D: "6\xAA"
+    alternativeCorrect: 2
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Miguel resolve seis problemas de Matem\xE1tica todos os dias, enquanto
+      L\xE1zaro resolve quatro todos os dias. Quantos dias L\xE1zaro leva para resolver
+      o mesmo n\xFAmero de problemas que Miguel resolve em quatro dias?"
+    alternative_A: 4
+    alternative_B: 5
+    alternative_C: 6
+    alternative_D: 7
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Em um sal\xE3o de festas, 3 meninas e 2 meninos estavam dan\xE7ando.
+      Cada menina dan\xE7ou com cada menino exatamente um minuto e somente um par
+      dan\xE7ou de cada vez. Jana\xEDna filmou somente os momentos em que os pares
+      dan\xE7aram. Quantos minutos de dan\xE7a ela filmou? "
+    alternative_A: 5
+    alternative_B: 6
+    alternative_C: 7
+    alternative_D: 8
+    alternativeCorrect: 2
+    imageQuestion: {fileID: 0}
+    isActivated: 0
+  - enunciated: "Na sequ\xEAncia o n\xFAmero que sucede 12 \xE9 o: 16, 20, 14, 22,
+      12, __:"
+    alternative_A: 28
+    alternative_B: 26
+    alternative_C: 24
+    alternative_D: 18
+    alternativeCorrect: 3
+    imageQuestion: {fileID: 0}
+    isActivated: 0

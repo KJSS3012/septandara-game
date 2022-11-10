@@ -39,12 +39,7 @@ public class PlayerInput : MonoBehaviour
 
     public bool IsJumpKeyboard()
     {
-        bool inputJump = Input.GetKey(KeyCode.Space);
-        return inputJump;
-    }
-
-    public bool IsJumpArrowUp(){
-        bool inputJump = Input.GetKey("up");
+        bool inputJump = Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W);
         return inputJump;
     }
 

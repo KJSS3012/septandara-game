@@ -100,6 +100,32 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void RestartScene(){
+        if (statusGame.chances[0] == false){
+            RestartHud();
+            Scene actualScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(actualScene.buildIndex);
+        }
+    }
+
+    public void CallRestartGame(){
+        if (Input.GetKeyDown(KeyCode.F12))
+        {
+            RestartHud();
+            SceneManager.LoadScene(0);
+        }
+    }
+
+    public void RestartHud(){
+        statusGame.quantLife = 100;
+        statusGame.consecutiveQuestion = 0;
+        statusGame.scoreCoins = 0;
+        for(int i = 0; i< 5; i++){
+            statusGame.chances[i] = true;
+        }
+        Start();
+    }
+
 
     //MECHANICAL CHANCES QUESTION
     public void ActiveAnimChanceNow(int index, bool isDesactive)
@@ -172,32 +198,6 @@ public class GameController : MonoBehaviour
         {
             resultsChanceActive.gameObject.SetActive(false);
         }
-    }
-
-    public void RestartScene(){
-        if (statusGame.chances[0] == false){
-            RestartHud();
-            Scene actualScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(actualScene.buildIndex);
-        }
-    }
-
-    public void CallRestartGame(){
-        if (Input.GetKeyDown(KeyCode.F12))
-        {
-            RestartHud();
-            SceneManager.LoadScene(0);
-        }
-    }
-
-    public void RestartHud(){
-        statusGame.quantLife = 100;
-        statusGame.consecutiveQuestion = 0;
-        statusGame.scoreCoins = 0;
-        for(int i = 0; i< 5; i++){
-            statusGame.chances[i] = true;
-        }
-        Start();
     }
 
 }

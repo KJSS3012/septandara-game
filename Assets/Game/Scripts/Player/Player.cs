@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
             speedMove = 2.5f;
         }
 
-        if (playerInput.IsJumpButtonInterface() || playerInput.IsJumpKeyboard() || playerInput.IsJumpArrowUp())
+        if (playerInput.IsJumpButtonInterface() || playerInput.IsJumpKeyboard())
         {
             if (isGround)
             {
@@ -190,12 +190,14 @@ public class Player : MonoBehaviour
         isGetSlingShot = true;
     }
 
-    public void DisableMoviment(){
+    public void DisableMoviment()
+    {
         isActiveMoviment = false;
         animPlayer.SetBool("walk", false);
     }
 
-    public void EnableMoviment(){
+    public void EnableMoviment()
+    {
         isActiveMoviment = true;
     }
 }
