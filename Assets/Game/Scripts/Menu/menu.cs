@@ -8,14 +8,22 @@ using UnityEngine.SceneManagement;
 public class menu : MonoBehaviour
 {
 
-    public Button yourButton;
+    public Button playButton;
+    public Button quitButton;
 
 	void Start () {
-		Button btn = yourButton.GetComponent<Button>();
-		btn.onClick.AddListener(PlayGame);
+		playButton = playButton.GetComponent<Button>();
+        quitButton = playButton.GetComponent<Button>();
+
+		playButton.onClick.AddListener(PlayGame);
+		playButton.onClick.AddListener(QuitGame);
 	}
 
     void PlayGame(){
         SceneManager.LoadScene(0);
+    }
+
+    void QuitGame(){
+        Application.Quit();
     }
 }
