@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Game/Scenes/0 - Menu/main-menu.unity
+    guid: 2f6d55669d1478441ad4a86c88023931
+  - enabled: 1
     path: Assets/Game/Scenes/1 - WorldMath/Prince_and_King.unity
     guid: a083a0a0b571c67498996d136b0d09d1
   - enabled: 1
@@ -41,9 +44,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/1 - WorldMath/Fase-1-10.unity
     guid: 7fd942a928e9f6b468d3f7c57ed30068
-  - enabled: 1
-    path: Assets/Game/Scenes/0 - Menu/main-menu.unity
-    guid: 2f6d55669d1478441ad4a86c88023931
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: c996d9dc35463a443a2fa8a8542adc7a, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 8e679d93d45d76f43baabf8f660a0e58, type: 2}

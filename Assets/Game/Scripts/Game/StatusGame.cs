@@ -11,4 +11,6 @@ public class StatusGame : ScriptableObject
     public int quantLife; //porcentagem de vida
     public int scoreCoins; //quantidade de moedas
 
+    public int scene;
+
 }

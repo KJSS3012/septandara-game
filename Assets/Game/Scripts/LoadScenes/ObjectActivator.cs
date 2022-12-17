@@ -9,6 +9,11 @@ public class ObjectActivator : MonoBehaviour
     public MouseTouchLoadScene mtLS;
     public int sceneIndex;
 
+
+    void Start(){
+        sceneIndex = SceneManager.GetActiveScene().buildIndex+1;
+    }
+
     public void Active()
     {
         mtLS = GetComponentInChildren<MouseTouchLoadScene>();

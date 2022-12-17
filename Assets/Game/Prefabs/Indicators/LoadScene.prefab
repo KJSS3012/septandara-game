@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3877030370550364549}
   - component: {fileID: 9044545772556191850}
   m_Layer: 0
-  m_Name: indicator_00
+  m_Name: LoadScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,9 @@ MonoBehaviour:
   animObject: {fileID: 0}
   isMouseDown: 0
   isCollider: 0
+  isKeyDownS: 0
   player: {fileID: 0}
   animPlayer: {fileID: 0}
   controlsUI: {fileID: 0}
+  status: {fileID: 11400000, guid: a484585002ceeb74d8e28cb97fa6a82a, type: 2}
   objAct: {fileID: 0}

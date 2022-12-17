@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class MouseTouchLoadScene : MonoBehaviour
@@ -15,6 +16,7 @@ public class MouseTouchLoadScene : MonoBehaviour
     public Player player;
     public Animator animPlayer;
     public GameObject controlsUI;
+    public StatusGame status;
     [SerializeField] private ObjectActivator objAct;
 
     private void Start()
@@ -67,6 +69,7 @@ public class MouseTouchLoadScene : MonoBehaviour
             player.RestartControls(false);
             controlsUI.SetActive(false);
             objAct.Active();
+            status.scene = SceneManager.GetActiveScene().buildIndex+1;
         }
     }
 

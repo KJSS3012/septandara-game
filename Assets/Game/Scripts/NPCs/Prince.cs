@@ -39,7 +39,7 @@ public class Prince : MonoBehaviour
 
         if (isNextScene == true)
         {
-            SceneManager.LoadScene(sceneIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
     }
 
