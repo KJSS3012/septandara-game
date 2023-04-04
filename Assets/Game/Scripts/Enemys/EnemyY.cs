@@ -21,12 +21,16 @@ public class EnemyY : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // posição dele apos o Start
         nextPosition = posStart.position;
+        // sprite do inimigo
         enemySprite = GetComponent<SpriteRenderer>();
+        // box collider para detectar a colisao
         colliderDetect = GetComponent<BoxCollider2D>();
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         colliderDetect.enabled = true;
+        // define a vida do inimigo como 3
         life = 3;
     }
 
@@ -38,6 +42,7 @@ public class EnemyY : MonoBehaviour
         ToDie();
     }
 
+    // move o  inimigo de um lugar para outro e retorna a posição inicial
     private void MoveEnemy()
     {
         if (transform.position == posStart.position)
@@ -58,6 +63,7 @@ public class EnemyY : MonoBehaviour
     {
         if (colliderDetect.IsTouchingLayers(playerLayer))
         {
+            // subtrai da vida do player
             GameController.instance.SubtractLife(10);
             DisableCollider();
             if (playerObject.GetComponent<SpriteRenderer>().flipX)
@@ -77,6 +83,8 @@ public class EnemyY : MonoBehaviour
 
     public void DisableCollider()
     {
+        // caso o colidor seja dectectado, o eneblad se torna falso
+        // e a courotina vai ser ativada
         colliderDetect.enabled = false;
         StartCoroutine(ColliderActive());
     }
@@ -88,7 +96,7 @@ public class EnemyY : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D col){
-
+        // decrescenta uma "vida" do inimigo ao ser atingido
         if (col.gameObject.tag == "Bullet"){
             life = life - 1;
             
@@ -96,6 +104,7 @@ public class EnemyY : MonoBehaviour
     }
 
     private void ToDie(){
+        // destroi o inimigo quando a vida for igual ou menor que 0
         if(life<=0){
             Destroy(gameObject);
         }

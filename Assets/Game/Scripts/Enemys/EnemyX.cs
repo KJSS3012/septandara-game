@@ -127,6 +127,8 @@ public class EnemyX : MonoBehaviour
 
     public void DisableCollider()
     {
+        // caso o colidor seja dectectado, o eneblad se torna falso
+        // e a courotina vai ser ativada
         colliderDetect.enabled = false;
         StartCoroutine(ColliderActive());
     }
@@ -137,7 +139,7 @@ public class EnemyX : MonoBehaviour
         colliderDetect.enabled = true;
     }
     private void OnTriggerEnter2D(Collider2D col){
-
+        // decrescenta uma "vida" do inimigo ao ser atingido
         if (col.gameObject.tag == "Bullet"){
             life = life - 1;
             
@@ -145,6 +147,7 @@ public class EnemyX : MonoBehaviour
     }
 
     private void ToDie(){
+        // destroi o inimigo quando a vida for igual ou menor que 0
         if(life<=0){
             Destroy(gameObject);
         }
