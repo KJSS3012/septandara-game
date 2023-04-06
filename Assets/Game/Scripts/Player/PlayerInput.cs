@@ -12,6 +12,7 @@ public class PlayerInput : MonoBehaviour
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal");
 
+        // define quanto vai andar pra cada lado 
         if(horizontalInput == 0f)
         {
             if(moveRight)
@@ -37,6 +38,7 @@ public class PlayerInput : MonoBehaviour
         return false;
     }
 
+    // define onde pressiona para pular
     public bool IsJumpKeyboard()
     {
         bool inputJump = Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W);
